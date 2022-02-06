@@ -1,0 +1,309 @@
+const callFormEl = document.querySelector("#inputDecision");
+const callTbodyEl = document.querySelector("#callTbody");
+const callTableEl = document.querySelector("#callTable");
+const dissentTableEl = document.querySelector("#dissentTable");
+var finalOObeatOG;
+var finalCGbeatOG;
+var finalCGbeatOO;
+var finalCObeatOG;
+var finalCObeatOO;
+var finalCObeatCG;
+
+function $(x) { return document.getElementById(x); }
+
+function onInputDecision(e) {
+    e.preventDefault();
+    var Duplicate = checkDuplicate();
+    if (!Duplicate) {
+        const judge = $("judge").value;
+        const decision1 = $("decision1").value;
+        const decision2 = $("decision2").value;
+        const decision3 = $("decision3").value;
+        const decision4 = $("decision4").value;
+        callTbodyEl.innerHTML += `
+    <tr id=${judge}>
+        <td>${judge}</td>
+        <td>${decision1}</td>
+        <td>${decision2}</td>
+        <td>${decision3}</td>
+        <td>${decision4}</td>
+        <td><button class="deleteBtn">X</button></td>
+    </tr>`;
+    }
+}
+
+function onDeleteRow(e) {
+    if (!e.target.classList.contains("deleteBtn"))
+        return;
+    e.target.closest("tr").remove();
+    calculateDissent();
+}
+
+function onClearRadio(e) {
+    if (!e.target.classList.contains("resolveBtn"))
+        return;
+    e.target.checked = false;
+}
+
+function checkDuplicate() {
+    //Check Duplicate Team
+    $("inputDecisionStatus").innerHTML = "";
+    var teamarray = [];
+    for (i = 1; i <= 4; i++) {
+        teamarray[i] = $("decision" + i).value;
+    }
+    for (i = 1; i <= 4; i++) {
+        for (j = i + 1; j <= 4; j++) {
+            if (i == j || teamarray[i] == "" || teamarray[j] == "")
+                continue;
+            if (teamarray[i] == teamarray[j]) {
+                $("inputDecisionStatus").innerHTML += "The same team cannot get two different ranks";
+                return true;
+            }
+        }
+    }
+    //Check Duplicate Judge
+    for (i = 1; i <= callTbodyEl.rows.length; i++) {
+        if ($("judge").value == callTableEl.rows[i].cells[0].innerHTML) {
+            callTableEl.rows[i].cells[1].innerHTML = $("decision1").value;
+            callTableEl.rows[i].cells[2].innerHTML = $("decision2").value;
+            callTableEl.rows[i].cells[3].innerHTML = $("decision3").value;
+            callTableEl.rows[i].cells[4].innerHTML = $("decision4").value;
+            return true;
+        }
+    }
+}
+
+function calculateDissent() {
+    var rankOG = [];
+    var rankOO = [];
+    var rankCG = [];
+    var rankCO = [];
+    var OObeatOG = 0;
+    var CGbeatOG = 0;
+    var CGbeatOO = 0;
+    var CObeatOG = 0;
+    var CObeatOO = 0;
+    var CObeatCG = 0;
+    var OGTopTwo = 0;
+    var OOTopTwo = 0;
+    var CGTopTwo = 0;
+    var COTopTwo = 0;
+    var DistanceOOOG = 0;
+    var DistanceCGOG = 0;
+    var DistanceCGOO = 0;
+    var DistanceCOOG = 0;
+    var DistanceCOOO = 0;
+    var DistanceCOCG = 0;
+    var PriorityOOOG = 0;
+    var PriorityCGOG = 0;
+    var PriorityCGOO = 0;
+    var PriorityCOOG = 0;
+    var PriorityCOOO = 0;
+    var PriorityCOCG = 0;
+    $("dissentTable").innerHTML = "";
+
+    if (callTbodyEl.rows.length > 1) {
+        //Repeat for all judges
+        for (i = 0; i < callTbodyEl.rows.length; i++) {
+            //Locate OG, OO, CG, CO positions
+            for (var j = 1; j <= 4; j++) {
+                if (callTbodyEl.rows[i].cells[j].innerHTML == "OG")
+                    rankOG[i] = j;
+                if (callTbodyEl.rows[i].cells[j].innerHTML == "OO")
+                    rankOO[i] = j;
+                if (callTbodyEl.rows[i].cells[j].innerHTML == "CG")
+                    rankCG[i] = j;
+                if (callTbodyEl.rows[i].cells[j].innerHTML == "CO")
+                    rankCO[i] = j;
+            }
+            //See the number of judges agreeing to these exchanges
+            if (rankOO[i] < rankOG[i]) OObeatOG += 1;
+            if (rankCG[i] < rankOG[i]) CGbeatOG += 1;
+            if (rankCG[i] < rankOO[i]) CGbeatOO += 1;
+            if (rankCO[i] < rankOG[i]) CObeatOG += 1;
+            if (rankCO[i] < rankOO[i]) CObeatOO += 1;
+            if (rankCO[i] < rankCG[i]) CObeatCG += 1;
+            //See the number of judges putting top 2 for each bench
+            if (rankOG[i] <= 2) OGTopTwo += 1;
+            if (rankOO[i] <= 2) OOTopTwo += 1;
+            if (rankCG[i] <= 2) CGTopTwo += 1;
+            if (rankCO[i] <= 2) COTopTwo += 1;
+            //See the distance of each bench in the call
+            DistanceOOOG = Math.abs(rankOO[i] - rankOG[i]);
+            DistanceCGOG = Math.abs(rankCG[i] - rankOG[i]);
+            DistanceCGOO = Math.abs(rankCG[i] - rankOO[i]);
+            DistanceCOOG = Math.abs(rankCO[i] - rankOG[i]);
+            DistanceCOOO = Math.abs(rankCO[i] - rankOO[i]);
+            DistanceCOCG = Math.abs(rankCO[i] - rankCG[i]);
+        }
+        /* $("dissentTable").innerHTML =    OObeatOG + "/" + callTbodyEl.rows.length + " judges think OO beats OG <br>" +
+                                            CGbeatOG + "/" + callTbodyEl.rows.length + " judges think CG beats OG <br>" +
+                                            CGbeatOO + "/" + callTbodyEl.rows.length + " judges think CG beats OO <br>" +
+                                            CObeatOG + "/" + callTbodyEl.rows.length + " judges think CO beats OG <br>" +
+                                            CObeatOO + "/" + callTbodyEl.rows.length + " judges think CO beats OO <br>" +
+                                            CObeatCG + "/" + callTbodyEl.rows.length + " judges think CO beats CG <br>" +
+                                            OGTopTwo + "/" + callTbodyEl.rows.length + " judges think OG is in top 2 <br>" +
+                                            OOTopTwo + "/" + callTbodyEl.rows.length + " judges think OO is in top 2 <br>" +
+                                            CGTopTwo + "/" + callTbodyEl.rows.length + " judges think CG is in top 2 <br>" +
+                                            COTopTwo + "/" + callTbodyEl.rows.length + " judges think CO is in top 2 <br>"; */
+        //Interpret exchanges that have been agreed upon
+        if (OObeatOG == callTbodyEl.rows.length) finalOObeatOG = true;
+        if (CGbeatOG == callTbodyEl.rows.length) finalCGbeatOG = true;
+        if (CGbeatOO == callTbodyEl.rows.length) finalCGbeatOO = true;
+        if (CObeatOG == callTbodyEl.rows.length) finalCObeatOG = true;
+        if (CObeatOO == callTbodyEl.rows.length) finalCObeatOO = true;
+        if (CObeatCG == callTbodyEl.rows.length) finalCObeatCG = true;
+        if (OObeatOG == 0) finalOObeatOG = false;
+        if (CGbeatOG == 0) finalCGbeatOG = false;
+        if (CGbeatOO == 0) finalCGbeatOO = false;
+        if (CObeatOG == 0) finalCObeatOG = false;
+        if (CObeatOO == 0) finalCObeatOO = false;
+        if (CObeatCG == 0) finalCObeatCG = false;
+        //If function is called by the "+" button, it updates the dissent table (exchanges to discuss)
+        //Mirror the calls that show a minority number of the panel (1/5 think OO>OG becomes 4/5 think OG>OO)
+        if (OObeatOG < (callTbodyEl.rows.length / 2)) OObeatOG = callTbodyEl.rows.length - OObeatOG;
+        if (CGbeatOG < (callTbodyEl.rows.length / 2)) CGbeatOG = callTbodyEl.rows.length - CGbeatOG;
+        if (CGbeatOO < (callTbodyEl.rows.length / 2)) CGbeatOO = callTbodyEl.rows.length - CGbeatOO;
+        if (CObeatOG < (callTbodyEl.rows.length / 2)) CObeatOG = callTbodyEl.rows.length - CObeatOG;
+        if (CObeatOO < (callTbodyEl.rows.length / 2)) CObeatOO = callTbodyEl.rows.length - CObeatOO;
+        if (CObeatCG < (callTbodyEl.rows.length / 2)) CObeatCG = callTbodyEl.rows.length - CObeatCG;
+        //
+        if (OGTopTwo < (callTbodyEl.rows.length / 2)) OGTopTwo = callTbodyEl.rows.length - OGTopTwo;
+        if (OOTopTwo < (callTbodyEl.rows.length / 2)) OOTopTwo = callTbodyEl.rows.length - OOTopTwo;
+        if (CGTopTwo < (callTbodyEl.rows.length / 2)) CGTopTwo = callTbodyEl.rows.length - CGTopTwo;
+        if (COTopTwo < (callTbodyEl.rows.length / 2)) COTopTwo = callTbodyEl.rows.length - COTopTwo;
+        //Rate exchanges to resolve, clearest to closest;
+        //Clearest is found by a primary consideration of whether many judges agree on that exchange,
+        //Then a secondary consideration of seeing disagreements on whether both teams are in top two or bottom two for most judges,
+        //Then a tertiary consideration of the distance of the benches in each judge's calls,
+        //Then a last tiebreaker here which is whether it's the closer to the first or last exchange in the debate
+        //The priority is indicated with decimals to make sure that the more secondary considerations will never weigh more than the primary ones
+        PriorityOOOG = OObeatOG + 0.01 * (OOTopTwo + OGTopTwo) + 1 / (100 * DistanceOOOG) + 0.0006;
+        PriorityCGOG = CGbeatOG + 0.01 * (CGTopTwo + OGTopTwo) + 1 / (100 * DistanceCGOG) + 0.0005;
+        PriorityCGOO = CGbeatOO + 0.01 * (CGTopTwo + OOTopTwo) + 1 / (100 * DistanceCGOO) + 0.0004;
+        PriorityCOOG = CObeatOG + 0.01 * (COTopTwo + OGTopTwo) + 1 / (100 * DistanceCOOG) + 0.0003;
+        PriorityCOOO = CObeatOO + 0.01 * (COTopTwo + OOTopTwo) + 1 / (100 * DistanceCOOO) + 0.0002;
+        PriorityCOCG = CObeatCG + 0.01 * (COTopTwo + CGTopTwo) + 1 / (100 * DistanceCOCG) + 0.0001;
+        //Arrange clearest to closest exchange
+        var clearestCall = [{ key: "OG-OO", value: PriorityOOOG },
+        { key: "OG-CG", value: PriorityCGOG },
+        { key: "OO-CG", value: PriorityCGOO },
+        { key: "OG-CO", value: PriorityCOOG },
+        { key: "OO-CO", value: PriorityCOOO },
+        { key: "CG-CO", value: PriorityCOCG }];
+        clearestCall.sort(function (a, b) {
+            return b.value - a.value;
+        });
+        //Show to user clearest to closest exchange
+        //While eliminating necessity to indicate exchanges that are unanimous
+        //Also add options to resolve those exchanges
+        for (i = 0; i < 6; i++) {
+            if (clearestCall[i].value >= callTbodyEl.rows.length)
+                continue;
+            $("dissentTable").innerHTML += `
+            <tr>
+                <td>
+                <input type="radio" class="resolveBtn" name="*${clearestCall[i].key}" id="More${clearestCall[i].key}"></input>
+                </td>
+                <td>${clearestCall[i].key}</td>
+                <td>
+                <input type="radio" class="resolveBtn" name="*${clearestCall[i].key}" id="Less${clearestCall[i].key}"></input>
+                </td>
+            </tr>`;
+        }
+    }
+    //If there are no dissents to be displayed, hide the "Finalise" button
+    if ($("dissentTable").rows.length < 1)
+        $("finaliseDecisionBtn").style.display = "none";
+    else
+        $("finaliseDecisionBtn").style.display = "block";
+    $("dissentTableStatus").innerHTML = "";
+}
+
+function onFinalise() {
+    var finalRankOG = 1;
+    var finalRankOO = 1;
+    var finalRankCG = 1;
+    var finalRankCO = 1;
+    $("dissentTableStatus").innerHTML = "";
+    //Check if all exchanges have been resolved
+    var dissents = document.getElementsByClassName("resolveBtn")
+    var resolvesChecked = 0;
+    for (i = 0; i < dissents.length; i++) {
+        if (dissents[i].checked) {
+            resolvesChecked += 1;
+            //$("dissentTableStatus").innerHTML += dissents[i].id + "<br>";
+            //Interpret the conclusions of the resolve radio buttons
+            if (dissents[i].id === "MoreOG-OO") finalOObeatOG = false;
+            if (dissents[i].id === "LessOG-OO") finalOObeatOG = true;
+            if (dissents[i].id === "MoreOG-CG") finalCGbeatOG = false;
+            if (dissents[i].id === "LessOG-CG") finalCGbeatOG = true;
+            if (dissents[i].id === "MoreOO-CG") finalCGbeatOO = false;
+            if (dissents[i].id === "LessOO-CG") finalCGbeatOO = true;
+            if (dissents[i].id === "MoreOG-CO") finalCObeatOG = false;
+            if (dissents[i].id === "LessOG-CO") finalCObeatOG = true;
+            if (dissents[i].id === "MoreOO-CO") finalCObeatOO = false;
+            if (dissents[i].id === "LessOO-CO") finalCObeatOO = true;
+            if (dissents[i].id === "MoreCG-CO") finalCObeatCG = false;
+            if (dissents[i].id === "LessCG-CO") finalCObeatCG = true;
+        }
+    }
+    if (resolvesChecked < dissents.length / 2) {
+        $("dissentTableStatus").innerHTML = "Not resolved!";
+        return;
+    }
+    //Calculate final rank
+    if (finalOObeatOG) finalRankOG += 1;
+    else finalRankOO += 1;
+    if (finalCGbeatOG) finalRankOG += 1;
+    else finalRankCG += 1;
+    if (finalCGbeatOO) finalRankOO += 1;
+    else finalRankCG += 1;
+    if (finalCObeatOG) finalRankOG += 1;
+    else finalRankCO += 1;
+    if (finalCObeatOO) finalRankOO += 1;
+    else finalRankCO += 1;
+    if (finalCObeatCG) finalRankCG += 1;
+    else finalRankCO += 1;
+    //Arrange final rank
+    var finalRanks = [{ key: "OG", value: finalRankOG },
+    { key: "OO", value: finalRankOO },
+    { key: "CG", value: finalRankCG },
+    { key: "CO", value: finalRankCO }]
+    finalRanks.sort(function (a, b) {
+        return a.value - b.value;
+    });
+    //Check if final ranks messed up (this is where my code gets a bit messy)
+    var filter1 = [finalRankOG, finalRankOO, finalRankCG, finalRankCO]
+    var filter2 = filter1.filter((item, index) => filter1.indexOf(item) !== index);
+    if (filter2.length > 0) {
+        $("dissentTableStatus").innerHTML += "Error in dissent resolutions for these teams:<br>"
+        for (i = 0; i < finalRanks.length; i++) {
+            if (filter2.includes(finalRanks[i].value))                    
+                $("dissentTableStatus").innerHTML += `${finalRanks[i].key} <br>`;
+        }
+        return;
+    }
+    //statusAlert();
+    $("dissentTableStatus").innerHTML += `<b>Final call: </b>
+                                        <br>${finalRanks[0].value}. ${finalRanks[0].key}
+                                        <br>${finalRanks[1].value}. ${finalRanks[1].key}
+                                        <br>${finalRanks[2].value}. ${finalRanks[2].key}
+                                        <br>${finalRanks[3].value}. ${finalRanks[3].key}`;
+}
+
+/* function statusAlert() {
+    $("dissentTableStatus").innerHTML += "Does OO beat OG? " + finalOObeatOG +
+        "<br> Does CG beat OG? " + finalCGbeatOG +
+        "<br> Does CG beat OO? " + finalCGbeatOO +
+        "<br> Does CO beat OG? " + finalCObeatOG +
+        "<br> Does CO beat OO? " + finalCObeatOO +
+        "<br> Does CO beat CG? " + finalCObeatCG + "<br>";
+} */
+
+callFormEl.addEventListener("submit", onInputDecision);
+callFormEl.addEventListener("submit", calculateDissent);
+callTableEl.addEventListener("click", onDeleteRow);
+dissentTableEl.addEventListener("dblclick", onClearRadio);
+$("finaliseDecisionBtn").addEventListener("click", onFinalise);

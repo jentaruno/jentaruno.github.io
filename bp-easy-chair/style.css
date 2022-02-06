@@ -1,0 +1,14 @@
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+* {
+    font-family: Arial;
+}
