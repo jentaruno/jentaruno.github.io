@@ -14,147 +14,158 @@
 
         <!-- Input Area -->
         <div class="card mt-2">
-            <div class="list-group list-group-flush list-group-item">
-                <form id="inputDecision" class="row">
-                    <div class="col-2 pt-2 p-lg-2 pr-0">
-                        <input type="text" class="form-control" name="judge" id="judge" placeholder="Judge" required>
-                    </div>
-                    <div class="col-1 pt-2 p-lg-2 pr-0">
-                        <select class="form-control custom-select" name="decision1" id="decision1" required>
-                            <option value="" disabled selected>1st</option>
-                            <option value="OG">OG</option>
-                            <option value="OO">OO</option>
-                            <option value="CG">CG</option>
-                            <option value="CO">CO</option>
-                        </select>
-                    </div>
-                    <div class="col-1 pt-2 p-lg-2 pr-0">
-                        <select class="form-control custom-select" name="decision2" id="decision2" required>
-                            <option value="" disabled selected>2nd</option>
-                            <option value="OG">OG</option>
-                            <option value="OO">OO</option>
-                            <option value="CG">CG</option>
-                            <option value="CO">CO</option>
-                        </select>
-                    </div>
-                    <div class="col-1 pt-2 p-lg-2 pr-0">
-                        <select class="form-control custom-select" name="decision3" id="decision3" required>
-                            <option value="" disabled selected>3rd</option>
-                            <option value="OG">OG</option>
-                            <option value="OO">OO</option>
-                            <option value="CG">CG</option>
-                            <option value="CO">CO</option>
-                        </select>
-                    </div>
-                    <div class="col-1 pt-2 p-lg-2 pr-0">
-                        <select class="form-control custom-select" name="decision4" id="decision4" required>
-                            <option value="" disabled selected>4th</option>
-                            <option value="OG">OG</option>
-                            <option value="OO">OO</option>
-                            <option value="CG">CG</option>
-                            <option value="CO">CO</option>
-                        </select>
-                    </div>
-                    <div class="pt-2 p-lg-2 pr-0">
-                        <button type="submit" class="save btn btn-primary submitDecisionBtn">+</button>
-                    </div>
-                </form>
-                <div class="errorlist" id="inputDecisionStatus"></div>
-            </div>
-        </div>
-
-        <div class="card mt-2">
-            <div class="card-deck p-4">
-                <div class="card table-container">
-                    <div class="card-body pl-3 pr-3 py-2">
-                        <table class="table" id="callTable">
-                            <thead>
-                                <tr>
-                                    <th>Judge</th>
-                                    <th>1st</th>
-                                    <th>2nd</th>
-                                    <th>3rd</th>
-                                    <th>4th</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody id="callTbody"></tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="card table-container">
-                    <div class="card-body pl-3 pr-3 py-2">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan="3">Dissents:</th>
-                                </tr>
-                            </thead>
-                            <tbody id="dissentTable"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card mt-2">
-            <div class="list-group list-group-flush list-group-item">
-                <div class="row">
-                    <div class="pt-2 p-lg-2 pr-0">
-                        <button type="submit" class="btn btn-primary submitDecisionBtn"
-                            id="finaliseDecisionBtn">Finalise</button>
-                    </div>
-                    <div class="column">
-                        <div class="pt-2 p-lg-2 pr-0 btn-group">
-                            <button class="btn btn-secondary btn-no-hover">Result</button>
-                            <button class="btn btn-outline-secondary btn-no-hover">
-                                <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none" stroke="#00bf8a" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
-                                    <polyline points="17 11 12 6 7 11"></polyline>
-                                    <polyline points="17 18 12 13 7 18"></polyline>
-                                </svg>
-                                1st
-                            </button>
-                            <button name="aff_rank" type="text" class="btn btn-no-hover  btn-success"
-                                id="rankFirst">--</button>
-                            <button class="btn btn-outline-secondary btn-no-hover">
-                                <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none" stroke="#17a2b8" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
-                                    <polyline points="18 15 12 9 6 15"></polyline>
-                                </svg>
-                                2nd
-                            </button>
-                            <button name="aff_rank" type="text" class="btn btn-no-hover btn-info"
-                                id="rankSecond">--</button>
-                            <button class="btn btn-outline-secondary btn-no-hover">
-                                <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none" stroke="#fd681d" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
-                                    <polyline points="6 9 12 15 18 9"></polyline>
-                                </svg>
-                                3rd
-                            </button>
-                            <button name="aff_rank" type="text" class="btn btn-no-hover btn-warning"
-                                id="rankThird">--</button>
-                            <button class="btn btn-outline-secondary btn-no-hover">
-                                <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none" stroke="#d1185e" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="feather feather-chevrons-down">
-                                    <polyline points="7 13 12 18 17 13"></polyline>
-                                    <polyline points="7 6 12 11 17 6"></polyline>
-                                </svg>
-                                4th
-                            </button>
-                            <button name="aff_rank" type="text" class="btn btn-no-hover btn-danger"
-                                id="rankFourth">--</button>
+            <div class="list-group list-group-flush">
+                <div class="list-group-item">
+                    <form id="inputDecision" class="row">
+                        <div class="col-2 pt-2 p-lg-2 pr-0">
+                            <input type="text" class="form-control" name="judge" id="judge" placeholder="Judge"
+                                required>
                         </div>
-                        <div class="errorlist" id="dissentTableStatus"></div>
+                        <div class="col-1 pt-2 p-lg-2 pr-0">
+                            <select class="form-control custom-select" name="decision1" id="decision1" required>
+                                <option value="" disabled selected>1st</option>
+                                <option value="OG">OG</option>
+                                <option value="OO">OO</option>
+                                <option value="CG">CG</option>
+                                <option value="CO">CO</option>
+                            </select>
+                        </div>
+                        <div class="col-1 pt-2 p-lg-2 pr-0">
+                            <select class="form-control custom-select" name="decision2" id="decision2" required>
+                                <option value="" disabled selected>2nd</option>
+                                <option value="OG">OG</option>
+                                <option value="OO">OO</option>
+                                <option value="CG">CG</option>
+                                <option value="CO">CO</option>
+                            </select>
+                        </div>
+                        <div class="col-1 pt-2 p-lg-2 pr-0">
+                            <select class="form-control custom-select" name="decision3" id="decision3" required>
+                                <option value="" disabled selected>3rd</option>
+                                <option value="OG">OG</option>
+                                <option value="OO">OO</option>
+                                <option value="CG">CG</option>
+                                <option value="CO">CO</option>
+                            </select>
+                        </div>
+                        <div class="col-1 pt-2 p-lg-2 pr-0">
+                            <select class="form-control custom-select" name="decision4" id="decision4" required>
+                                <option value="" disabled selected>4th</option>
+                                <option value="OG">OG</option>
+                                <option value="OO">OO</option>
+                                <option value="CG">CG</option>
+                                <option value="CO">CO</option>
+                            </select>
+                        </div>
+                        <div class="pt-2 p-lg-2 pr-0">
+                            <button type="submit" class="save btn btn-primary submitDecisionBtn">+</button>
+                        </div>
+                    </form>
+                    <div class="errorlist" id="inputDecisionStatus"></div>
+                </div>
+
+                <div class="list-group-item">
+                    <div style="min-height:50vh" class="card-deck">
+                        <div class="card table-container">
+                            <div class="card-body pl-3 pr-3 py-2">
+                                <table class="table" id="callTable">
+                                    <thead>
+                                        <tr>
+                                            <th><b>Judge</b></th>
+                                            <th><b>1st</b></th>
+                                            <th><b>2nd</b></th>
+                                            <th><b>3rd</b></th>
+                                            <th><b>4th</b></th>
+                                            <th style="min-width:2rem"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="callTbody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card table-container">
+                            <div class="card-body pl-3 pr-3 py-2">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3"><b>Dissents:</b></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="dissentTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="pt-2 p-lg-2 pr-0">
+                            <button type="submit" class="btn btn-primary submitDecisionBtn"
+                                id="finaliseDecisionBtn">Finalise</button>
+                        </div>
+                        <div class="column">
+                            <div class="pt-2 p-lg-2 pr-0 btn-group">
+                                <!-- <button class="btn btn-secondary btn-no-hover">Result</button> -->
+                                <button class="btn btn-outline-secondary btn-no-hover">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="#00bf8a" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevrons-up">
+                                        <polyline points="17 11 12 6 7 11"></polyline>
+                                        <polyline points="17 18 12 13 7 18"></polyline>
+                                    </svg>
+                                    1st
+                                </button>
+                                <button name="aff_rank" type="text" class="btn btn-no-hover  btn-success"
+                                    id="rankFirst">--</button>
+                            </div>
+                            <div class="pt-2 p-lg-2 pr-0 btn-group">
+                                <button class="btn btn-outline-secondary btn-no-hover">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="#17a2b8" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-up">
+                                        <polyline points="18 15 12 9 6 15"></polyline>
+                                    </svg>
+                                    2nd
+                                </button>
+                                <button name="aff_rank" type="text" class="btn btn-no-hover btn-info"
+                                    id="rankSecond">--</button>
+                            </div>
+                            <div class="pt-2 p-lg-2 pr-0 btn-group">
+                                <button class="btn btn-outline-secondary btn-no-hover">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="#fd681d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-down">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                    3rd
+                                </button>
+                                <button name="aff_rank" type="text" class="btn btn-no-hover btn-warning"
+                                    id="rankThird">--</button>
+                            </div>
+                            <div class="pt-2 p-lg-2 pr-0 btn-group">
+                                <button class="btn btn-outline-secondary btn-no-hover">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="#d1185e" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevrons-down">
+                                        <polyline points="7 13 12 18 17 13"></polyline>
+                                        <polyline points="7 6 12 11 17 6"></polyline>
+                                    </svg>
+                                    4th
+                                </button>
+                                <button name="aff_rank" type="text" class="btn btn-no-hover btn-danger"
+                                    id="rankFourth">--</button>
+                            </div>
+                        </div>
+
                         <table id="finalRanksStatus">
                         </table>
                     </div>
+                    <div class="errorlist" id="dissentTableStatus"></div>
                 </div>
             </div>
         </div>
