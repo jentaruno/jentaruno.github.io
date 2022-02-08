@@ -129,7 +129,6 @@ function checkDuplicate() {
     //Check Duplicate Team
     $("inputDecisionStatus").innerHTML = "";
     $("dissentTableStatus").innerHTML = "";
-    // $("finalRanksStatus").innerHTML = "";
     $("rankFirst").innerHTML = "--";
     $("rankSecond").innerHTML = "--";
     $("rankThird").innerHTML = "--";
