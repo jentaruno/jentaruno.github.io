@@ -3,13 +3,12 @@ const callTbodyEl = document.querySelector("#callTbody");
 const callTableEl = document.querySelector("#callTable");
 const dissentTableEl = document.querySelector("#dissentTable");
 
-//var finalDissent = [false, false, false, false, false, false]
-var finalOObeatOG;
-var finalCGbeatOG;
-var finalCGbeatOO;
-var finalCObeatOG;
-var finalCObeatOO;
-var finalCObeatCG;
+var finalDissent = [{ key: "OG-OO", value: false },
+                    { key: "OG-CG", value: false },
+                    { key: "OO-CG", value: false },
+                    { key: "OG-CO", value: false },
+                    { key: "OO-CO", value: false },
+                    { key: "CG-CO", value: false }]
 
 function $(x) { return document.getElementById(x); }
 
@@ -66,24 +65,11 @@ function onFinalise() {
     for (i = 0; i < resolves.length; i++) {
         if (resolves[i].checked) {
             resolvesChecked += 1;
-            //$("dissentRadioStatus").innerHTML += resolves[i].id + "<br>";
             //Interpret the conclusions of the resolve radio buttons
-            /* for (i = 0; i < 6; i++) {
-            if (resolves[i].id === "More" + dissent[i].key) finalDissent[i] = false;
-            else    finalDissent[i] = true;
-            } */
-            if (resolves[i].id === "MoreOG-OO") finalOObeatOG = false;
-            if (resolves[i].id === "LessOG-OO") finalOObeatOG = true;
-            if (resolves[i].id === "MoreOG-CG") finalCGbeatOG = false;
-            if (resolves[i].id === "LessOG-CG") finalCGbeatOG = true;
-            if (resolves[i].id === "MoreOO-CG") finalCGbeatOO = false;
-            if (resolves[i].id === "LessOO-CG") finalCGbeatOO = true;
-            if (resolves[i].id === "MoreOG-CO") finalCObeatOG = false;
-            if (resolves[i].id === "LessOG-CO") finalCObeatOG = true;
-            if (resolves[i].id === "MoreOO-CO") finalCObeatOO = false;
-            if (resolves[i].id === "LessOO-CO") finalCObeatOO = true;
-            if (resolves[i].id === "MoreCG-CO") finalCObeatCG = false;
-            if (resolves[i].id === "LessCG-CO") finalCObeatCG = true;
+            for (i = 0; i < 6; i++) {
+            if (resolves[i].id === "More" + finalDissent[i].key) finalDissent[i].value = false;
+            if (resolves[i].id === "Less" + finalDissent[i].key) finalDissent[i].value = true;
+            }
         }
     }
     if (resolvesChecked < resolves.length / 2) {
@@ -91,18 +77,16 @@ function onFinalise() {
         return;
     }
     //Calculate final rank
-    if (finalOObeatOG) finalRank[0].value += 1;
-    else finalRank[1].value += 1;
-    if (finalCGbeatOG) finalRank[0].value += 1;
-    else finalRank[2].value += 1;
-    if (finalCGbeatOO) finalRank[1].value += 1;
-    else finalRank[2].value += 1;
-    if (finalCObeatOG) finalRank[0].value += 1;
-    else finalRank[3].value += 1;
-    if (finalCObeatOO) finalRank[1].value += 1;
-    else finalRank[3].value += 1;
-    if (finalCObeatCG) finalRank[2].value += 1;
-    else finalRank[3].value += 1;
+    var disInd = 5;
+            for (let j = 3; j >= 0; j--) {
+                for (let k = j - 1; k >= 0; k--) {
+                    if (finalDissent[disInd].value = true)
+                        finalRank[k].value += 1;
+                    else
+                        finalRank[j].value += 1;
+                    disInd--;
+                }
+            }
     //Arrange final ranks
     finalRank.sort(function (a, b) {
         return a.value - b.value;
@@ -210,18 +194,12 @@ function calculateDissent() {
             }
         }
         //Interpret exchanges that have been agreed upon
-        if (dissent[0].givingRight == callTbodyEl.rows.length) finalOObeatOG = true;
-        if (dissent[1].givingRight == callTbodyEl.rows.length) finalCGbeatOG = true;
-        if (dissent[2].givingRight == callTbodyEl.rows.length) finalCGbeatOO = true;
-        if (dissent[3].givingRight == callTbodyEl.rows.length) finalCObeatOG = true;
-        if (dissent[4].givingRight == callTbodyEl.rows.length) finalCObeatOO = true;
-        if (dissent[5].givingRight == callTbodyEl.rows.length) finalCObeatCG = true;
-        if (dissent[0].givingRight == 0) finalOObeatOG = false;
-        if (dissent[1].givingRight == 0) finalCGbeatOG = false;
-        if (dissent[2].givingRight == 0) finalCGbeatOO = false;
-        if (dissent[3].givingRight == 0) finalCObeatOG = false;
-        if (dissent[4].givingRight == 0) finalCObeatOO = false;
-        if (dissent[5].givingRight == 0) finalCObeatCG = false;
+        for (j = 0; j < 6; j++) {
+            if (dissent[j].givingRight == callTbodyEl.rows.length)
+                finalDissent[j].value = true;
+            if (dissent[j].givingRight == 0)
+                finalDissent[j].value = false;
+        }
         //Rate exchanges to resolve, clearest to closest;
         //Clearest is found by a primary consideration of whether many judges agree on that exchange,
         //Then a secondary consideration of the distance of the benches in each judge's calls,
