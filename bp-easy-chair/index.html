@@ -77,6 +77,13 @@
                                 </tr>
                             </thead>
                             <tbody id="callTbody"></tbody>
+                            <tfoot style="height:100%; background-color:rgba(0,0,0,.1);">
+                                <tr>
+                                    <td id="callTableStatus" colspan="6" class="text-muted text-center">
+                                        <i>There are no calls to display yet. When you input judges' calls and press the "+" button, their calls will appear here.</i>
+                                    </td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </div>
@@ -89,9 +96,17 @@
                             <thead>
                                 <tr>
                                     <th><b>Dissents</b></th>
+                                    <th title="Judges disagreeing on the winning team" data-toggle="tooltip">💢</th>
                                 </tr>
                             </thead>
                             <tbody id="dissentTable"></tbody>
+                            <tfoot style="height:100%; background-color:rgba(0,0,0,.1);">
+                                <tr>
+                                    <td id="dissentTableStatus" colspan="6" class="text-muted text-center">
+                                        <i>There are no dissents to display yet. When you input differing calls, dissents will appear here. The dissents will be arranged by difficulty to resolve, from easiest to hardest.</i>
+                                    </td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                     <div class="list-group-item">
@@ -152,7 +167,7 @@
                                 <button type="text" class="btn btn-no-hover btn-danger" id="rankFourth">--</button>
                             </div>
                         </div>
-                        <div class="errorlist" id="dissentTableStatus"></div>
+                        <div class="errorlist" id="dissentRadioStatus"></div>
                     </div>
                 </div>
             </div>

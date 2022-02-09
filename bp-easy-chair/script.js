@@ -12,6 +12,10 @@ var finalCObeatCG;
 
 function $(x) { return document.getElementById(x); }
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
 function onInputDecision(e) {
     e.preventDefault();
     var Duplicate = checkDuplicate();
@@ -51,39 +55,39 @@ function onFinalise() {
     var finalRankOO = 1;
     var finalRankCG = 1;
     var finalRankCO = 1;
-    $("dissentTableStatus").innerHTML = "";
+    $("dissentRadioStatus").innerHTML = "";
     $("rankFirst").innerHTML = "--";
     $("rankSecond").innerHTML = "--";
     $("rankThird").innerHTML = "--";
     $("rankFourth").innerHTML = "--";
     if (callTbodyEl.rows.length < 1) {
-        $("dissentTableStatus").innerHTML += "There are no ranks to be finalised";
+        $("dissentRadioStatus").innerHTML += "There are no ranks to be finalised";
         return;
     }
     //Check if all exchanges have been resolved
-    var dissents = document.getElementsByClassName("resolveBtn")
+    var resolves = document.getElementsByClassName("resolveBtn")
     var resolvesChecked = 0;
-    for (i = 0; i < dissents.length; i++) {
-        if (dissents[i].checked) {
+    for (i = 0; i < resolves.length; i++) {
+        if (resolves[i].checked) {
             resolvesChecked += 1;
-            //$("dissentTableStatus").innerHTML += dissents[i].id + "<br>";
+            //$("dissentRadioStatus").innerHTML += resolves[i].id + "<br>";
             //Interpret the conclusions of the resolve radio buttons
-            if (dissents[i].id === "MoreOG-OO") finalOObeatOG = false;
-            if (dissents[i].id === "LessOG-OO") finalOObeatOG = true;
-            if (dissents[i].id === "MoreOG-CG") finalCGbeatOG = false;
-            if (dissents[i].id === "LessOG-CG") finalCGbeatOG = true;
-            if (dissents[i].id === "MoreOO-CG") finalCGbeatOO = false;
-            if (dissents[i].id === "LessOO-CG") finalCGbeatOO = true;
-            if (dissents[i].id === "MoreOG-CO") finalCObeatOG = false;
-            if (dissents[i].id === "LessOG-CO") finalCObeatOG = true;
-            if (dissents[i].id === "MoreOO-CO") finalCObeatOO = false;
-            if (dissents[i].id === "LessOO-CO") finalCObeatOO = true;
-            if (dissents[i].id === "MoreCG-CO") finalCObeatCG = false;
-            if (dissents[i].id === "LessCG-CO") finalCObeatCG = true;
+            if (resolves[i].id === "MoreOG-OO") finalOObeatOG = false;
+            if (resolves[i].id === "LessOG-OO") finalOObeatOG = true;
+            if (resolves[i].id === "MoreOG-CG") finalCGbeatOG = false;
+            if (resolves[i].id === "LessOG-CG") finalCGbeatOG = true;
+            if (resolves[i].id === "MoreOO-CG") finalCGbeatOO = false;
+            if (resolves[i].id === "LessOO-CG") finalCGbeatOO = true;
+            if (resolves[i].id === "MoreOG-CO") finalCObeatOG = false;
+            if (resolves[i].id === "LessOG-CO") finalCObeatOG = true;
+            if (resolves[i].id === "MoreOO-CO") finalCObeatOO = false;
+            if (resolves[i].id === "LessOO-CO") finalCObeatOO = true;
+            if (resolves[i].id === "MoreCG-CO") finalCObeatCG = false;
+            if (resolves[i].id === "LessCG-CO") finalCObeatCG = true;
         }
     }
-    if (resolvesChecked < dissents.length / 2) {
-        $("dissentTableStatus").innerHTML = "Not resolved!";
+    if (resolvesChecked < resolves.length / 2) {
+        $("dissentRadioStatus").innerHTML = "Not resolved!";
         return;
     }
     //Calculate final rank
@@ -111,10 +115,10 @@ function onFinalise() {
     var filter1 = [finalRankOG, finalRankOO, finalRankCG, finalRankCO]
     var filter2 = filter1.filter((item, index) => filter1.indexOf(item) !== index);
     if (filter2.length > 0) {
-        $("dissentTableStatus").innerHTML += "Error in dissent resolutions involving these teams:"
+        $("dissentRadioStatus").innerHTML += "Error in dissent resolutions involving these teams:"
         for (i = 0; i < finalRanks.length; i++) {
             if (filter2.includes(finalRanks[i].value))
-                $("dissentTableStatus").innerHTML += ` ${finalRanks[i].key}`;
+                $("dissentRadioStatus").innerHTML += ` ${finalRanks[i].key}`;
         }
         return;
     }
@@ -128,7 +132,7 @@ function onFinalise() {
 function checkDuplicate() {
     //Check Duplicate Team
     $("inputDecisionStatus").innerHTML = "";
-    $("dissentTableStatus").innerHTML = "";
+    $("dissentRadioStatus").innerHTML = "";
     $("rankFirst").innerHTML = "--";
     $("rankSecond").innerHTML = "--";
     $("rankThird").innerHTML = "--";
@@ -160,6 +164,13 @@ function checkDuplicate() {
 }
 
 function calculateDissent() {
+    //0 = OG-OO, 1 = OG-CG, 2 = OO-CG, 3 = OG-CO, 4 = OO-CO, 5 = CG-CO
+    var dissent = [{ key: "OG-OO", givingLeft: 0, givingRight: 0, distance: 0, priority: 0},
+    { key: "OG-CG", givingLeft: 0, givingRight: 0, distance: 0, priority: 0},
+    { key: "OO-CG", givingLeft: 0, givingRight: 0, distance: 0, priority: 0},
+    { key: "OG-CO", givingLeft: 0, givingRight: 0, distance: 0, priority: 0},
+    { key: "OO-CO", givingLeft: 0, givingRight: 0, distance: 0, priority: 0},
+    { key: "CG-CO", givingLeft: 0, givingRight: 0, distance: 0, priority: 0}];
     var rankOG = [];
     var rankOO = [];
     var rankCG = [];
@@ -186,14 +197,17 @@ function calculateDissent() {
     var PriorityCOOG = 0;
     var PriorityCOOO = 0;
     var PriorityCOCG = 0;
+    $("callTableStatus").style.display = "table-cell";
+    $("dissentTableStatus").style.display = "table-cell";
     $("dissentTable").innerHTML = "";
-    $("dissentTableStatus").innerHTML = "";
+    $("dissentRadioStatus").innerHTML = "";
     $("rankFirst").innerHTML = "--";
     $("rankSecond").innerHTML = "--";
     $("rankThird").innerHTML = "--";
     $("rankFourth").innerHTML = "--";
-
+    
     if (callTbodyEl.rows.length > 0) {
+        $("callTableStatus").style.display = "none";
         //Repeat for all judges
         for (i = 0; i < callTbodyEl.rows.length; i++) {
             //Locate OG, OO, CG, CO positions
@@ -297,12 +311,15 @@ function calculateDissent() {
         for (i = 0; i < 6; i++) {
             if (clearestCall[i].value >= callTbodyEl.rows.length)
                 continue;
+            $("dissentTableStatus").style.display = "none";
             $("dissentTable").innerHTML += `
             <tr>
                 <td>
                 <input type="radio" class="resolveBtn" name="*${clearestCall[i].key}" id="More${clearestCall[i].key}"></input>
                 ${clearestCall[i].key}
                 <input type="radio" class="resolveBtn" name="*${clearestCall[i].key}" id="Less${clearestCall[i].key}"></input>
+                </td>
+                <td>${clearestCall[i].value}
                 </td>
             </tr>`;
         }
