@@ -3,6 +3,7 @@ const callTbodyEl = document.querySelector("#callTbody");
 const callTableEl = document.querySelector("#callTable");
 const dissentTableEl = document.querySelector("#dissentTable");
 
+//var finalDissent = [false, false, false, false, false, false]
 var finalOObeatOG;
 var finalCGbeatOG;
 var finalCGbeatOO;
@@ -72,6 +73,10 @@ function onFinalise() {
             resolvesChecked += 1;
             //$("dissentRadioStatus").innerHTML += resolves[i].id + "<br>";
             //Interpret the conclusions of the resolve radio buttons
+            /* for (i = 0; i < 6; i++) {
+            if (resolves[i].id === "More" + dissent[i].key) finalDissent[i] = false;
+            else    finalDissent[i] = true;
+            } */
             if (resolves[i].id === "MoreOG-OO") finalOObeatOG = false;
             if (resolves[i].id === "LessOG-OO") finalOObeatOG = true;
             if (resolves[i].id === "MoreOG-CG") finalCGbeatOG = false;
@@ -165,38 +170,20 @@ function checkDuplicate() {
 
 function calculateDissent() {
     //0 = OG-OO, 1 = OG-CG, 2 = OO-CG, 3 = OG-CO, 4 = OO-CO, 5 = CG-CO
-    var dissent = [{ key: "OG-OO", givingLeft: 0, givingRight: 0, distance: 0, priority: 0},
-    { key: "OG-CG", givingLeft: 0, givingRight: 0, distance: 0, priority: 0},
-    { key: "OO-CG", givingLeft: 0, givingRight: 0, distance: 0, priority: 0},
-    { key: "OG-CO", givingLeft: 0, givingRight: 0, distance: 0, priority: 0},
-    { key: "OO-CO", givingLeft: 0, givingRight: 0, distance: 0, priority: 0},
-    { key: "CG-CO", givingLeft: 0, givingRight: 0, distance: 0, priority: 0}];
+    var dissent = [{ key: "OG-OO", givingRight: 0, distance: 0, priority: 0},
+    { key: "OG-CG", givingRight: 0, distance: 0, priority: 0},
+    { key: "OO-CG", givingRight: 0, distance: 0, priority: 0},
+    { key: "OG-CO", givingRight: 0, distance: 0, priority: 0},
+    { key: "OO-CO", givingRight: 0, distance: 0, priority: 0},
+    { key: "CG-CO", givingRight: 0, distance: 0, priority: 0}];
     var rankOG = [];
     var rankOO = [];
     var rankCG = [];
     var rankCO = [];
-    var OObeatOG = 0;
-    var CGbeatOG = 0;
-    var CGbeatOO = 0;
-    var CObeatOG = 0;
-    var CObeatOO = 0;
-    var CObeatCG = 0;
     var OGTopTwo = 0;
     var OOTopTwo = 0;
     var CGTopTwo = 0;
     var COTopTwo = 0;
-    var DistanceOOOG = 0;
-    var DistanceCGOG = 0;
-    var DistanceCGOO = 0;
-    var DistanceCOOG = 0;
-    var DistanceCOOO = 0;
-    var DistanceCOCG = 0;
-    var PriorityOOOG = 0;
-    var PriorityCGOG = 0;
-    var PriorityCGOO = 0;
-    var PriorityCOOG = 0;
-    var PriorityCOOO = 0;
-    var PriorityCOCG = 0;
     $("callTableStatus").style.display = "table-cell";
     $("dissentTableStatus").style.display = "table-cell";
     $("dissentTable").innerHTML = "";
@@ -222,64 +209,43 @@ function calculateDissent() {
                     rankCO[i] = j;
             }
             //See the number of judges agreeing to these exchanges
-            if (rankOO[i] < rankOG[i]) OObeatOG += 1;
-            if (rankCG[i] < rankOG[i]) CGbeatOG += 1;
-            if (rankCG[i] < rankOO[i]) CGbeatOO += 1;
-            if (rankCO[i] < rankOG[i]) CObeatOG += 1;
-            if (rankCO[i] < rankOO[i]) CObeatOO += 1;
-            if (rankCO[i] < rankCG[i]) CObeatCG += 1;
+            if (rankOO[i] < rankOG[i]) dissent[0].givingRight += 1;
+            if (rankCG[i] < rankOG[i]) dissent[1].givingRight += 1;
+            if (rankCG[i] < rankOO[i]) dissent[2].givingRight += 1;
+            if (rankCO[i] < rankOG[i]) dissent[3].givingRight += 1;
+            if (rankCO[i] < rankOO[i]) dissent[4].givingRight += 1;
+            if (rankCO[i] < rankCG[i]) dissent[5].givingRight += 1;
             //See the number of judges putting top 2 for each bench
             if (rankOG[i] <= 2) OGTopTwo += 1;
             if (rankOO[i] <= 2) OOTopTwo += 1;
             if (rankCG[i] <= 2) CGTopTwo += 1;
             if (rankCO[i] <= 2) COTopTwo += 1;
             //See the distance of each bench in the call
-            DistanceOOOG += Math.abs(rankOO[i] - rankOG[i]);
-            DistanceCGOG += Math.abs(rankCG[i] - rankOG[i]);
-            DistanceCGOO += Math.abs(rankCG[i] - rankOO[i]);
-            DistanceCOOG += Math.abs(rankCO[i] - rankOG[i]);
-            DistanceCOOO += Math.abs(rankCO[i] - rankOO[i]);
-            DistanceCOCG += Math.abs(rankCO[i] - rankCG[i]);
+            dissent[0].distance += Math.abs(rankOO[i] - rankOG[i]);
+            dissent[1].distance += Math.abs(rankCG[i] - rankOG[i]);
+            dissent[2].distance += Math.abs(rankCG[i] - rankOO[i]);
+            dissent[3].distance += Math.abs(rankCO[i] - rankOG[i]);
+            dissent[4].distance += Math.abs(rankCO[i] - rankOO[i]);
+            dissent[5].distance += Math.abs(rankCO[i] - rankCG[i]);
         }
-        /* $("dissentTable").innerHTML =    OObeatOG + "/" + callTbodyEl.rows.length + " judges think OO beats OG <br>" +
-                                            CGbeatOG + "/" + callTbodyEl.rows.length + " judges think CG beats OG <br>" +
-                                            CGbeatOO + "/" + callTbodyEl.rows.length + " judges think CG beats OO <br>" +
-                                            CObeatOG + "/" + callTbodyEl.rows.length + " judges think CO beats OG <br>" +
-                                            CObeatOO + "/" + callTbodyEl.rows.length + " judges think CO beats OO <br>" +
-                                            CObeatCG + "/" + callTbodyEl.rows.length + " judges think CO beats CG <br>" +
-                                            OGTopTwo + "/" + callTbodyEl.rows.length + " judges think OG is in top 2 <br>" +
-                                            OOTopTwo + "/" + callTbodyEl.rows.length + " judges think OO is in top 2 <br>" +
-                                            CGTopTwo + "/" + callTbodyEl.rows.length + " judges think CG is in top 2 <br>" +
-                                            COTopTwo + "/" + callTbodyEl.rows.length + " judges think CO is in top 2 <br>"; */
         //Interpret exchanges that have been agreed upon
-        if (OObeatOG == callTbodyEl.rows.length) finalOObeatOG = true;
-        if (CGbeatOG == callTbodyEl.rows.length) finalCGbeatOG = true;
-        if (CGbeatOO == callTbodyEl.rows.length) finalCGbeatOO = true;
-        if (CObeatOG == callTbodyEl.rows.length) finalCObeatOG = true;
-        if (CObeatOO == callTbodyEl.rows.length) finalCObeatOO = true;
-        if (CObeatCG == callTbodyEl.rows.length) finalCObeatCG = true;
-        if (OObeatOG == 0) finalOObeatOG = false;
-        if (CGbeatOG == 0) finalCGbeatOG = false;
-        if (CGbeatOO == 0) finalCGbeatOO = false;
-        if (CObeatOG == 0) finalCObeatOG = false;
-        if (CObeatOO == 0) finalCObeatOO = false;
-        if (CObeatCG == 0) finalCObeatCG = false;
-        //If function is called by the "+" button, it updates the dissent table (exchanges to discuss)
-        //Mirror the calls that show a minority number of the panel (1/5 think OO>OG becomes 4/5 think OG>OO)
-        var mirroredOObeatOG = OObeatOG;
-        var mirroredCGbeatOG = CGbeatOG;
-        var mirroredCGbeatOO = CGbeatOO;
-        var mirroredCObeatOG = CObeatOG;
-        var mirroredCObeatOO = CObeatOO;
-        var mirroredCObeatCG = CObeatCG;
-        //
-        if (OObeatOG < (callTbodyEl.rows.length / 2)) mirroredOObeatOG = callTbodyEl.rows.length - OObeatOG;
-        if (CGbeatOG < (callTbodyEl.rows.length / 2)) mirroredCGbeatOG = callTbodyEl.rows.length - CGbeatOG;
-        if (CGbeatOO < (callTbodyEl.rows.length / 2)) mirroredCGbeatOO = callTbodyEl.rows.length - CGbeatOO;
-        if (CObeatOG < (callTbodyEl.rows.length / 2)) mirroredCObeatOG = callTbodyEl.rows.length - CObeatOG;
-        if (CObeatOO < (callTbodyEl.rows.length / 2)) mirroredCObeatOO = callTbodyEl.rows.length - CObeatOO;
-        if (CObeatCG < (callTbodyEl.rows.length / 2)) mirroredCObeatCG = callTbodyEl.rows.length - CObeatCG;
-        //
+        /* for (i = 0, i < 6, i++) {
+            if (dissent[i].givingRight == callTbodyEl.rows.length)  dissent[i].doesRightWin = true;
+            if (dissent[i].givingRight == 0)    dissent[i].doesRightWin = false;
+        } */
+        if (dissent[0].givingRight == callTbodyEl.rows.length) finalOObeatOG = true;
+        if (dissent[1].givingRight == callTbodyEl.rows.length) finalCGbeatOG = true;
+        if (dissent[2].givingRight == callTbodyEl.rows.length) finalCGbeatOO = true;
+        if (dissent[3].givingRight == callTbodyEl.rows.length) finalCObeatOG = true;
+        if (dissent[4].givingRight == callTbodyEl.rows.length) finalCObeatOO = true;
+        if (dissent[5].givingRight == callTbodyEl.rows.length) finalCObeatCG = true;
+        if (dissent[0].givingRight == 0) finalOObeatOG = false;
+        if (dissent[1].givingRight == 0) finalCGbeatOG = false;
+        if (dissent[2].givingRight == 0) finalCGbeatOO = false;
+        if (dissent[3].givingRight == 0) finalCObeatOG = false;
+        if (dissent[4].givingRight == 0) finalCObeatOO = false;
+        if (dissent[5].givingRight == 0) finalCObeatCG = false;
+        //Mirroring
         if (OGTopTwo < (callTbodyEl.rows.length / 2)) OGTopTwo = callTbodyEl.rows.length - OGTopTwo;
         if (OOTopTwo < (callTbodyEl.rows.length / 2)) OOTopTwo = callTbodyEl.rows.length - OOTopTwo;
         if (CGTopTwo < (callTbodyEl.rows.length / 2)) CGTopTwo = callTbodyEl.rows.length - CGTopTwo;
@@ -289,38 +255,38 @@ function calculateDissent() {
         //Then a secondary consideration of the distance of the benches in each judge's calls,
         //Then a tertiary consideration of seeing disagreements on whether both teams are in top two or bottom two for most judges,        //Then a last tiebreaker here which is whether it's the closer to the first or last exchange in the debate
         //The priority is indicated with decimals to make sure that the more secondary considerations will never weigh more than the primary ones
-        PriorityOOOG = mirroredOObeatOG + 1 / (10 * DistanceOOOG) + 0.001 * (OOTopTwo + OGTopTwo) + 0.0006;
-        PriorityCGOG = mirroredCGbeatOG + 1 / (10 * DistanceCGOG) + 0.001 * (CGTopTwo + OGTopTwo) + 0.0005;
-        PriorityCGOO = mirroredCGbeatOO + 1 / (10 * DistanceCGOO) + 0.001 * (CGTopTwo + OOTopTwo) + 0.0004;
-        PriorityCOOG = mirroredCObeatOG + 1 / (10 * DistanceCOOG) + 0.001 * (COTopTwo + OGTopTwo) + 0.0003;
-        PriorityCOOO = mirroredCObeatOO + 1 / (10 * DistanceCOOO) + 0.001 * (COTopTwo + OOTopTwo) + 0.0002;
-        PriorityCOCG = mirroredCObeatCG + 1 / (10 * DistanceCOCG) + 0.001 * (COTopTwo + CGTopTwo) + 0.0001;
+        dissent[0].priority = Math.max(dissent[0].givingRight, callTbodyEl.rows.length - dissent[0].givingRight)
+                        + 1 / (10 * dissent[0].distance) + 0.001 * (OOTopTwo + OGTopTwo) + 0.0006;
+        dissent[1].priority = Math.max(dissent[1].givingRight, callTbodyEl.rows.length - dissent[1].givingRight)
+                        + 1 / (10 * dissent[1].distance) + 0.001 * (CGTopTwo + OGTopTwo) + 0.0005;
+        dissent[2].priority = Math.max(dissent[2].givingRight, callTbodyEl.rows.length - dissent[2].givingRight)
+                        + 1 / (10 * dissent[2].distance) + 0.001 * (CGTopTwo + OOTopTwo) + 0.0004;
+        dissent[3].priority = Math.max(dissent[3].givingRight, callTbodyEl.rows.length - dissent[3].givingRight)
+                        + 1 / (10 * dissent[3].distance) + 0.001 * (COTopTwo + OGTopTwo) + 0.0003;
+        dissent[4].priority = Math.max(dissent[4].givingRight, callTbodyEl.rows.length - dissent[4].givingRight)
+                        + 1 / (10 * dissent[4].distance) + 0.001 * (COTopTwo + OOTopTwo) + 0.0002;
+        dissent[5].priority = Math.max(dissent[5].givingRight, callTbodyEl.rows.length - dissent[5].givingRight)
+                        + 1 / (10 * dissent[5].distance) + 0.001 * (COTopTwo + CGTopTwo) + 0.0001;
         //Arrange clearest to closest exchange
-        var clearestCall = [{ key: "OG-OO", value: PriorityOOOG },
-        { key: "OG-CG", value: PriorityCGOG },
-        { key: "OO-CG", value: PriorityCGOO },
-        { key: "OG-CO", value: PriorityCOOG },
-        { key: "OO-CO", value: PriorityCOOO },
-        { key: "CG-CO", value: PriorityCOCG }];
-        clearestCall.sort(function (a, b) {
-            return b.value - a.value;
+        dissent.sort(function (a, b) {
+            return b.priority - a.priority;
         });
         //Show to user clearest to closest exchange
         //While eliminating necessity to indicate exchanges that are unanimous
         //Also add options to resolve those exchanges
         for (i = 0; i < 6; i++) {
-            if (clearestCall[i].value >= callTbodyEl.rows.length)
+            if (dissent[i].priority >= callTbodyEl.rows.length)
                 continue;
             $("dissentTableStatus").style.display = "none";
             $("dissentTable").innerHTML += `
             <tr>
                 <td>
-                <input type="radio" class="resolveBtn" name="*${clearestCall[i].key}" id="More${clearestCall[i].key}"></input>
-                ${clearestCall[i].key}
-                <input type="radio" class="resolveBtn" name="*${clearestCall[i].key}" id="Less${clearestCall[i].key}"></input>
+                <input type="radio" class="resolveBtn" name="*${dissent[i].key}" id="More${dissent[i].key}"></input>
+                ${dissent[i].key}
+                <input type="radio" class="resolveBtn" name="*${dissent[i].key}" id="Less${dissent[i].key}"></input>
                 </td>
-                <td>${clearestCall[i].value}
-                </td>
+                <td>${(callTbodyEl.rows.length - dissent[i].givingRight)}-${dissent[i].givingRight}</td>
+                <td>${(dissent[i].distance / callTbodyEl.rows.length).toFixed(1)}</td>
             </tr>`;
         }
     }
