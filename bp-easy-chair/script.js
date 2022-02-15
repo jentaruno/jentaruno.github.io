@@ -155,6 +155,32 @@ function checkDuplicate() {
     }
 }
 
+function checkInterchange(num) {
+    switch (num) {
+        case 1:
+            if ($("interchange1-2").checked)
+                return "#fd681d";
+            else return "black";
+            break;
+        case 2:
+            if ($("interchange1-2").checked || $("interchange2-3").checked)
+                return "#fd681d";
+            else return "black";
+            break;
+        case 3:
+            if ($("interchange2-3").checked || $("interchange3-4").checked)
+                return "#fd681d";
+            else return "black";
+            break;
+        case 4:
+            if ($("interchange3-4").checked)
+                return "#fd681d";
+            else return "black";
+            break;
+        default: break;
+    }
+}
+
 function calculateDissent() {
     //0 = OG-OO, 1 = OG-CG, 2 = OO-CG, 3 = OG-CO, 4 = OO-CO, 5 = CG-CO
     var dissent = [{ key: "OG-OO", givingRight: 0, distance: 0, priority: 0 },
