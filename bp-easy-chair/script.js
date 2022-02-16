@@ -158,7 +158,7 @@ function checkDuplicate() {
         if ($("judge").value == callTableEl.rows[i].cells[0].innerHTML) {
             for (j = 1; j <= 4; j++) {
                 callTableEl.rows[i].cells[j].innerHTML = $("decision" + j).value;
-                if (j < 4)  callTableEl.rows[i].cells[j].innerHTML += checkInterchange(j);
+                if (j < 4) callTableEl.rows[i].cells[j].innerHTML += checkInterchange(j);
             }
             return true;
         }
@@ -185,17 +185,17 @@ function checkInterchange(num) {
 
 function calculateDissent() {
     //0 = OG-OO, 1 = OG-CG, 2 = OO-CG, 3 = OG-CO, 4 = OO-CO, 5 = CG-CO
-    var dissent = [{ key: "OG-OO", givingRight: 0, distance: 0, priority: 0 },
-    { key: "OG-CG", givingRight: 0, distance: 0, priority: 0 },
-    { key: "OO-CG", givingRight: 0, distance: 0, priority: 0 },
-    { key: "OG-CO", givingRight: 0, distance: 0, priority: 0 },
-    { key: "OO-CO", givingRight: 0, distance: 0, priority: 0 },
-    { key: "CG-CO", givingRight: 0, distance: 0, priority: 0 }];
+    var dissent = [{ key: "OG-OO", interchange: 0, givingRight: 0, distance: 0, priority: 0 },
+    { key: "OG-CG", interchange: 0, givingRight: 0, distance: 0, priority: 0 },
+    { key: "OO-CG", interchange: 0, givingRight: 0, distance: 0, priority: 0 },
+    { key: "OG-CO", interchange: 0, givingRight: 0, distance: 0, priority: 0 },
+    { key: "OO-CO", interchange: 0, givingRight: 0, distance: 0, priority: 0 },
+    { key: "CG-CO", interchange: 0, givingRight: 0, distance: 0, priority: 0 }];
     //0 = OG, 1 = OO, 2 = CG, 4 = OO
-    var team = [{ key: "OG", interchange: false, rank: 0, topTwo: 0 },
-    { key: "OO", interchange: false, rank: 0, topTwo: 0 },
-    { key: "CG", interchange: false, rank: 0, topTwo: 0 },
-    { key: "CO", interchange: false, rank: 0, topTwo: 0 }]
+    var team = [{ key: "OG", rank: 0, topTwo: 0 },
+    { key: "OO", rank: 0, topTwo: 0 },
+    { key: "CG", rank: 0, topTwo: 0 },
+    { key: "CO", rank: 0, topTwo: 0 }]
     $("callTableStatus").style.display = "table-cell";
     $("dissentTableStatus").style.display = "table-cell";
     $("dissentTable").innerHTML = "";
@@ -235,6 +235,26 @@ function calculateDissent() {
                     disInd--;
                 }
             }
+            //See the number of judges indicating interchangeability
+            var disInd = 5;
+            for (let j = 3; j >= 0; j--) {
+                for (let k = j - 1; k >= 0; k--) {
+                    if (Math.abs(team[j].rank - team[k].rank) == 1) {
+                        let leftCell = 0;
+                        let rightCell = 0;
+                        for (let l = 1; l <= 4; l++) {
+                            if (callTbodyEl.rows[i].cells[l].innerHTML.indexOf(team[k].key) != -1)
+                                leftCell = l;
+                            if (callTbodyEl.rows[i].cells[l].innerHTML.indexOf(team[j].key) != -1)
+                                rightCell = l;
+                        }
+                        if (callTbodyEl.rows[i].cells[leftCell].innerHTML.toLowerCase().indexOf("<svg") >= 0 ||
+                            callTbodyEl.rows[i].cells[rightCell].innerHTML.toLowerCase().indexOf("<svg") >= 0)
+                            dissent[disInd].interchange += 1;
+                    }
+                    disInd--;
+                }
+            }
         }
         //Interpret exchanges that have been agreed upon
         if (dissent[0].givingRight == callTbodyEl.rows.length) finalOObeatOG = true;
@@ -250,17 +270,20 @@ function calculateDissent() {
         if (dissent[4].givingRight == 0) finalCObeatOO = false;
         if (dissent[5].givingRight == 0) finalCObeatCG = false;
         //Rate exchanges to resolve, clearest to closest;
-        //Clearest is found by a primary consideration of whether many judges agree on that exchange,
-        //Then a secondary consideration of the distance of the benches in each judge's calls,
-        //Then a tertiary consideration of seeing disagreements on whether both teams are in top two or bottom two for most judges,        //Then a last tiebreaker here which is whether it's the closer to the first or last exchange in the debate
+        //Clearest is found by a primary consideration of interchangeability,
+        //Then a secondary consideration of whether many judges agree on that exchange,
+        //Then a tertiary consideration of the distance of the benches in each judge's calls,
+        //Then a quaternary consideration of seeing disagreements on whether both teams are in top two or bottom two for most judges,        //Then a last tiebreaker here which is whether it's the closer to the first or last exchange in the debate
         //The priority is indicated with decimals to make sure that the more secondary considerations will never weigh more than the primary ones
         var disInd = 5;
         for (let j = 3; j >= 0; j--) {
             for (let k = j - 1; k >= 0; k--) {
-                dissent[disInd].priority = Math.max(dissent[disInd].givingRight, callTbodyEl.rows.length - dissent[disInd].givingRight)
+                dissent[disInd].priority =
+                    10 * dissent[disInd].interchange
+                    + Math.max(dissent[disInd].givingRight, callTbodyEl.rows.length - dissent[disInd].givingRight)
                     + 1 / (10 * dissent[disInd].distance)
                     + 0.001 * (Math.max(team[j].topTwo, callTbodyEl.rows.length - team[j].topTwo)
-                        + Math.max(team[k].topTwo, callTbodyEl.rows.length - team[k].topTwo))
+                                + Math.max(team[k].topTwo, callTbodyEl.rows.length - team[k].topTwo))
                     + 0.0001 * (6 - disInd);
                 disInd--;
             }
@@ -272,7 +295,7 @@ function calculateDissent() {
         //While eliminating necessity to indicate exchanges that are unanimous
         //Also add options to resolve those exchanges
         for (i = 0; i < 6; i++) {
-            if (dissent[i].priority >= callTbodyEl.rows.length)
+            if ((dissent[i].priority - (10 * dissent[i].interchange)) >= callTbodyEl.rows.length)
                 continue;
             $("dissentTableStatus").style.display = "none";
             $("dissentTable").innerHTML += `
@@ -282,6 +305,7 @@ function calculateDissent() {
                 ${dissent[i].key}
                 <input type="radio" class="resolveBtn" name="*${dissent[i].key}" id="Less${dissent[i].key}"></input>
                 </td>
+                <td>${dissent[i].interchange}</td>
                 <td>${(callTbodyEl.rows.length - dissent[i].givingRight)}-${dissent[i].givingRight}</td>
                 <td>${Math.round((dissent[i].distance / callTbodyEl.rows.length) * 10) / 10}</td>
             </tr>`;
