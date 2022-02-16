@@ -34,10 +34,10 @@ function onInputDecision(e) {
         callTbodyEl.innerHTML += `
     <tr id=${judge}>
         <td>${judge}</td>
-        <td><p style="display:inline">${$("decision1").value}</p>${checkInterchange(1)}</td>
-        <td><p style="display:inline">${$("decision2").value}</p>${checkInterchange(2)}</td>
-        <td><p style="display:inline">${$("decision3").value}</p>${checkInterchange(3)}</td>
-        <td><p style="display:inline">${$("decision4").value}</p></td>
+        <td>${$("decision1").value}${checkInterchange(1)}</td>
+        <td>${$("decision2").value}${checkInterchange(2)}</td>
+        <td>${$("decision3").value}${checkInterchange(3)}</td>
+        <td>${$("decision4").value}</td>
         <td><a class="vue-sortable deleteBtn">🅇</a></td>
     </tr>`;
     }
@@ -192,10 +192,10 @@ function calculateDissent() {
     { key: "OO-CO", givingRight: 0, distance: 0, priority: 0 },
     { key: "CG-CO", givingRight: 0, distance: 0, priority: 0 }];
     //0 = OG, 1 = OO, 2 = CG, 4 = OO
-    var team = [{ key: "OG", rank: 0, topTwo: 0 },
-    { key: "OO", rank: 0, topTwo: 0 },
-    { key: "CG", rank: 0, topTwo: 0 },
-    { key: "CO", rank: 0, topTwo: 0 }]
+    var team = [{ key: "OG", interchange: false, rank: 0, topTwo: 0 },
+    { key: "OO", interchange: false, rank: 0, topTwo: 0 },
+    { key: "CG", interchange: false, rank: 0, topTwo: 0 },
+    { key: "CO", interchange: false, rank: 0, topTwo: 0 }]
     $("callTableStatus").style.display = "table-cell";
     $("dissentTableStatus").style.display = "table-cell";
     $("dissentTable").innerHTML = "";
@@ -210,9 +210,8 @@ function calculateDissent() {
             //Locate OG, OO, CG, CO positions
             for (var j = 1; j <= 4; j++) {
                 for (var k = 0; k < 4; k++) {
-                    if (team[k].key == callTbodyEl.rows[i].cells[j].innerHTML) {
+                    if (callTbodyEl.rows[i].cells[j].innerHTML.indexOf(team[k].key) != -1)
                         team[k].rank = j;
-                    }
                 }
             }
             //See the number of judges agreeing to these exchanges
