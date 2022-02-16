@@ -13,6 +13,15 @@ var finalCObeatCG;
 
 function $(x) { return document.getElementById(x); }
 
+function interchangeSymbol() {
+    return `<svg style="display:inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+fill="currentColor" class="bi bi-arrow-left-right"
+viewBox="0 0 16 16">
+<path fill-rule="evenodd"
+    d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z" />
+</svg>`
+}
+
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
@@ -25,10 +34,10 @@ function onInputDecision(e) {
         callTbodyEl.innerHTML += `
     <tr id=${judge}>
         <td>${judge}</td>
-        <td>${$("decision1").value}</td>
-        <td>${$("decision2").value}</td>
-        <td>${$("decision3").value}</td>
-        <td>${$("decision4").value}</td>
+        <td><p style="display:inline">${$("decision1").value}</p>${checkInterchange(1)}</td>
+        <td><p style="display:inline">${$("decision2").value}</p>${checkInterchange(2)}</td>
+        <td><p style="display:inline">${$("decision3").value}</p>${checkInterchange(3)}</td>
+        <td><p style="display:inline">${$("decision4").value}</p></td>
         <td><a class="vue-sortable deleteBtn">🅇</a></td>
     </tr>`;
     }
@@ -149,6 +158,7 @@ function checkDuplicate() {
         if ($("judge").value == callTableEl.rows[i].cells[0].innerHTML) {
             for (j = 1; j <= 4; j++) {
                 callTableEl.rows[i].cells[j].innerHTML = $("decision" + j).value;
+                if (j < 4)  callTableEl.rows[i].cells[j].innerHTML += checkInterchange(j);
             }
             return true;
         }
@@ -159,25 +169,17 @@ function checkInterchange(num) {
     switch (num) {
         case 1:
             if ($("interchange1-2").checked)
-                return "#fd681d";
-            else return "black";
-            break;
+                return interchangeSymbol();
+            else return "";
         case 2:
-            if ($("interchange1-2").checked || $("interchange2-3").checked)
-                return "#fd681d";
-            else return "black";
-            break;
+            if ($("interchange2-3").checked)
+                return interchangeSymbol();
+            else return "";
         case 3:
-            if ($("interchange2-3").checked || $("interchange3-4").checked)
-                return "#fd681d";
-            else return "black";
-            break;
-        case 4:
             if ($("interchange3-4").checked)
-                return "#fd681d";
-            else return "black";
-            break;
-        default: break;
+                return interchangeSymbol();
+            else return "";
+        default: return "";;
     }
 }
 
@@ -254,16 +256,16 @@ function calculateDissent() {
         //Then a tertiary consideration of seeing disagreements on whether both teams are in top two or bottom two for most judges,        //Then a last tiebreaker here which is whether it's the closer to the first or last exchange in the debate
         //The priority is indicated with decimals to make sure that the more secondary considerations will never weigh more than the primary ones
         var disInd = 5;
-            for (let j = 3; j >= 0; j--) {
-                for (let k = j - 1; k >= 0; k--) {
-                    dissent[disInd].priority = Math.max(dissent[disInd].givingRight, callTbodyEl.rows.length - dissent[disInd].givingRight)
+        for (let j = 3; j >= 0; j--) {
+            for (let k = j - 1; k >= 0; k--) {
+                dissent[disInd].priority = Math.max(dissent[disInd].givingRight, callTbodyEl.rows.length - dissent[disInd].givingRight)
                     + 1 / (10 * dissent[disInd].distance)
                     + 0.001 * (Math.max(team[j].topTwo, callTbodyEl.rows.length - team[j].topTwo)
-                                + Math.max(team[k].topTwo, callTbodyEl.rows.length - team[k].topTwo))
-                    + 0.0001 * (6-disInd);
-                    disInd--;
-                }
+                        + Math.max(team[k].topTwo, callTbodyEl.rows.length - team[k].topTwo))
+                    + 0.0001 * (6 - disInd);
+                disInd--;
             }
+        }
         dissent.sort(function (a, b) {
             return b.priority - a.priority;
         });
