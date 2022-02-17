@@ -40,12 +40,12 @@
                     <div class="list-group-item">
                         <form id="inputDecision">
                             <div class="row pl-2 pr-2">
-                                <div class="col-lg-3 col-md-6 pt-2 p-lg-2">
+                                <div class="col-lg-3 col-md-12 pt-2 p-lg-2">
                                     <input type="text" class="form-control" name="judge" id="judge" placeholder="Judge"
                                         required>
                                 </div>
-                                <div class="col-lg-9 col-md-6">
-                                    <div class="row">
+                                <div class="col-lg-auto col-md-12">
+                                    <div class="row pl-3 pl-md-3 pl-lg-0">
                                         <div class="pt-2 p-lg-2 pr-0">
                                             <select class="form-control custom-select" name="decision1" id="decision1"
                                                 required>
@@ -122,12 +122,13 @@
                                                 <option value="CO">CO</option>
                                             </select>
                                         </div>
-                                        <div class="pt-2 p-lg-2 pr-0">
-                                            <button type="submit" class="btn btn-block btn-primary submitDecisionBtn">+</button>
-                                        </div>
                                     </div>
                                 </div>
-                                
+                                <div class="col-lg-auto col-md-12">
+                                    <div class="pt-2 pr-0">
+                                        <button type="submit" class="btn btn-primary btn-block submitDecisionBtn">+</button>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                         <div class="errorlist" id="inputDecisionStatus"></div>
@@ -164,12 +165,12 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th class="col-6"><b>Dissents</b></th>
-                                    <th class="col-1" title="Judges indicating interchangeability"
+                                    <th><b>Dissents</b></th>
+                                    <th style="width: 4rem" title="Judges indicating interchangeability"
                                         data-toggle="tooltip">↔️</th>
-                                    <th class="col-2" title="Judges disagreeing on the winning team"
+                                    <th style="width: 4rem" class="col-2" title="Judges disagreeing on the winning team"
                                         data-toggle="tooltip">💢</th>
-                                    <th class="col-1" title="Average distance of the benches in calls"
+                                    <th style="width: 4rem" class="col-1" title="Average distance of the benches in calls"
                                         data-toggle="tooltip">📏</th>
                                 </tr>
                             </thead>
