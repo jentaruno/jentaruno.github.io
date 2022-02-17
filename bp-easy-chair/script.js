@@ -248,8 +248,10 @@ function calculateDissent() {
                             if (callTbodyEl.rows[i].cells[l].innerHTML.indexOf(team[j].key) != -1)
                                 rightCell = l;
                         }
-                        if (callTbodyEl.rows[i].cells[leftCell].innerHTML.toLowerCase().indexOf("<svg") >= 0 ||
-                            callTbodyEl.rows[i].cells[rightCell].innerHTML.toLowerCase().indexOf("<svg") >= 0)
+                        if ((callTbodyEl.rows[i].cells[leftCell].innerHTML.toLowerCase().indexOf("<svg") >= 0 &&
+                                team[k].rank < team[j].rank) ||
+                            (callTbodyEl.rows[i].cells[rightCell].innerHTML.toLowerCase().indexOf("<svg") >= 0 &&
+                                team[j].rank < team[k].rank))
                             dissent[disInd].interchange += 1;
                     }
                     disInd--;
