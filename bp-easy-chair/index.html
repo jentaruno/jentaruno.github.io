@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="https://tabbycat.tabtastic.net/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <style>
         .th-rank {
             width: 4rem;
@@ -25,6 +25,69 @@
             color: #cc4502 !important;
             cursor: pointer;
         }
+
+        /* The switch - the box around the slider */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 1.7rem;
+            height: 1rem;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 0.67rem;
+            width: 0.67rem;
+            left: 2.67px;
+            bottom: 2.67px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #663da0;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #663da0;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(0.67rem);
+            -ms-transform: translateX(0.67rem);
+            transform: translateX(0.67rem);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
     </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,11 +96,20 @@
 
 <body>
     <div class="container-fluid">
-        <div class="col mt-4 h2">💺 EasyChair</div>
+        <div class="col mt-4">
+            <p class="h2">💺 EasyChair</p>
+        </div>
         <div class="card-deck">
             <div class="card mt-3">
                 <div class="list-group list-group-flush">
                     <div class="list-group-item">
+                        <div class="row pl-lg-3 pr-lg-2">
+                            <label class="switch align-middle mt-2 mr-2">
+                                <input type="checkbox" id="manualTypeBtn">
+                                <span class="slider round"></span>
+                            </label>
+                            <div class="small mt-2">Manually type judges' calls</div>
+                        </div>
                         <form id="inputDecision">
                             <div class="row pl-lg-2 pr-lg-2">
                                 <div class="col-lg-3 col-md-12 pt-2 p-lg-2">
@@ -126,11 +198,32 @@
                                 </div>
                                 <div class="col-lg-auto col-md-12">
                                     <div class="pt-2 pr-0">
-                                        <button type="submit" class="btn btn-primary btn-block submitDecisionBtn">+</button>
+                                        <button type="submit"
+                                            class="btn btn-primary btn-block submitDecisionBtn">+</button>
                                     </div>
                                 </div>
                             </div>
                         </form>
+
+                        <form id="inputDecisionManual" style="display:none">
+                            <div class="row pl-lg-2 pr-lg-2">
+                                <div class="col-lg-3 col-md-12 pt-2 p-lg-2">
+                                    <input type="text" class="form-control" name="judge" id="judgeManual" placeholder="Judge"
+                                        required>
+                                </div>
+                                <div class="col-lg-7 col-md-12 pt-2 p-lg-2">
+                                    <input type="text" class="form-control" name="judge" id="decisionManual" placeholder="1st (/) 2nd (/) 3rd (/) 4th"
+                                        required>
+                                </div>
+                                <div class="col-lg-auto col-md-12">
+                                    <div class="pt-2 pr-0">
+                                        <button id="submitManual"
+                                            class="btn btn-primary btn-block submitDecisionBtn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
                         <div class="errorlist" id="inputDecisionStatus"></div>
                     </div>
                     <div class="list-group-item" style="min-height:12rem">
@@ -162,25 +255,33 @@
             <div class="card mt-3">
                 <div class="list-group list-group-flush">
                     <div class="list-group-item" style="min-height:18rem">
-                        <table class="table">
-                            <thead>
+                        <table class="table sortable">
+                            <thead id="dissentThead">
                                 <tr>
-                                    <th><b>Dissents</b></th>
-                                    <th style="width: 4rem" title="Judges indicating interchangeability"
-                                        data-toggle="tooltip">↔️</th>
-                                    <th style="width: 4rem" class="col-2" title="Judges disagreeing on the winning team"
-                                        data-toggle="tooltip">💢</th>
-                                    <th style="width: 4rem" class="col-1" title="Average distance of the benches in calls"
-                                        data-toggle="tooltip">📏</th>
+                                    <th class="sort-order" title="Chronological team exchanges" data-toggle="tooltip">
+                                        <span class="sort-order tooltip-trigger"><b>Team comparisons</b></span>
+                                    </th>
+                                    <th class="sort-interchange" style="width: 5rem" title="Judges indicating interchangeability"
+                                        data-toggle="tooltip">
+                                        <span class="tooltip-trigger pb-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="sort-interchange bi bi-arrow-left-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+                                        </svg>
+                                    </span>
+                                    </th>
+                                    <th class="sort-dissent" style="width: 5rem" class="col-2" title="Judges disagreeing on the winning team"
+                                        data-toggle="tooltip">
+                                        <span class="sort-dissent tooltip-trigger"><b>💢</b></span>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody id="dissentTable"></tbody>
                             <tfoot style="height:100%; background-color:rgba(0,0,0,.1);">
                                 <tr>
                                     <td id="dissentTableStatus" colspan="6" class="text-muted text-center">
-                                        <i>There are no dissents to display yet. When you input differing calls,
-                                            dissents will appear here. The dissents will be arranged by difficulty to
-                                            resolve, from easiest to hardest.</i>
+                                        <i>There are no team comparisons to display yet. When you input calls,
+                                            team comparisons will appear here. You can input which team wins each of them
+                                            as you deliberate.</i>
                                     </td>
                                 </tr>
                             </tfoot>
@@ -258,7 +359,8 @@
                         <div class="col-lg-7 col-md-6">
                             <h6>Functions that may be less intuitive</h6>
                             <ul class="text-muted">
-                                <li>To indicate interchangeability/closeness between two teams, click on the right-left arrow symbol between them.</li>
+                                <li>To indicate interchangeability/closeness between two teams, click on the right-left
+                                    arrow symbol between them.</li>
                                 <li>To edit a judge's call, input their name and updated call. Their previous call will
                                     be overwritten.</li>
                                 <li>To resolve a dissent, click the radio button beside the winning team</li>
