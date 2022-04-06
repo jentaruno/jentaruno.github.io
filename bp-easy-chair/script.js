@@ -919,6 +919,12 @@ sorttable = {
       }
   };  
 
+$("helpBtn").addEventListener("click", function() { $("helpModal").style.display = "block"; })
+$("closeHelpBtn").addEventListener("click", function() { $("helpModal").style.display = "none"; })
+window.addEventListener("click", function(event) {
+    if (event.target == $("helpModal")) {
+      $("helpModal").style.display = "none";
+    }})
 $("decisionManual").addEventListener("keyup", restrictLetters);
 $("manualTypeBtn").addEventListener("click", onManualType);
 $("inputDecision").addEventListener("submit", onInputDecision);
