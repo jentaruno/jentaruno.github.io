@@ -12,17 +12,14 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>
-          Software engineering, web development, and information systems enthusiast
-        </p>
-      </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Portfolio</h2>
-        <ul className={utilStyles.list}>
+        <div className={utilStyles.list}>
           {allPostsData.map(({ id, stack, link, date, title, desc }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <img src={`/images/${id}.png`} height="200px"></img>
+            <div className={utilStyles.listItem} key={id}>
+              <div className={utilStyles.listThumbnail}>
+                <img src={`/images/${id}.png`}></img>
+              </div>
               <row>
                 <Link href={`${link}`} target='_blank'><b>{title}</b></Link>
                 <small> | {stack}</small>
@@ -32,12 +29,12 @@ export default function Home({ allPostsData }) {
                 <Date dateString={date} />
               </small>
               <br />
-              <small>
+              <small className={utilStyles.listDesc}>
                 {desc}
               </small>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
     </Layout>
   )

@@ -35,37 +35,22 @@ export default function Layout({ children, home }) {
         }
       />
       <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpeg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpeg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt={name}
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )}
+        <>
+          <Image
+            priority
+            src="/images/profile.jpeg"
+            className={utilStyles.borderCircle}
+            height={144}
+            width={144}
+            alt={name}
+          />
+          <h1 className={utilStyles.heading2Xl}>{name}</h1>
+          <section className={utilStyles.subtitle}>
+            <p>
+              Software engineering, web development, and information systems enthusiast
+            </p>
+          </section>
+        </>
       </header>
       <main>{children}</main>
       {!home && (
