@@ -3,7 +3,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "scriptname": "next build",
+    "export": "next export",
+    "deploy": "next deploy"
   },
   "dependencies": {
     "date-fns": "^2.29.3",
