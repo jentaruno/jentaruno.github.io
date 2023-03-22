@@ -3,14 +3,14 @@
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
 let assetPrefix = ''
-let basePath = ''
+let basePath = '/portfolio'
 
 if (isGithubActions) {
   // trim off `<owner>/`
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
 
-  assetPrefix = `/${repo}/`
-  basePath = `/${repo}`
+  assetPrefix = `/${repo}/portfolio`
+  basePath = `/${repo}/portfolio`
 }
 
 module.exports = {
