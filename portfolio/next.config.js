@@ -3,7 +3,7 @@
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
 let assetPrefix = ''
-let basePath = '/portfolio'
+let basePath = ''
 
 if (isGithubActions) {
   // trim off `<owner>/`
