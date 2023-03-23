@@ -18,7 +18,7 @@ export default function Home({ allPostsData }) {
           {allPostsData.map(({ id, stack, link, date, title, desc }) => (
             <div className={utilStyles.listItem} key={id}>
               <div className={utilStyles.listThumbnail}>
-                <img src={`/images/${id}.png`}></img>
+                <Image alt={id} src={`/images/${id}.png`}></Image>
               </div>
               <row>
                 <Link href={`${link}`} target='_blank'><b>{title}</b></Link>
