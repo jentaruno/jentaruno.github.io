@@ -12,8 +12,8 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Portfolio</h2>
+      <section className={`${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Coding</h2>
         <div className={utilStyles.list}>
           {allPostsData.map(({ id, stack, link, date, title, desc }) => (
             <div className={utilStyles.listItem} key={id}>
@@ -21,11 +21,11 @@ export default function Home({ allPostsData }) {
                 <img alt={id} src={`./images/${id}.png`}></img>
               </div>
               <row>
-                <Link href={`${link}`} target='_blank'><b>{title}</b></Link>
+                <Link className={utilStyles.listTitle} href={`${link}`} target='_blank'><b>{title}</b></Link>
                 <small> | {stack}</small>
               </row>
               <br />
-              <small className={utilStyles.lightText}>
+              <small className={utilStyles.listDate}>
                 <Date dateString={date} />
               </small>
               <br />
@@ -36,6 +36,18 @@ export default function Home({ allPostsData }) {
           ))}
         </div>
       </section>
+      {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Graphic Design</h2>
+        <div className={utilStyles.list}>
+          {allPostsData.map(({ id, stack, link, date, title, desc }) => (
+            <div className={utilStyles.listItem} key={id}>
+              <div className={utilStyles.listThumbnail}>
+                <img alt={id} src={`./images/${id}.png`}></img>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section> */}
     </Layout>
   )
 }

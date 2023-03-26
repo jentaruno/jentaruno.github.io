@@ -1,11 +1,43 @@
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('../assets/SpaceGrotesk/SpaceGrotesk-Bold.ttf');
+  font-weight: 800;
+  font-style: black;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/Inter/Inter-Regular.ttf');
+  font-weight: 400;
+  font-style: black;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/Inter/Inter-Bold.ttf');
+  font-weight: 600;
+  font-style: black;
+}
+
+@font-face {
+  font-family: 'AppleGaramond';
+  src: url('../assets/AppleGaramond/AppleGaramond-BoldItalic.ttf');
+  font-weight: 600;
+  font-style: black;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 14px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 16Zzpx;
+}
+
+i {
+  font-family: AppleGaramond;
+  font-weight: 600;
 }
 
 * {

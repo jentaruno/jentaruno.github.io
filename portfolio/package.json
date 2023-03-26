@@ -6,12 +6,14 @@
     "start": "next start",
     "scriptname": "next build",
     "export": "next export",
-    "deploy": "next deploy"
+    "deploy": "gh-pages -d out -t true",
+    "static": "next build && next export && touch ./out/.nojekyll && echo 'https://jentaruno.github.io' > ./out/CNAME"
   },
   "dependencies": {
     "date-fns": "^2.29.3",
+    "gh-pages": "^5.0.0",
     "gray-matter": "^4.0.3",
-    "next": "latest",
+    "next": "^13.2.4",
     "next-images": "^1.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
