@@ -4,10 +4,11 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 
-const postsDirectory = path.join(process.cwd(), 'posts')
+const assetsDirectory = path.join(process.cwd(), 'assets/');
 
-export function getSortedPostsData() {
+export function getSortedPostsData(dir) {
   // Get file names under /posts
+  const postsDirectory = assetsDirectory + dir;
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map(fileName => {
     // Remove ".md" from file name to get id
@@ -36,6 +37,7 @@ export function getSortedPostsData() {
   })
 }
 
+// TODO: fix this function so it can load subdirectories
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames.map(fileName => {
