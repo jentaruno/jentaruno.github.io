@@ -4,7 +4,11 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 
-const assetsDirectory = path.join(process.cwd(), 'assets/');
+const assetsDirectory = path.join(process.cwd(), 'assets/posts/');
+
+export function getSectionNames() {
+  return fs.readdirSync(assetsDirectory)
+}
 
 export function getSortedPostsData(dir) {
   // Get file names under /posts
