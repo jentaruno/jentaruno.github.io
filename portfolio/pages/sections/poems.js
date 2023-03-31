@@ -1,4 +1,4 @@
-import bookStyles from '../../styles/book-scroll.module.css'
+import bookStyles from '../../styles/poems.module.css'
 import {useState} from "react";
 import utilStyles from "../../styles/utils.module.css";
 import Date from "../../components/date";
@@ -29,6 +29,18 @@ export default function Poems({content}) {
         }
     }
 
+    function parseMarkdown(md) {
+        let removeLineBreaks = md.split("\\");
+        let htmlOutput = removeLineBreaks.map((e) => {
+            if (e === " ") {
+                return <br></br>
+            } else {
+                return <p className={bookStyles.poemText}>{e}</p>
+            }
+        })
+        return <>{htmlOutput}</>
+    }
+
     return <>
         <div className={bookStyles.book}>
             <div id="classNames" className={bookStyles.pages}>
@@ -39,17 +51,17 @@ export default function Poems({content}) {
                              style={setZIndex(index, maxPage)}>
                             <div className={bookStyles.pageContent}>
                                 {<div className={utilStyles.listItem} key={id}>
-                                        <div className={utilStyles.listTitle}>
-                                            {title}
-                                        </div>
-                                        <small className={utilStyles.listDate}>
-                                            <Date dateString={date}/>
-                                        </small>
-                                        <br/>
-                                        <small className={utilStyles.listDesc}>
-                                            {desc}
-                                        </small>
+                                    <div className={utilStyles.listTitle}>
+                                        {title}
                                     </div>
+                                    <small className={utilStyles.listDate}>
+                                        <Date dateString={date}/>
+                                    </small>
+                                    <br/>
+                                    <small className={utilStyles.listDesc}>
+                                        {parseMarkdown(desc)}
+                                    </small>
+                                </div>
                                 }
                             </div>
                         </div>

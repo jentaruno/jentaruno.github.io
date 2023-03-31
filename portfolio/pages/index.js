@@ -42,38 +42,8 @@ export default function Home({folderPostsData}) {
                     ))}
                 </div>
             </section>
-            {/*<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>*/}
-            {/*    <h2 className={utilStyles.headingLg}>Graphic Design</h2>*/}
-            {/*    <div className={utilStyles.list}>*/}
-            {/*        {allPostsData.get(poemsFolder).map(({id, title, date, desc}) => (*/}
-            {/*            <div className={utilStyles.listItem} key={id}>*/}
-            {/*                <div className={utilStyles.listThumbnail}>*/}
-            {/*                    <img alt={id} src={`./images/${id}.png`}></img>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        ))}*/}
-            {/*    </div>*/}
-            {/*</section>*/}
-            <section className={`${utilStyles.padding1px}`}>
-                <h2 className={utilStyles.headingLg}>Poems</h2>
-                <div className={utilStyles.list}>
-                    {allPostsData.get(poemsFolder).map(({id, title, date, desc}) => (
-                        <div className={utilStyles.listItem} key={id}>
-                            <div className={utilStyles.listTitle}>
-                                {title}
-                            </div>
-                            <small className={utilStyles.listDate}>
-                                <Date dateString={date}/>
-                            </small>
-                            <br/>
-                            <small className={utilStyles.listDesc}>
-                                {desc}
-                            </small>
-                        </div>
-                    ))}
-                </div>
-            </section>
             <section>
+                <h2 className={utilStyles.headingLg}>Poems</h2>
                 <Poems content={allPostsData.get(poemsFolder)}></Poems>
             </section>
         </Layout>

@@ -58,6 +58,7 @@
     /*box-shadow: 0 0 0 1px #e3dfd8;*/
 }
 .book .page {
+    display: flex;
     float: none;
     clear: none;
     margin: 0;
@@ -134,8 +135,7 @@
     background: rgba(0, 0, 0, 0);
 }
 .book .page .pageContent {
-    margin: 8vw 2rem 0 2rem;
-    text-align: center;
+    margin: auto 2rem auto 3rem;
 }
 /**,*/
 /** :before,*/
@@ -161,4 +161,13 @@
 /*}*/
 .page:nth-child(odd){
     background-position: right top;
+}
+
+.poemText {
+    font-size: smaller;
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
