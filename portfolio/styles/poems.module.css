@@ -1,5 +1,6 @@
 .book {
     transition: opacity 0.4s 0.2s;
+    margin: 2rem;
 }
 /*p {*/
 /*    margin-top: 8vw;*/
@@ -55,7 +56,7 @@
     transform-style: preserve-3d;
     backface-visibility: hidden;
     border-radius: 4px;
-    /*box-shadow: 0 0 0 1px #e3dfd8;*/
+    box-shadow: 0 0 0 1px #e3dfd8;
 }
 .book .page {
     display: flex;
@@ -166,8 +167,8 @@
 .poemText {
     font-size: smaller;
     display: block;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
+    margin-block-start: 0.25em;
+    margin-block-end: 0.25em;
     margin-inline-start: 0;
     margin-inline-end: 0;
 }
