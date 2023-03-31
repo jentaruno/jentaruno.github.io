@@ -1,3 +1,4 @@
+import bookStyles from './book-scroll.module.css'
 function processPoems() {
     var pages = document.getElementsByClassName('page');
     for (var i = 0; i < pages.length; i++) {
@@ -27,12 +28,11 @@ function processPoems() {
 export default function Poems({ content }) {
     console.log(JSON.stringify(content))
     return <>
-        <link href="./book-scroll.css" rel="stylesheet"/>
-        <div className="book">
-            <div id="classNames" className="pages">
+        <div className={bookStyles.book}>
+            <div id="classNames" className={bookStyles.pages}>
                 {content.map(({title, date, desc}) =>
                     (
-                        <div className="page">
+                        <div className={bookStyles.page}>
                             {title}
                             <br/>
                             {desc}
