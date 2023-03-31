@@ -1,12 +1,14 @@
 import bookStyles from '../../styles/book-scroll.module.css'
 import {useState} from "react";
+import utilStyles from "../../styles/utils.module.css";
+import Date from "../../components/date";
 
 export default function Poems({content}) {
     const maxPage = content.length
     const [currentPage, setCurrentPage] = useState(0)
 
-    function handlePageClick(id, maxPage) {
-        if (id % 2 === 0) {
+    function handlePageClick(index) {
+        if (index % 2 === 0) {
             setCurrentPage(currentPage + 2)
         } else {
             setCurrentPage(currentPage - 2)
@@ -30,14 +32,26 @@ export default function Poems({content}) {
     return <>
         <div className={bookStyles.book}>
             <div id="classNames" className={bookStyles.pages}>
-                {content.map(({id, title, desc}, index) =>
+                {content.map(({id, title, date, desc}, index) =>
                     (
                         <div className={`${bookStyles.page} ${setFlippedState(index)}`} id={index}
-                             onClick={(e) => handlePageClick(index, maxPage)}
+                             onClick={() => handlePageClick(index)}
                              style={setZIndex(index, maxPage)}>
-                            {title}
-                            <br/>
-                            {desc}
+                            <div className={bookStyles.pageContent}>
+                                {<div className={utilStyles.listItem} key={id}>
+                                        <div className={utilStyles.listTitle}>
+                                            {title}
+                                        </div>
+                                        <small className={utilStyles.listDate}>
+                                            <Date dateString={date}/>
+                                        </small>
+                                        <br/>
+                                        <small className={utilStyles.listDesc}>
+                                            {desc}
+                                        </small>
+                                    </div>
+                                }
+                            </div>
                         </div>
                     ))}
             </div>
