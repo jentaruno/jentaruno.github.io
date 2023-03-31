@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import {getSectionNames, getSortedPostsData} from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import Poems from './sections/poems'
 
 const codingFolder = 'coding'
 const designFolder = 'design'
@@ -24,10 +25,10 @@ export default function Home({folderPostsData}) {
                             <div className={utilStyles.listThumbnail}>
                                 <img alt={id} src={`./images/${id}.png`}></img>
                             </div>
-                            <row>
+                            <row className={utilStyles.listJustifyBetween}>
                                 <Link className={utilStyles.listTitle} href={`${link}`}
                                       target='_blank'><b>{title}</b></Link>
-                                <small> | {stack}</small>
+                                <small>{stack}</small>
                             </row>
                             <br/>
                             <small className={utilStyles.listDate}>
@@ -58,18 +59,22 @@ export default function Home({folderPostsData}) {
                 <div className={utilStyles.list}>
                     {allPostsData.get(poemsFolder).map(({id, title, date, desc}) => (
                         <div className={utilStyles.listItem} key={id}>
-                            <div className={utilStyles.headingMd}>
+                            <div className={utilStyles.listTitle}>
                                 {title}
                             </div>
                             <small className={utilStyles.listDate}>
                                 <Date dateString={date}/>
                             </small>
-                            <div className={utilStyles.listDesc}>
+                            <br/>
+                            <small className={utilStyles.listDesc}>
                                 {desc}
-                            </div>
+                            </small>
                         </div>
                     ))}
                 </div>
+            </section>
+            <section>
+                <Poems content={allPostsData.get(poemsFolder)}></Poems>
             </section>
         </Layout>
     )
