@@ -1,15 +1,15 @@
-import bookStyles from './book-scroll.module.css'
-function processPoems() {
-    var pages = document.getElementsByClassName('page');
-    for (var i = 0; i < pages.length; i++) {
-        var page = pages[i];
+import bookStyles from '../../styles/book-scroll.module.css'
+export function processPoems() {
+    const pages = document.getElementsByClassName('page');
+    for (let i = 0; i < pages.length; i++) {
+        const page = pages[i];
         if (i % 2 === 0) {
             page.style.zIndex = (pages.length - i);
         }
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        for (var i = 0; i < pages.length; i++) {
+        for (let i = 0; i < pages.length; i++) {
             //Or var page = pages[i];
             pages[i].pageNum = i + 1;
             pages[i].onclick = function () {
@@ -30,7 +30,7 @@ export default function Poems({ content }) {
     return <>
         <div className={bookStyles.book}>
             <div id="classNames" className={bookStyles.pages}>
-                {content.map(({title, date, desc}) =>
+                {content.map(({title, desc}) =>
                     (
                         <div className={bookStyles.page}>
                             {title}
