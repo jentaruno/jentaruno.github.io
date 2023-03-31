@@ -60,7 +60,6 @@
 .listJustifyBetween {
   display: flex;
   justify-content: space-between;
-  vertical-align: bottom;
 }
 
 .listThumbnail {
@@ -77,6 +76,10 @@
   font-family: AppleGaramond, serif;
   font-size: 1.3rem;
   line-height: 1.6;
+}
+
+.listStack {
+  margin: auto 0;
 }
 
 .listDate {

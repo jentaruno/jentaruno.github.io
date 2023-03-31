@@ -3,6 +3,7 @@ import {useState} from "react";
 import utilStyles from "../../styles/utils.module.css";
 import Date from "../../components/date";
 
+// TODO: make responsive
 export default function Poems({content}) {
     const maxPage = content.length
     const [currentPage, setCurrentPage] = useState(0)

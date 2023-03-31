@@ -22,15 +22,16 @@ export default function Home({folderPostsData}) {
                 <div className={utilStyles.list}>
                     {allPostsData.get(codingFolder).map(({id, stack, link, date, title, desc}) => (
                         <div className={utilStyles.listItem} key={id}>
+                            <a href={link} target='_blank'>
                             <div className={utilStyles.listThumbnail}>
                                 <img alt={id} src={`./images/${id}.png`}></img>
                             </div>
+                            </a>
                             <row className={utilStyles.listJustifyBetween}>
-                                <Link className={utilStyles.listTitle} href={`${link}`}
+                                <Link className={utilStyles.listTitle} href={link}
                                       target='_blank'><b>{title}</b></Link>
-                                <small>{stack}</small>
+                                <small className={utilStyles.listStack}>{stack}</small>
                             </row>
-                            <br/>
                             <small className={utilStyles.listDate}>
                                 <Date dateString={date}/>
                             </small>
