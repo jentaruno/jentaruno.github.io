@@ -46,47 +46,17 @@
   padding-top: 1px;
 }
 
-.list {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 20px;
-  padding: 10px;
-}
-
-.listItem {
-  margin: 0 0 1.25rem;
-}
-
-.listJustifyBetween {
-  display: flex;
-  justify-content: space-between;
-}
-
-.listThumbnail {
-  display: flex;
-  height: 12rem;
-  flex: 1 1 auto;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.7rem;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-}
-
-.listTitle {
+.itemTitle {
   font-family: AppleGaramond, serif;
   font-size: 1.3rem;
   line-height: 1.6;
 }
 
-.listStack {
-  margin: auto 0;
-}
-
-.listDate {
+.itemDate {
   line-height: 2;
   color: #666;
 }
 
-.listDesc {
+.itemDesc {
   line-height: 1.6;
 }

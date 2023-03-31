@@ -51,19 +51,16 @@ export default function Poems({content}) {
                              onClick={() => handlePageClick(index)}
                              style={setZIndex(index, maxPage)}>
                             <div className={bookStyles.pageContent}>
-                                {<div className={utilStyles.listItem} key={id}>
-                                    <div className={utilStyles.listTitle}>
-                                        {title}
-                                    </div>
-                                    <small className={utilStyles.listDate}>
-                                        <Date dateString={date}/>
-                                    </small>
-                                    <br/>
-                                    <small className={utilStyles.listDesc}>
-                                        {parseMarkdown(desc)}
-                                    </small>
+                                <div className={utilStyles.itemTitle}>
+                                    {title}
                                 </div>
-                                }
+                                <small className={utilStyles.itemDate}>
+                                    <Date dateString={date}/>
+                                </small>
+                                <br/>
+                                <small className={utilStyles.itemDesc}>
+                                    {parseMarkdown(desc)}
+                                </small>
                             </div>
                         </div>
                     ))}
