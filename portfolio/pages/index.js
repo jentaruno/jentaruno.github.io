@@ -5,6 +5,7 @@ import Design from "../components/design";
 import Coding from "../components/coding";
 import utilStyles from '../styles/utils.module.css'
 import {getSectionNames, getSortedPostsData} from '../lib/posts'
+import Debate from "../components/debate";
 
 const codingFolder = 'coding'
 const designFolder = 'design'
@@ -24,6 +25,10 @@ export default function Home({folderPostsData}) {
             <section>
                 <h2 className={utilStyles.headingLg}>Design</h2>
                 <Design content={allPostsData.get(designFolder)}></Design>
+            </section>
+            <section>
+                <h2 className={utilStyles.headingLg}>Debate</h2>
+                <Debate></Debate>
             </section>
             <section>
                 <h2 className={utilStyles.headingLg}>Poems</h2>

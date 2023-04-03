@@ -31,8 +31,13 @@ body {
   font-size: 16px;
 }
 
+p {
+  line-height: 1.6;
+}
+
 i {
   font-family: AppleGaramond, serif;
+  font-size: 14pt;
   font-weight: 600;
 }
 
