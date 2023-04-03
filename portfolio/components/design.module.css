@@ -1,0 +1,38 @@
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    padding: 10px;
+}
+
+.item {
+    margin: 0 0 1.25rem;
+}
+
+.rowJustifyBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemDate {
+    margin: auto 0;
+    color: #666;
+}
+
+.itemThumbnail {
+    /*display: flex;*/
+    /*height: 12rem;*/
+    /*flex: 1 1 auto;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    margin-bottom: 0.7rem;
+    margin-top: 0.3rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    transition: margin 0.3s ease-out;
+}
+
+.itemThumbnail:hover {
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}

@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Layout, {siteTitle} from '../components/layout'
+import Poems from '../components/poems'
+import Design from "../components/design";
+import Coding from "../components/coding";
 import utilStyles from '../styles/utils.module.css'
 import {getSectionNames, getSortedPostsData} from '../lib/posts'
-import Poems from './sections/poems'
-import Coding from "./sections/coding";
 
 const codingFolder = 'coding'
 const designFolder = 'design'
@@ -19,6 +20,10 @@ export default function Home({folderPostsData}) {
             <section className={`${utilStyles.padding1px}`}>
                 <h2 className={utilStyles.headingLg}>Coding</h2>
                 <Coding content={allPostsData.get(codingFolder)}></Coding>
+            </section>
+            <section>
+                <h2 className={utilStyles.headingLg}>Design</h2>
+                <Design content={allPostsData.get(designFolder)}></Design>
             </section>
             <section>
                 <h2 className={utilStyles.headingLg}>Poems</h2>

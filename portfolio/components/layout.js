@@ -5,6 +5,7 @@ import Script from 'next/script'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Contacts from "./contacts";
 
 const name = 'Jen Taruno'
 export const siteTitle = 'Jen Taruno'
@@ -50,6 +51,9 @@ export default function Layout({ children, home }) {
               Software engineering, web development, and information systems enthusiast
             </p>
           </section>
+            <section>
+                <Contacts></Contacts>
+            </section>
         </>
       </header>
       <main>{children}</main>
