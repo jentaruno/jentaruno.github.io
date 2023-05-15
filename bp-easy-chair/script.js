@@ -38,6 +38,20 @@ function onManualType(e) {
     }
 }
 
+// If top two teams only, hide 3rd and 4th team options and change dissent calculation.
+// If not, show 3rd and 4th team options.
+function onTopTwo(e) {
+    $("inputDecisionStatus").innerHTML = "";
+
+    if (e.target.checked == true) {
+        $("thirdFourth").style.display = "none";
+        $("finalThirdFourth").style.display = "none";
+        $("decisionManual").placeholder = "1st 2nd"
+    } else {
+
+    }
+}
+
 function onInputDecision(e) {
     e.preventDefault();
     var Error = validateForm();
@@ -749,6 +763,7 @@ $("closeHelpBtn").addEventListener("click", function () { $("helpModal").style.d
 window.addEventListener("click", function (event) { if (event.target == $("helpModal")) $("helpModal").style.display = "none"; })
 $("decisionManual").addEventListener("keyup", restrictLetters);
 $("manualTypeBtn").addEventListener("click", onManualType);
+$("topTwoBtn").addEventListener("click", onTopTwo);
 $("inputDecision").addEventListener("submit", onInputDecision);
 $("inputDecisionManual").addEventListener("submit", onInputDecision);
 $("callTable").addEventListener("click", onDeleteRow);
