@@ -6,6 +6,8 @@ var finalCObeatOG;
 var finalCObeatOO;
 var finalCObeatCG;
 
+const benches = ["OG", "OO", "CG", "CO"];
+
 function $(x) { return document.getElementById(x); }
 
 function interchangeSymbol() {
@@ -44,17 +46,21 @@ function onTopTwo(e) {
     $("inputDecisionStatus").innerHTML = "";
 
     if (e.target.checked == true) {
-        const elements = document.querySelectorAll(".third-fourth");
+        const elements = document.querySelectorAll(".third-fourth, .third-fourth-table");
         elements.forEach(e => {  e.style.display = "none"; });
-        $("tableThirdFourth").style.display = "none";
+        $("decision3").required = false;
+        $("decision4").required = false;
         $("finalThirdFourth").style.display = "none";
-        $("decisionManual").placeholder = "1st (/) 2nd"
+        $("decisionManual").placeholder = "1st (/) 2nd";
         $("inputDecision").reset();
         $("inputDecisionManual").reset();
     } else {
         const elements = document.querySelectorAll(".third-fourth");
         elements.forEach(e => {  e.style.display = "flex"; });
-        $("tableThirdFourth").style.display = "table-cell";
+        const tableElements = document.querySelectorAll(".third-fourth-table");
+        tableElements.forEach(e => {  e.style.display = "table-cell"; });
+        $("decision3").required = true;
+        $("decision4").required = true;
         $("finalThirdFourth").style.display = "inline-flex";
         $("decisionManual").placeholder = "1st (/) 2nd (/) 3rd (/) 4th"
         $("inputDecision").reset();
@@ -64,8 +70,8 @@ function onTopTwo(e) {
 
 function onInputDecision(e) {
     e.preventDefault();
-    var Error = validateForm();
-    if (!Error) {
+    var isFormInvalid = validateForm();
+    if (!isFormInvalid) {
         //For manual type
         if ($("manualTypeBtn").checked == true) {
             //Locate benches and ranks
@@ -90,6 +96,7 @@ function onInputDecision(e) {
                     decision[i].interchange = interchangeSymbol();
                 }
             }
+            // !!! branch
             //Add to table
             $("callTbody").innerHTML += `
             <tr id=${$("judgeManual").value}>
@@ -104,6 +111,7 @@ function onInputDecision(e) {
         }
         //For dropdown type
         else {
+            // !!! branch
             $("callTbody").innerHTML += `
             <tr id=${$("judge").value}>
                 <td>${$("judge").value}</td>
@@ -266,11 +274,39 @@ function restrictLetters() {
     $("decisionManual").value = $("decisionManual").value.replace(regex, "");
 }
 
+// !!! branch
 function validateForm() {
     $("inputDecisionStatus").innerHTML = "";
 
+    // For top two only
+    if ($("topTwoBtn").checked == true) {
+        if ($("manualTypeBtn").checked == true) {
+            // Check that two different teams are placed
+            let teamCount = 0;
+            benches.forEach(e => {
+                let re = new RegExp(e, "g");
+                let count = ($("decisionManual").value.toUpperCase().match(re) || []).length;
+                console.log(e, count);
+                if (count > 1) {
+                    teamCount += 3;
+                }
+                teamCount++;
+            });
+            if (teamCount != 2) {
+                $("inputDecisionStatus").innerHTML += "Please make sure you enter only two different teams.";
+                return true;
+            }
+        } else {
+            // Check for duplicates
+            if ($("decision1").value == $("decision2").value) {
+                $("inputDecisionStatus").innerHTML += "The same team cannot get two different ranks";
+                return true;
+            }
+        }
+    }
+
     //For manual type
-    if ($("manualTypeBtn").checked == true) {
+    else if ($("manualTypeBtn").checked == true) {
         //Check if all teams placed
         if ($("decisionManual").value.toUpperCase().indexOf("OG") == -1 ||
             $("decisionManual").value.toUpperCase().indexOf("OO") == -1 ||
