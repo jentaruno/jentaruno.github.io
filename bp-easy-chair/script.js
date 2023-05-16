@@ -44,11 +44,21 @@ function onTopTwo(e) {
     $("inputDecisionStatus").innerHTML = "";
 
     if (e.target.checked == true) {
-        $("thirdFourth").style.display = "none";
+        const elements = document.querySelectorAll(".third-fourth");
+        elements.forEach(e => {  e.style.display = "none"; });
+        $("tableThirdFourth").style.display = "none";
         $("finalThirdFourth").style.display = "none";
-        $("decisionManual").placeholder = "1st 2nd"
+        $("decisionManual").placeholder = "1st (/) 2nd"
+        $("inputDecision").reset();
+        $("inputDecisionManual").reset();
     } else {
-
+        const elements = document.querySelectorAll(".third-fourth");
+        elements.forEach(e => {  e.style.display = "flex"; });
+        $("tableThirdFourth").style.display = "table-cell";
+        $("finalThirdFourth").style.display = "inline-flex";
+        $("decisionManual").placeholder = "1st (/) 2nd (/) 3rd (/) 4th"
+        $("inputDecision").reset();
+        $("inputDecisionManual").reset();
     }
 }
 
@@ -559,15 +569,15 @@ sorttable = {
                         //For chronological
                         if (col == 0) {
                             let orderTeam = 0;
-                                switch ($("dissentTable").rows[j].cells[col].children[1].innerHTML) {
-                                    case "OG-OO": orderTeam = 0; break;
-                                    case "OG-CG": orderTeam = 1; break;
-                                    case "OO-CG": orderTeam = 2; break;
-                                    case "OG-CO": orderTeam = 3; break;
-                                    case "OO-CO": orderTeam = 4; break;
-                                    case "CG-CO": orderTeam = 5; break;
-                                    default: orderTeam = 0;
-                                }
+                            switch ($("dissentTable").rows[j].cells[col].children[1].innerHTML) {
+                                case "OG-OO": orderTeam = 0; break;
+                                case "OG-CG": orderTeam = 1; break;
+                                case "OO-CG": orderTeam = 2; break;
+                                case "OG-CO": orderTeam = 3; break;
+                                case "OO-CO": orderTeam = 4; break;
+                                case "CG-CO": orderTeam = 5; break;
+                                default: orderTeam = 0;
+                            }
                             row_array[row_array.length] = [orderTeam, rows[j]];
                         }
                         //For interchangeability
