@@ -47,7 +47,7 @@ function onTopTwo(e) {
 
     if (e.target.checked == true) {
         const elements = document.querySelectorAll(".third-fourth, .third-fourth-table");
-        elements.forEach(e => {  e.style.display = "none"; });
+        elements.forEach(e => { e.style.display = "none"; });
         $("decision3").required = false;
         $("decision4").required = false;
         $("finalThirdFourth").style.display = "none";
@@ -56,9 +56,9 @@ function onTopTwo(e) {
         $("inputDecisionManual").reset();
     } else {
         const elements = document.querySelectorAll(".third-fourth");
-        elements.forEach(e => {  e.style.display = "flex"; });
+        elements.forEach(e => { e.style.display = "flex"; });
         const tableElements = document.querySelectorAll(".third-fourth-table");
-        tableElements.forEach(e => {  e.style.display = "table-cell"; });
+        tableElements.forEach(e => { e.style.display = "table-cell"; });
         $("decision3").required = true;
         $("decision4").required = true;
         $("finalThirdFourth").style.display = "inline-flex";
@@ -80,14 +80,22 @@ function onInputDecision(e) {
             { key: "OO", value: 0, interchange: "" },
             { key: "CG", value: 0, interchange: "" },
             { key: "CO", value: 0, interchange: "" }]
-            for (i = 0; i < 4; i++) {
-                decision[i].value = decisionManual.indexOf(decision[i].key);
+            for (let i = 0; i < decision.length; i++) {
+                console.log("iter " + i + decision[i].key);
+                if (decisionManual.indexOf(decision[i].key) == -1) {
+                    console.log("splice " + decision[i].key);
+                    decision.splice(i, 1);
+                    i--;
+                    console.log(i, " index, length of decision is ", decision.length);
+                } else {
+                    decision[i].value = decisionManual.indexOf(decision[i].key);
+                }
             }
             decision.sort(function (a, b) {
                 return a.value - b.value;
             });
             //Check interchangeability
-            for (i = 0; i < 3; i++) {
+            for (i = 0; i < decision.length - 1; i++) {
                 var part = decisionManual.substring(
                     decisionManual.indexOf(decision[i].key) + 1,
                     decisionManual.indexOf(decision[i + 1].key)
@@ -96,29 +104,41 @@ function onInputDecision(e) {
                     decision[i].interchange = interchangeSymbol();
                 }
             }
-            // !!! branch
             //Add to table
+            let decisionHTML = ``;
+            if ($("topTwoBtn").checked == true) {
+                decisionHTML = `<td>${decision[0].key}${decision[0].interchange}</td>
+                <td>${decision[1].key}</td>`;
+            } else {
+                decisionHTML = `<td>${decision[0].key}${decision[0].interchange}</td>
+                <td>${decision[1].key}${decision[1].interchange}</td>
+                <td>${decision[2].key}${decision[2].interchange}</td>
+                <td>${decision[3].key}</td>`;
+            }
             $("callTbody").innerHTML += `
             <tr id=${$("judgeManual").value}>
                 <td>${$("judgeManual").value}</td>
-                <td>${decision[0].key}${decision[0].interchange}</td>
-                <td>${decision[1].key}${decision[1].interchange}</td>
-                <td>${decision[2].key}${decision[2].interchange}</td>
-                <td>${decision[3].key}</td>
+                ${decisionHTML}
                 <td><a class="vue-sortable deleteBtn">🅇</a></td>
             </tr>`;
             $("inputDecisionManual").reset();
         }
         //For dropdown type
         else {
-            // !!! branch
+            let decisionHTML = ``;
+            if ($("topTwoBtn").checked == true) {
+                decisionHTML = `<td>${$("decision1").value}${checkInterchange(1)}</td>
+                <td>${$("decision2").value}</td>`;
+            } else {
+                decisionHTML = `<td>${$("decision1").value}${checkInterchange(1)}</td>
+                <td>${$("decision2").value}${checkInterchange(2)}</td>
+                <td>${$("decision3").value}${checkInterchange(3)}</td>
+                <td>${$("decision4").value}</td>`;
+            }
             $("callTbody").innerHTML += `
             <tr id=${$("judge").value}>
                 <td>${$("judge").value}</td>
-                <td>${$("decision1").value}${checkInterchange(1)}</td>
-                <td>${$("decision2").value}${checkInterchange(2)}</td>
-                <td>${$("decision3").value}${checkInterchange(3)}</td>
-                <td>${$("decision4").value}</td>
+                ${decisionHTML}
                 <td><a class="vue-sortable deleteBtn">🅇</a></td>
             </tr>`;
             $("inputDecision").reset();
@@ -274,7 +294,6 @@ function restrictLetters() {
     $("decisionManual").value = $("decisionManual").value.replace(regex, "");
 }
 
-// !!! branch
 function validateForm() {
     $("inputDecisionStatus").innerHTML = "";
 
@@ -286,11 +305,10 @@ function validateForm() {
             benches.forEach(e => {
                 let re = new RegExp(e, "g");
                 let count = ($("decisionManual").value.toUpperCase().match(re) || []).length;
-                console.log(e, count);
                 if (count > 1) {
                     teamCount += 3;
                 }
-                teamCount++;
+                teamCount += count;
             });
             if (teamCount != 2) {
                 $("inputDecisionStatus").innerHTML += "Please make sure you enter only two different teams.";
@@ -371,6 +389,7 @@ function checkInterchange(num) {
     }
 }
 
+// !!! branch
 function calculateDissent(num) {
     //0 = OG-OO, 1 = OG-CG, 2 = OO-CG, 3 = OG-CO, 4 = OO-CO, 5 = CG-CO
     var dissent = [{ key: "OG-OO", order: 0, interchange: 0, givingRight: 0, distance: 0, color: "black" },
