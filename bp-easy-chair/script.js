@@ -151,6 +151,7 @@ function onDeleteRow(e) {
     calculateDissent();
 }
 
+// !!! branch
 function onHoverRow(e) {
     var exchange = e.target.closest("tr").cells[0].children[1].innerHTML;
     var dissent = e.target.closest("tr").cells[2].innerHTML;
@@ -387,7 +388,6 @@ function checkInterchange(num) {
 }
 
 
-// !!! branch
 function calculateDissent() {
     //0 = OG-OO, 1 = OG-CG, 2 = OO-CG, 3 = OG-CO, 4 = OO-CO, 5 = CG-CO
     var dissent = [{ key: "OG-OO", order: 0, interchange: 0, givingRight: 0, distance: 0, color: "black" },
@@ -413,7 +413,7 @@ function calculateDissent() {
 
         // If top two only, switch to other function
         if ($("topTwoBtn").checked == true) {
-            calculateDissentTopTwo();
+            onDissentTopTwo();
             return;
         }
 
@@ -504,6 +504,23 @@ function calculateDissent() {
         }
     }
 }
+
+// Handles dissent for top two only
+// Calls dissent calculation function
+// If there is more than one judge,
+// - clears team comparisons placeholder
+// - displays dissents on table
+function onDissentTopTwo() {
+    let dissent = calculateDissentTopTwo();
+    console.log($("callTbody").rows.length);
+    if ($("callTbody").rows.length > 1) {
+        $("dissentTableStatus").style.display = "none";
+        displayDissents(dissent);
+    }
+}
+
+// Reads call table
+// Returns the dissents with team key, interchangeability, results of the dissent
 function calculateDissentTopTwo() {
     // Construct dissents data structure
     let dissent = [];
@@ -517,7 +534,6 @@ function calculateDissentTopTwo() {
             });
         }
     }
-    console.log(dissent);
 
     // Repeat for all judges
     for (let i = 0; i < $("callTbody").rows.length; i++) {
@@ -530,9 +546,9 @@ function calculateDissentTopTwo() {
                 teamRanks.unshift("/");
             }
         }
+
+        // Calculate dissents based on OG, OO, CG, CO positions
         let teamRanksString = teamRanks.join("");
-        console.log("iter" + i, teamRanksString);
-        // Log dissents
         let index = 0;
         for (let j = 1; j <= 3; j++) {
             for (k = 0; k < j; k++) {
@@ -542,13 +558,49 @@ function calculateDissentTopTwo() {
                 }
                 // Log interchangeability
                 if (teamRanksString.indexOf(benches[j] + "/" + benches[k]) != -1 ||
-                teamRanksString.indexOf(benches[k] + "/" + benches[j]) != -1) {
+                    teamRanksString.indexOf(benches[k] + "/" + benches[j]) != -1) {
                     dissent[index].interchange++;
+                }
+                // Log if all judges agree, color is grey. Otherwise, color is black
+                let agreement = Math.max(dissent[i].givingRight, $("callTbody").rows.length - dissent[i].givingRight);
+                if (agreement == $("callTbody").rows.length) {
+                    dissent[index].color = "#868e96";
+                } else {
+                    dissent[index].color = "black";
                 }
                 index++;
             }
         }
-        console.log(dissent);
+    }
+
+    return dissent;
+}
+
+// Displays dissents on the team comparisons table
+function displayDissents(dissent) {
+    console.log("ive been called");
+    // Check if an exchange is already resolved
+    // If yes, return checked so that the radio is checked already
+    function checkResolved(left, index) {
+        if ((left && dissent[index].givingRight == 0) ||
+            (!left && dissent[index].givingRight == $("callTbody").rows.length)) {
+            return "checked";
+        } else {
+            return "";
+        }
+    }
+    // Repeat for all team comparisons
+    for (let i = 0; i < dissent.length; i++) {
+        $("dissentTable").innerHTML +=
+            `<tr>
+            <td>
+            <input type="radio" class="resolveBtn" name="*${dissent[i].key}" id="More${dissent[i].key}" ${checkResolved(true, i)}></input>
+            <span style="color:${dissent[i].color}">${dissent[i].key}</span>
+            <input type="radio" class="resolveBtn" name="*${dissent[i].key}" id="Less${dissent[i].key}" ${checkResolved(false, i)}></input>
+            </td>
+            <td>${dissent[i].interchange}</td>
+            <td>${($("callTbody").rows.length - dissent[i].givingRight)}-${dissent[i].givingRight}</td>
+        </tr>`
     }
 }
 
