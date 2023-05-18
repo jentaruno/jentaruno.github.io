@@ -6,6 +6,8 @@ var finalCObeatOG;
 var finalCObeatOO;
 var finalCObeatCG;
 
+const benches = ["OG", "OO", "CG", "CO"];
+
 function $(x) { return document.getElementById(x); }
 
 function interchangeSymbol() {
@@ -38,10 +40,38 @@ function onManualType(e) {
     }
 }
 
+// If top two teams only, hide 3rd and 4th team options and change dissent calculation.
+// If not, show 3rd and 4th team options.
+function onTopTwo(e) {
+    $("inputDecisionStatus").innerHTML = "";
+
+    if (e.target.checked == true) {
+        const elements = document.querySelectorAll(".third-fourth, .third-fourth-table");
+        elements.forEach(e => { e.style.display = "none"; });
+        $("decision3").required = false;
+        $("decision4").required = false;
+        $("finalThirdFourth").style.display = "none";
+        $("decisionManual").placeholder = "1st (/) 2nd";
+        $("inputDecision").reset();
+        $("inputDecisionManual").reset();
+    } else {
+        const elements = document.querySelectorAll(".third-fourth");
+        elements.forEach(e => { e.style.display = "flex"; });
+        const tableElements = document.querySelectorAll(".third-fourth-table");
+        tableElements.forEach(e => { e.style.display = "table-cell"; });
+        $("decision3").required = true;
+        $("decision4").required = true;
+        $("finalThirdFourth").style.display = "inline-flex";
+        $("decisionManual").placeholder = "1st (/) 2nd (/) 3rd (/) 4th"
+        $("inputDecision").reset();
+        $("inputDecisionManual").reset();
+    }
+}
+
 function onInputDecision(e) {
     e.preventDefault();
-    var Error = validateForm();
-    if (!Error) {
+    var isFormInvalid = validateForm();
+    if (!isFormInvalid) {
         //For manual type
         if ($("manualTypeBtn").checked == true) {
             //Locate benches and ranks
@@ -50,14 +80,19 @@ function onInputDecision(e) {
             { key: "OO", value: 0, interchange: "" },
             { key: "CG", value: 0, interchange: "" },
             { key: "CO", value: 0, interchange: "" }]
-            for (i = 0; i < 4; i++) {
-                decision[i].value = decisionManual.indexOf(decision[i].key);
+            for (let i = 0; i < decision.length; i++) {
+                if (decisionManual.indexOf(decision[i].key) == -1) {
+                    decision.splice(i, 1);
+                    i--;
+                } else {
+                    decision[i].value = decisionManual.indexOf(decision[i].key);
+                }
             }
             decision.sort(function (a, b) {
                 return a.value - b.value;
             });
             //Check interchangeability
-            for (i = 0; i < 3; i++) {
+            for (i = 0; i < decision.length - 1; i++) {
                 var part = decisionManual.substring(
                     decisionManual.indexOf(decision[i].key) + 1,
                     decisionManual.indexOf(decision[i + 1].key)
@@ -67,26 +102,40 @@ function onInputDecision(e) {
                 }
             }
             //Add to table
+            let decisionHTML = ``;
+            if ($("topTwoBtn").checked == true) {
+                decisionHTML = `<td>${decision[0].key}${decision[0].interchange}</td>
+                <td>${decision[1].key}</td>`;
+            } else {
+                decisionHTML = `<td>${decision[0].key}${decision[0].interchange}</td>
+                <td>${decision[1].key}${decision[1].interchange}</td>
+                <td>${decision[2].key}${decision[2].interchange}</td>
+                <td>${decision[3].key}</td>`;
+            }
             $("callTbody").innerHTML += `
             <tr id=${$("judgeManual").value}>
                 <td>${$("judgeManual").value}</td>
-                <td>${decision[0].key}${decision[0].interchange}</td>
-                <td>${decision[1].key}${decision[1].interchange}</td>
-                <td>${decision[2].key}${decision[2].interchange}</td>
-                <td>${decision[3].key}</td>
+                ${decisionHTML}
                 <td><a class="vue-sortable deleteBtn">🅇</a></td>
             </tr>`;
             $("inputDecisionManual").reset();
         }
         //For dropdown type
         else {
+            let decisionHTML = ``;
+            if ($("topTwoBtn").checked == true) {
+                decisionHTML = `<td>${$("decision1").value}${checkInterchange(1)}</td>
+                <td>${$("decision2").value}</td>`;
+            } else {
+                decisionHTML = `<td>${$("decision1").value}${checkInterchange(1)}</td>
+                <td>${$("decision2").value}${checkInterchange(2)}</td>
+                <td>${$("decision3").value}${checkInterchange(3)}</td>
+                <td>${$("decision4").value}</td>`;
+            }
             $("callTbody").innerHTML += `
             <tr id=${$("judge").value}>
                 <td>${$("judge").value}</td>
-                <td>${$("decision1").value}${checkInterchange(1)}</td>
-                <td>${$("decision2").value}${checkInterchange(2)}</td>
-                <td>${$("decision3").value}${checkInterchange(3)}</td>
-                <td>${$("decision4").value}</td>
+                ${decisionHTML}
                 <td><a class="vue-sortable deleteBtn">🅇</a></td>
             </tr>`;
             $("inputDecision").reset();
@@ -102,7 +151,10 @@ function onDeleteRow(e) {
     calculateDissent();
 }
 
+// !!! branch
 function onHoverRow(e) {
+    let teamsLength;
+    ($("topTwoBtn").checked) ? teamsLength = 2 : teamsLength = 4;
     var exchange = e.target.closest("tr").cells[0].children[1].innerHTML;
     var dissent = e.target.closest("tr").cells[2].innerHTML;
     //Repeat for all judges
@@ -112,7 +164,7 @@ function onHoverRow(e) {
         var team = [{ key: exchange.substring(0, 2), rank: 0 },
         { key: exchange.substring(3, 5), rank: 0 }]
         //Locate teams positions
-        for (var j = 1; j <= 4; j++) {
+        for (var j = 1; j <= teamsLength; j++) {
             if ($("callTbody").rows[i].cells[j].innerHTML.indexOf(team[0].key) != -1)
                 team[0].rank = j;
             if ($("callTbody").rows[i].cells[j].innerHTML.indexOf(team[1].key) != -1)
@@ -245,8 +297,34 @@ function restrictLetters() {
 function validateForm() {
     $("inputDecisionStatus").innerHTML = "";
 
+    // For top two only
+    if ($("topTwoBtn").checked == true) {
+        if ($("manualTypeBtn").checked == true) {
+            // Check that two different teams are placed
+            let teamCount = 0;
+            benches.forEach(e => {
+                let re = new RegExp(e, "g");
+                let count = ($("decisionManual").value.toUpperCase().match(re) || []).length;
+                if (count > 1) {
+                    teamCount += 3;
+                }
+                teamCount += count;
+            });
+            if (teamCount != 2) {
+                $("inputDecisionStatus").innerHTML += "Please make sure you enter only two different teams.";
+                return true;
+            }
+        } else {
+            // Check for duplicates
+            if ($("decision1").value == $("decision2").value) {
+                $("inputDecisionStatus").innerHTML += "The same team cannot get two different ranks";
+                return true;
+            }
+        }
+    }
+
     //For manual type
-    if ($("manualTypeBtn").checked == true) {
+    else if ($("manualTypeBtn").checked == true) {
         //Check if all teams placed
         if ($("decisionManual").value.toUpperCase().indexOf("OG") == -1 ||
             $("decisionManual").value.toUpperCase().indexOf("OO") == -1 ||
@@ -311,7 +389,7 @@ function checkInterchange(num) {
     }
 }
 
-function calculateDissent(num) {
+function calculateDissent() {
     //0 = OG-OO, 1 = OG-CG, 2 = OO-CG, 3 = OG-CO, 4 = OO-CO, 5 = CG-CO
     var dissent = [{ key: "OG-OO", order: 0, interchange: 0, givingRight: 0, distance: 0, color: "black" },
     { key: "OG-CG", order: 1, interchange: 0, givingRight: 0, distance: 0, color: "black" },
@@ -333,6 +411,13 @@ function calculateDissent(num) {
 
     if ($("callTbody").rows.length > 0) {
         $("callTableStatus").style.display = "none";
+
+        // If top two only, switch to other function
+        if ($("topTwoBtn").checked == true) {
+            onDissentTopTwo();
+            return;
+        }
+
         //Repeat for all judges
         for (i = 0; i < $("callTbody").rows.length; i++) {
             //Locate OG, OO, CG, CO positions
@@ -418,6 +503,104 @@ function calculateDissent(num) {
             </tr>`;
             }
         }
+    }
+}
+
+// Handles dissent for top two only
+// Calls dissent calculation function
+// If there is more than one judge,
+// - clears team comparisons placeholder
+// - displays dissents on table
+function onDissentTopTwo() {
+    let dissent = calculateDissentTopTwo();
+    if ($("callTbody").rows.length > 1) {
+        $("dissentTableStatus").style.display = "none";
+        displayDissents(dissent);
+    }
+}
+
+// Reads call table
+// Returns the dissents with team key, interchangeability, results of the dissent
+function calculateDissentTopTwo() {
+    // Construct dissents data structure
+    let dissent = [];
+    for (i = 1; i <= 3; i++) {
+        for (j = 0; j < i; j++) {
+            dissent.push({
+                key: benches[j] + "-" + benches[i],
+                interchange: 0,
+                givingRight: 0,
+                color: "black"
+            });
+        }
+    }
+
+    // Repeat for all judges
+    for (let i = 0; i < $("callTbody").rows.length; i++) {
+        // Locate OG, OO, CG, CO positions
+        let teamRanks = [];
+        for (let j = 1; j < $("callTbody").rows[i].cells.length - 1; j++) {
+            let cellValue = $("callTbody").rows[i].cells[j].innerHTML;
+            teamRanks.unshift(cellValue.substring(0, 2));
+            if (cellValue.indexOf("<svg") != -1) {
+                teamRanks.unshift("/");
+            }
+        }
+
+        // Calculate dissents based on OG, OO, CG, CO positions
+        let teamRanksString = teamRanks.join("");
+        let index = 0;
+        for (let j = 1; j <= 3; j++) {
+            for (k = 0; k < j; k++) {
+                // Log dissents
+                if (teamRanks.indexOf(benches[j]) > teamRanks.indexOf(benches[k])) {
+                    dissent[index].givingRight++;
+                }
+                // Log interchangeability
+                if (teamRanksString.indexOf(benches[j] + "/" + benches[k]) != -1 ||
+                    teamRanksString.indexOf(benches[k] + "/" + benches[j]) != -1) {
+                    dissent[index].interchange++;
+                }
+                // Log if all judges agree, color is grey. Otherwise, color is black
+                let agreement = Math.max(dissent[index].givingRight, $("callTbody").rows.length - dissent[index].givingRight);
+                console.log("agree", agreement + "/" + $("callTbody").rows.length);
+                if (agreement == $("callTbody").rows.length) {
+                    dissent[index].color = "#868e96";
+                } else {
+                    dissent[index].color = "black";
+                }
+                index++;
+            }
+        }
+    }
+
+    return dissent;
+}
+
+// Displays dissents on the team comparisons table
+function displayDissents(dissent) {
+    // Check if an exchange is already resolved
+    // If yes, return checked so that the radio is checked already
+    function checkResolved(left, index) {
+        if ((left && dissent[index].givingRight == 0) ||
+            (!left && dissent[index].givingRight == $("callTbody").rows.length)) {
+            return "checked";
+        } else {
+            return "";
+        }
+    }
+    // Repeat for all team comparisons
+    for (let i = 0; i < dissent.length; i++) {
+        $("dissentTable").innerHTML +=
+            `<tr>
+            <td>
+            <input type="radio" class="resolveBtn" name="*${dissent[i].key}" id="More${dissent[i].key}" ${checkResolved(true, i)}></input>
+            <span style="color:${dissent[i].color}">${dissent[i].key}</span>
+            <input type="radio" class="resolveBtn" name="*${dissent[i].key}" id="Less${dissent[i].key}" ${checkResolved(false, i)}></input>
+            </td>
+            <td>${dissent[i].interchange}</td>
+            <td>${($("callTbody").rows.length - dissent[i].givingRight)}-${dissent[i].givingRight}</td>
+        </tr>`
     }
 }
 
@@ -545,15 +728,15 @@ sorttable = {
                         //For chronological
                         if (col == 0) {
                             let orderTeam = 0;
-                                switch ($("dissentTable").rows[j].cells[col].children[1].innerHTML) {
-                                    case "OG-OO": orderTeam = 0; break;
-                                    case "OG-CG": orderTeam = 1; break;
-                                    case "OO-CG": orderTeam = 2; break;
-                                    case "OG-CO": orderTeam = 3; break;
-                                    case "OO-CO": orderTeam = 4; break;
-                                    case "CG-CO": orderTeam = 5; break;
-                                    default: orderTeam = 0;
-                                }
+                            switch ($("dissentTable").rows[j].cells[col].children[1].innerHTML) {
+                                case "OG-OO": orderTeam = 0; break;
+                                case "OG-CG": orderTeam = 1; break;
+                                case "OO-CG": orderTeam = 2; break;
+                                case "OG-CO": orderTeam = 3; break;
+                                case "OO-CO": orderTeam = 4; break;
+                                case "CG-CO": orderTeam = 5; break;
+                                default: orderTeam = 0;
+                            }
                             row_array[row_array.length] = [orderTeam, rows[j]];
                         }
                         //For interchangeability
@@ -749,6 +932,7 @@ $("closeHelpBtn").addEventListener("click", function () { $("helpModal").style.d
 window.addEventListener("click", function (event) { if (event.target == $("helpModal")) $("helpModal").style.display = "none"; })
 $("decisionManual").addEventListener("keyup", restrictLetters);
 $("manualTypeBtn").addEventListener("click", onManualType);
+$("topTwoBtn").addEventListener("click", onTopTwo);
 $("inputDecision").addEventListener("submit", onInputDecision);
 $("inputDecisionManual").addEventListener("submit", onInputDecision);
 $("callTable").addEventListener("click", onDeleteRow);
