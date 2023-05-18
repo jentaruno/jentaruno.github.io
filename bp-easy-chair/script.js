@@ -52,6 +52,7 @@ function onTopTwo(e) {
         $("decision4").required = false;
         $("finalThirdFourth").style.display = "none";
         $("decisionManual").placeholder = "1st (/) 2nd";
+        $("callTbody").innerHTML = '';
         $("inputDecision").reset();
         $("inputDecisionManual").reset();
     } else {
@@ -63,6 +64,7 @@ function onTopTwo(e) {
         $("decision4").required = true;
         $("finalThirdFourth").style.display = "inline-flex";
         $("decisionManual").placeholder = "1st (/) 2nd (/) 3rd (/) 4th"
+        $("callTbody").innerHTML = '';
         $("inputDecision").reset();
         $("inputDecisionManual").reset();
     }
@@ -563,7 +565,6 @@ function calculateDissentTopTwo() {
                 }
                 // Log if all judges agree, color is grey. Otherwise, color is black
                 let agreement = Math.max(dissent[index].givingRight, $("callTbody").rows.length - dissent[index].givingRight);
-                console.log("agree", agreement + "/" + $("callTbody").rows.length);
                 if (agreement == $("callTbody").rows.length) {
                     dissent[index].color = "#868e96";
                 } else {
