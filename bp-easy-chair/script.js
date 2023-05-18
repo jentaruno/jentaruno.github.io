@@ -81,12 +81,9 @@ function onInputDecision(e) {
             { key: "CG", value: 0, interchange: "" },
             { key: "CO", value: 0, interchange: "" }]
             for (let i = 0; i < decision.length; i++) {
-                console.log("iter " + i + decision[i].key);
                 if (decisionManual.indexOf(decision[i].key) == -1) {
-                    console.log("splice " + decision[i].key);
                     decision.splice(i, 1);
                     i--;
-                    console.log(i, " index, length of decision is ", decision.length);
                 } else {
                     decision[i].value = decisionManual.indexOf(decision[i].key);
                 }
@@ -389,8 +386,9 @@ function checkInterchange(num) {
     }
 }
 
+
 // !!! branch
-function calculateDissent(num) {
+function calculateDissent() {
     //0 = OG-OO, 1 = OG-CG, 2 = OO-CG, 3 = OG-CO, 4 = OO-CO, 5 = CG-CO
     var dissent = [{ key: "OG-OO", order: 0, interchange: 0, givingRight: 0, distance: 0, color: "black" },
     { key: "OG-CG", order: 1, interchange: 0, givingRight: 0, distance: 0, color: "black" },
@@ -412,6 +410,13 @@ function calculateDissent(num) {
 
     if ($("callTbody").rows.length > 0) {
         $("callTableStatus").style.display = "none";
+
+        // If top two only, switch to other function
+        if ($("topTwoBtn").checked == true) {
+            calculateDissentTopTwo();
+            return;
+        }
+
         //Repeat for all judges
         for (i = 0; i < $("callTbody").rows.length; i++) {
             //Locate OG, OO, CG, CO positions
@@ -497,6 +502,53 @@ function calculateDissent(num) {
             </tr>`;
             }
         }
+    }
+}
+function calculateDissentTopTwo() {
+    // Construct dissents data structure
+    let dissent = [];
+    for (i = 1; i <= 3; i++) {
+        for (j = 0; j < i; j++) {
+            dissent.push({
+                key: benches[j] + "-" + benches[i],
+                interchange: 0,
+                givingRight: 0,
+                color: "black"
+            });
+        }
+    }
+    console.log(dissent);
+
+    // Repeat for all judges
+    for (let i = 0; i < $("callTbody").rows.length; i++) {
+        // Locate OG, OO, CG, CO positions
+        let teamRanks = [];
+        for (let j = 1; j < $("callTbody").rows[i].cells.length - 1; j++) {
+            let cellValue = $("callTbody").rows[i].cells[j].innerHTML;
+            teamRanks.unshift(cellValue.substring(0, 2));
+            if (cellValue.indexOf("<svg") != -1) {
+                teamRanks.unshift("/");
+            }
+        }
+        let teamRanksString = teamRanks.join("");
+        console.log("iter" + i, teamRanksString);
+        // Log dissents
+        let index = 0;
+        for (let j = 1; j <= 3; j++) {
+            for (k = 0; k < j; k++) {
+                // Log dissents
+                if (teamRanks.indexOf(benches[j]) > teamRanks.indexOf(benches[k])) {
+                    dissent[index].givingRight++;
+                }
+                // Log interchangeability
+                if (teamRanksString.indexOf(benches[j] + "/" + benches[k]) != -1 ||
+                teamRanksString.indexOf(benches[k] + "/" + benches[j]) != -1) {
+                    dissent[index].interchange++;
+                }
+                index++;
+            }
+        }
+        console.log(dissent);
     }
 }
 
