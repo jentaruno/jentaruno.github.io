@@ -153,6 +153,8 @@ function onDeleteRow(e) {
 
 // !!! branch
 function onHoverRow(e) {
+    let teamsLength;
+    ($("topTwoBtn").checked) ? teamsLength = 2 : teamsLength = 4;
     var exchange = e.target.closest("tr").cells[0].children[1].innerHTML;
     var dissent = e.target.closest("tr").cells[2].innerHTML;
     //Repeat for all judges
@@ -162,7 +164,7 @@ function onHoverRow(e) {
         var team = [{ key: exchange.substring(0, 2), rank: 0 },
         { key: exchange.substring(3, 5), rank: 0 }]
         //Locate teams positions
-        for (var j = 1; j <= 4; j++) {
+        for (var j = 1; j <= teamsLength; j++) {
             if ($("callTbody").rows[i].cells[j].innerHTML.indexOf(team[0].key) != -1)
                 team[0].rank = j;
             if ($("callTbody").rows[i].cells[j].innerHTML.indexOf(team[1].key) != -1)
@@ -512,7 +514,6 @@ function calculateDissent() {
 // - displays dissents on table
 function onDissentTopTwo() {
     let dissent = calculateDissentTopTwo();
-    console.log($("callTbody").rows.length);
     if ($("callTbody").rows.length > 1) {
         $("dissentTableStatus").style.display = "none";
         displayDissents(dissent);
@@ -578,7 +579,6 @@ function calculateDissentTopTwo() {
 
 // Displays dissents on the team comparisons table
 function displayDissents(dissent) {
-    console.log("ive been called");
     // Check if an exchange is already resolved
     // If yes, return checked so that the radio is checked already
     function checkResolved(left, index) {
