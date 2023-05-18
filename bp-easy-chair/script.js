@@ -389,7 +389,6 @@ function checkInterchange(num) {
     }
 }
 
-
 function calculateDissent() {
     //0 = OG-OO, 1 = OG-CG, 2 = OO-CG, 3 = OG-CO, 4 = OO-CO, 5 = CG-CO
     var dissent = [{ key: "OG-OO", order: 0, interchange: 0, givingRight: 0, distance: 0, color: "black" },
@@ -563,7 +562,8 @@ function calculateDissentTopTwo() {
                     dissent[index].interchange++;
                 }
                 // Log if all judges agree, color is grey. Otherwise, color is black
-                let agreement = Math.max(dissent[i].givingRight, $("callTbody").rows.length - dissent[i].givingRight);
+                let agreement = Math.max(dissent[index].givingRight, $("callTbody").rows.length - dissent[index].givingRight);
+                console.log("agree", agreement + "/" + $("callTbody").rows.length);
                 if (agreement == $("callTbody").rows.length) {
                     dissent[index].color = "#868e96";
                 } else {
