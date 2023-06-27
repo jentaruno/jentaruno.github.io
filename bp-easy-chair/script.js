@@ -19,10 +19,6 @@ viewBox="0 0 16 16">
 </svg>`
 }
 
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-})
-
 function onManualType(e) {
     $("inputDecisionStatus").innerHTML = "";
 
@@ -68,6 +64,20 @@ function onTopTwo(e) {
         $("inputDecision").reset();
         $("inputDecisionManual").reset();
     }
+}
+
+// Handle input draw link
+// If valid draw link, import judge names from draw
+function onInputDrawLink(e) {
+    $("inputDecisionStatus").innerHTML = "";
+    e.preventDefault();
+    console.log($("drawLink").value);
+    if ($("drawLink").value.indexOf("/draw") != -1) {
+        readDraw($("drawLink").value.trim());
+    } else {
+        $("inputDecisionStatus").innerHTML += "Not a valid draw link!";
+    }
+
 }
 
 function onInputDecision(e) {
@@ -153,7 +163,6 @@ function onDeleteRow(e) {
     calculateDissent();
 }
 
-// !!! branch
 function onHoverRow(e) {
     let teamsLength;
     ($("topTwoBtn").checked) ? teamsLength = 2 : teamsLength = 4;
@@ -605,6 +614,19 @@ function displayDissents(dissent) {
     }
 }
 
+async function readDraw(link) {
+    try {
+        const response = await fetch('https://cors.io/?http://ubcfallhst2022.calicotab.com/api/v1/tournaments/ubcfall2022sr/adjudicators');
+        const data = await response.json();
+        // Handle the received data on the client-side
+        console.log(data);
+        // Use the data as needed in your client-side code
+    } catch (error) {
+        // Handle any errors that occurred during the request
+        console.error(error);
+    }
+}
+
 sorttable = {
     init: function () {
         // quit if this function has already been called
@@ -928,12 +950,14 @@ var forEach = function (object, block, context) {
     }
 };
 
-$("helpBtn").addEventListener("click", function () { $("helpModal").style.display = "block"; })
-$("closeHelpBtn").addEventListener("click", function () { $("helpModal").style.display = "none"; })
-window.addEventListener("click", function (event) { if (event.target == $("helpModal")) $("helpModal").style.display = "none"; })
+// Add event listeners
+window.addEventListener("click", function (event) { if (event.target == $("helpModal")) $("helpModal").style.display = "none"; });
+$("helpBtn").addEventListener("click", function () { $("helpModal").style.display = "block"; });
+$("closeHelpBtn").addEventListener("click", function () { $("helpModal").style.display = "none"; });
 $("decisionManual").addEventListener("keyup", restrictLetters);
 $("manualTypeBtn").addEventListener("click", onManualType);
 $("topTwoBtn").addEventListener("click", onTopTwo);
+$("inputDrawLink").addEventListener("submit", onInputDrawLink);
 $("inputDecision").addEventListener("submit", onInputDecision);
 $("inputDecisionManual").addEventListener("submit", onInputDecision);
 $("callTable").addEventListener("click", onDeleteRow);
