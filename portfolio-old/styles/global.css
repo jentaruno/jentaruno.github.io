@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('../assets/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter/Inter-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter/Inter-Bold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'AppleGaramond';
+  src: url('../assets/fonts/AppleGaramond/AppleGaramond-BoldItalic.ttf');
+  font-weight: 600;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+i {
+  font-family: AppleGaramond, serif;
+  font-size: 14pt;
+  font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #2633cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
