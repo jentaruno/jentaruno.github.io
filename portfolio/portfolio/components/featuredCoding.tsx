@@ -1,6 +1,7 @@
-import {CodingHero} from "@/components/codingHero";
+import {CodingHero} from "@/components/reusable/codingHero";
 
 export default function FeaturedCoding() {
+
     return (
         <div>
             <div className={'mb-16'}>
@@ -13,6 +14,7 @@ export default function FeaturedCoding() {
                     statDesc={'views in 2 weeks'}
                 />
             </div>
+
             <div className={'mb-16'}>
                 <CodingHero
                     src={'/easychair.png'}
@@ -24,13 +26,28 @@ export default function FeaturedCoding() {
                 />
             </div>
 
-            <div className={'mb-16'}>
-                <h4>I've worked with</h4>
-                JavaScript, TypeScript, HTML, CSS, Java, C#, Dart, MySQL, Python
-                React.js, Next.js, Sass, Flutter, SQLite, JUnit
-                Unity, WordPress
-
-                [See more]
+            <div className={'pt-8'}>
+                <h4 className={'text-green-600'}>I've worked with</h4>
+                <h3 className={'font-bold text-justify leading-normal [word-spacing:1rem]'}>
+                    JavaScript
+                    TypeScript
+                    HTML
+                    CSS
+                    Java
+                    C#
+                    Dart
+                    MySQL
+                    Python
+                    React.js
+                    Next.js
+                    TailwindCSS
+                    Sass
+                    Flutter
+                    SQLite
+                    JUnit
+                    Unity
+                    WordPress
+                </h3>
             </div>
 
         </div>

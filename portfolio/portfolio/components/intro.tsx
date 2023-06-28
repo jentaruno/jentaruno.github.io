@@ -10,7 +10,7 @@ export default function Intro() {
                     <p className={'text-8xl font-bold'}>
                         Jen Taruno
                     </p>
-                    <h3 className={'mt-3'}>
+                    <h3 className={'mt-3 text-green-600'}>
                         Techie on weekdays,
                         <br/>
                         debater on weekends
@@ -26,19 +26,19 @@ export default function Intro() {
                     />
                 </div>
             </div>
-            <div className={'w-2/3'}>
-                <p className={'text-green-600 mt-8'}>
+            <div className={'w-3/4'}>
+                <p className={'mt-8'}>
                     Passionate about optimising processes, front-end development, and community projects
                 </p>
                 <div className={'w-full flex justify-between mt-4'}>
                     <div className={'flex flex-row items-center'}>
                         <ComputerDesktopIcon
-                            className={'h-8 w-8 mr-2 fill-orange'}/>
+                            className={'h-8 w-8 mr-2 fill-orange-700'}/>
                         <h5>Full Ride UBC CS</h5>
                     </div>
                     <div className={'flex flex-row items-center'}>
                         <TrophyIcon
-                            className={'h-8 w-8 mr-2 fill-orange'}/>
+                            className={'h-8 w-8 mr-2 fill-orange-700'}/>
                         <h5>Worlds Debate Coach</h5>
                     </div>
                 </div>
