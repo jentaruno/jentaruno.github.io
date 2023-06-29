@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad07acd4-e9ef-466a-b296-36f4b14c6b41" name="Changes" comment="Debate block">
+    <list default="true" id="ad07acd4-e9ef-466a-b296-36f4b14c6b41" name="Changes" comment="Design block and contact block">
+      <change afterPath="$PROJECT_DIR$/portfolio/components/reusable/contact.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/codingHero.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/components/featuredCoding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredCoding.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/pageNavs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/seeMoreButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/seeMoreButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +89,7 @@
       <workItem from="1687841697750" duration="7989000" />
       <workItem from="1687897779360" duration="6000" />
       <workItem from="1687971669923" duration="11512000" />
-      <workItem from="1688060642191" duration="1034000" />
+      <workItem from="1688060642191" duration="11840000" />
     </task>
     <task id="LOCAL-00001" summary="Intro and coding block">
       <created>1687844153044</created>
@@ -109,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687977364476</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Design carousel">
+      <created>1688061774109</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688061774109</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +140,8 @@
     <MESSAGE value="Next files" />
     <MESSAGE value="Intro and coding block" />
     <MESSAGE value="Debate block" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debate block" />
+    <MESSAGE value="Design carousel" />
+    <MESSAGE value="Design block and contact block" />
+    <option name="LAST_COMMIT_MESSAGE" value="Design block and contact block" />
   </component>
 </project>

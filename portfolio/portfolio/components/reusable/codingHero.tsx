@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export function CodingHero(props: {
+    link: string,
     src: string,
     title: string,
     desc: string,
@@ -10,18 +11,22 @@ export function CodingHero(props: {
 }) {
     return <div className={"flex flex-col lg:flex-row"}>
         <div className={"relative h-64 lg:w-1/2 flex flex-col justify-center lg:mr-8"}>
-            <Image
-                fill={true}
-                className={"rounded-md drop-shadow-md"}
-                src={props.src}
-                alt={props.title}
-                style={{objectFit: "cover"}}
-            />
+            <a href={props.link} target={'blank'}>
+                <Image
+                    fill={true}
+                    className={"rounded-md drop-shadow-md"}
+                    src={props.src}
+                    alt={props.title}
+                    style={{objectFit: "cover"}}
+                />
+            </a>
         </div>
         <div className={"flex flex-col lg:w-1/2 lg:ml-8 justify-center"}>
-            <h2 className={"text-orange-700 font-bold"}>
-                {props.title}
-            </h2>
+            <a href={props.link} target={'blank'}>
+                <h2 className={"text-orange-700 font-bold"}>
+                    {props.title}
+                </h2>
+            </a>
             <p className={"mt-2"}>
                 {props.desc}
             </p>

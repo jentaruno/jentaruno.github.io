@@ -6,6 +6,7 @@ export default function FeaturedCoding() {
         <div>
             <div className={'mb-16'}>
                 <CodingHero
+                    link={'https://ubc-course-matcher.netlify.app/'}
                     src={'/course-matcher.png'}
                     title={'UBC Course Matcher'}
                     desc={'Social networking app for UBC students'}
@@ -17,6 +18,7 @@ export default function FeaturedCoding() {
 
             <div className={'mb-16'}>
                 <CodingHero
+                    link={'https://jentaruno.github.io/bp-easy-chair/'}
                     src={'/easychair.png'}
                     title={'EasyChair'}
                     desc={'Web app to ease debate judging'}

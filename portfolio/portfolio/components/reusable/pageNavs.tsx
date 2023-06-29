@@ -1,6 +1,6 @@
 export default function PageNavs() {
     return (
-        <div className={'text-orange-700 font-bold'}>
+        <div className={'text-orange-700 text-sm font-bold'}>
             <ul className="flex">
                 {[
                     ['Home', '/'],
