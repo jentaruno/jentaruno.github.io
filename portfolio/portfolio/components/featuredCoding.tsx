@@ -37,7 +37,7 @@ export default function FeaturedCoding() {
                     C#
                     Dart
                     MySQL
-                    Python
+                    Rust
                     React.js
                     Next.js
                     TailwindCSS

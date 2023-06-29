@@ -4,17 +4,16 @@ export function DebateHero(props: { year: number, title: string, desc: string, s
     return <div>
         <div className={"flex flex-col lg:flex-row justify-center"}>
             <div className={"flex flex-col lg:w-1/3 lg:mr-8 justify-center"}>
-                <h2 className={"font-bold mb-4"}>{props.title}</h2>
+                <h1 className={"font-bold mb-4"}>{props.title}</h1>
                 <p className={'text-green-600'}>{props.desc}</p>
             </div>
             <div className={'lg:w-1/3 bg-white flex flex-col justify-center rounded-md drop-shadow-md'}>
                 <div className={"text-center text-green-600 font-bold tracking-wider"}>
                     {props.year}
                 </div>
-                <div className={"relative h-64"}>
+                <div className={"relative mx-2 mb-4 h-64"}>
                     <Image
                         fill={true}
-                        className={"rounded-b-md"}
                         src={props.src}
                         alt={props.title}
                         style={{objectFit: "cover"}}

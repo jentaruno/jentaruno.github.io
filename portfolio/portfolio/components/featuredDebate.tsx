@@ -23,7 +23,7 @@ export default function FeaturedDebate() {
             <DebateHero
                 year={2022}
                 title={'World Schools Debate Coach'}
-                desc={'Coached the team to Octofinals, matched the national record.'}
+                desc={'Coached the team to Octofinals. Raised country rank from B to AB.'}
                 src={'/wsdc-coach.jpg'}
                 otherText={'also achieved in 2021'}
                 strings={[
