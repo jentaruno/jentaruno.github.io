@@ -19,6 +19,10 @@ module.exports = {
             },
             'white': '#fcfcfc',
         },
+        fontFamily: {
+            'sans': ['Inter'],
+            'serif': ['AppleGaramond', 'serif'],
+        },
         extend: {
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

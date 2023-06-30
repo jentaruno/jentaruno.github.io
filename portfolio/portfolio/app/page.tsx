@@ -1,5 +1,3 @@
-import PageNavs from '@/components/reusable/pageNavs'
-import Contact from '@/components/reusable/contact'
 import Intro from "@/components/intro";
 import FeaturedCoding from "@/components/featuredCoding";
 import FeaturedDebate from "@/components/featuredDebate";
@@ -10,7 +8,6 @@ export default function Home() {
     return (
         <main className={'flex flex-col bg-white'}>
             <div className="flex flex-col items-center px-8 lg:px-20 py-4 bg-white">
-                <PageNavs/>
                 <div className={'w-full lg:w-3/4 grid grid-cols-1 divide-y divide-green-200'}>
                     <div className={'flex flex-col min-h-screen justify-center'}>
                         <Intro/>
@@ -49,9 +46,6 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className={'w-full bg-white px-8 lg:px-20 pt-4 pb-8 drop-shadow-2xl'}>
-                <Contact/>
             </div>
         </main>
     )

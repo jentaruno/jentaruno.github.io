@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad07acd4-e9ef-466a-b296-36f4b14c6b41" name="Changes" comment="Design block and contact block">
-      <change afterPath="$PROJECT_DIR$/portfolio/components/reusable/contact.jsx" afterDir="false" />
+    <list default="true" id="ad07acd4-e9ef-466a-b296-36f4b14c6b41" name="Changes" comment="Poems page has poem book">
+      <change afterPath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/components/poemBook.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/components/poems.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/components/utils.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/codingHero.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredCoding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredCoding.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/pageNavs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/seeMoreButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/seeMoreButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/contact.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +66,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\app\poems" />
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\reusable" />
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\general" />
     </key>
@@ -89,7 +91,7 @@
       <workItem from="1687841697750" duration="7989000" />
       <workItem from="1687897779360" duration="6000" />
       <workItem from="1687971669923" duration="11512000" />
-      <workItem from="1688060642191" duration="11840000" />
+      <workItem from="1688060642191" duration="18986000" />
     </task>
     <task id="LOCAL-00001" summary="Intro and coding block">
       <created>1687844153044</created>
@@ -119,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688061774109</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Design block and contact block">
+      <created>1688075887945</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688075887945</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +151,7 @@
     <MESSAGE value="Debate block" />
     <MESSAGE value="Design carousel" />
     <MESSAGE value="Design block and contact block" />
-    <option name="LAST_COMMIT_MESSAGE" value="Design block and contact block" />
+    <MESSAGE value="Poems page has poem book" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poems page has poem book" />
   </component>
 </project>

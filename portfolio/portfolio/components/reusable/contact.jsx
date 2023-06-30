@@ -1,3 +1,5 @@
+import {EnvelopeIcon} from "@heroicons/react/24/solid";
+
 export default function Contact() {
     return (
         <div className={'flex flex-row'}>

@@ -16,7 +16,7 @@ export default function FeaturedDebate() {
                     'Rotterdam Open Finalist (ESL)'
                 ]}
             />
-            <div className={'flex flex-row h-24 justify-center grid grid-cols-2 divide-x divide-grey'}>
+            <div className={'flex flex-row h-24 justify-center grid grid-cols-2 divide-x divide-green-200'}>
                 <p></p>
                 <p></p>
             </div>
