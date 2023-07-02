@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad07acd4-e9ef-466a-b296-36f4b14c6b41" name="Changes" comment="Poems page has poem book">
-      <change afterPath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/components/poemBook.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/components/poems.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/components/utils.module.css" afterDir="false" />
+    <list default="true" id="ad07acd4-e9ef-466a-b296-36f4b14c6b41" name="Changes" comment="started The Maverick">
+      <change afterPath="$PROJECT_DIR$/portfolio/components/fnParseMarkdown.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/components/maverick.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/contact.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/poemBook.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/poemBook.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +87,8 @@
       <workItem from="1687841697750" duration="7989000" />
       <workItem from="1687897779360" duration="6000" />
       <workItem from="1687971669923" duration="11512000" />
-      <workItem from="1688060642191" duration="18986000" />
+      <workItem from="1688060642191" duration="19249000" />
+      <workItem from="1688334935840" duration="4617000" />
     </task>
     <task id="LOCAL-00001" summary="Intro and coding block">
       <created>1687844153044</created>
@@ -128,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688075887945</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Poems page has poem book">
+      <created>1688096082020</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688096082020</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +156,7 @@
     <MESSAGE value="Design carousel" />
     <MESSAGE value="Design block and contact block" />
     <MESSAGE value="Poems page has poem book" />
-    <option name="LAST_COMMIT_MESSAGE" value="Poems page has poem book" />
+    <MESSAGE value="started The Maverick" />
+    <option name="LAST_COMMIT_MESSAGE" value="started The Maverick" />
   </component>
 </project>

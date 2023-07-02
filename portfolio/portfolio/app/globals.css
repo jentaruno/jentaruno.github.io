@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'AppleGaramond';
-    src: url('/public/fonts/AppleGaramond/AppleGaramond-BoldItalic.ttf');
-    font-weight: 600;
-}
 
 @layer base {
+    @font-face {
+        font-family: 'AppleGaramond';
+        src: url('/public/fonts/AppleGaramond/AppleGaramond-BoldItalic.ttf') format('truetype');
+        font-weight: 600;
+    }
+
     div {
         @apply text-lg text-green-900 mt-1;
     }

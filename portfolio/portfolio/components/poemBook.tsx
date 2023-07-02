@@ -3,6 +3,7 @@
 import bookStyles from '@/components/poems.module.css'
 import utilStyles from "@/components/utils.module.css";
 import {useState} from "react";
+import parseMarkdown from "@/components/fnParseMarkdown";
 
 // TODO: make responsive
 export default function PoemBook() {
@@ -85,16 +86,6 @@ export default function PoemBook() {
         }
     }
 
-    function parseMarkdown(md: string) {
-        let removeLineBreaks = md.split("\\");
-        return removeLineBreaks.map((e) => {
-            if (e === " ") {
-                return <br></br>
-            } else {
-                return <p className={bookStyles.poemText}>{e}</p>
-            }
-        })
-    }
 
     return <>
         <div className={bookStyles.book}>

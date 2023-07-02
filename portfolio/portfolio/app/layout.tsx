@@ -18,7 +18,7 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={inter.className}>
-        <div className="flex flex-col items-center px-8 lg:px-20 py-4 bg-white">
+        <div className="flex flex-col items-center px-8 lg:px-20 py-2 bg-white">
             <PageNavs/>
         </div>
         {children}
