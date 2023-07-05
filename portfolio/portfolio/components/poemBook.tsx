@@ -96,7 +96,7 @@ export default function PoemBook() {
                              onClick={() => handlePageClick(index)}
                              style={setZIndex(index, maxPage)}>
                             <div className={bookStyles.pageContent}>
-                                <h4 className={'font-serif'}>
+                                <h4 className={'font-serif uppercase'}>
                                     {title}
                                 </h4>
                                 <small className={utilStyles.itemDate}>

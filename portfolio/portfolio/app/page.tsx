@@ -19,7 +19,7 @@ export default function Home() {
                         <div className={'mt-16'}>
                             <FeaturedCoding/>
                             <div className={'mt-12'}>
-                                <SeeMoreButton link={'/coding'}/>
+                                <SeeMoreButton link={'https://github.com/jentaruno'}/>
                             </div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@ export default function Home() {
                         <div className={'mt-16'}>
                             <FeaturedDebate/>
                             <div className={'mt-12'}>
-                                <SeeMoreButton link={'/debate'}/>
+                                <SeeMoreButton link={'https://disputandum.com/'}/>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ export default function Home() {
                         <div className={'mt-16'}>
                             <FeaturedDesign/>
                             <div className={'mt-12'}>
-                                <SeeMoreButton link={'/design'}/>
+                                <SeeMoreButton link={'https://www.instagram.com/jentaruno/'}/>
                             </div>
                         </div>
                     </div>

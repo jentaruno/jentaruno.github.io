@@ -76,7 +76,7 @@ export default function Maverick() {
     return (
         <div className={'pb-12'}>
             <div className={'w-full m-auto px-4 relative group'}>
-                <div className={'flex flex-col w-[30vw] h-min justify-center'}>
+                <div className={'flex flex-col w-[35vw] h-min justify-center'}>
                     <div className={'flex flex-row justify-between mb-2'}>
                         <h1 className={'font-serif uppercase'}>
                             THE<br/>
@@ -86,17 +86,17 @@ export default function Maverick() {
                         <p className={'text-green-600'}>{poems[index].date}</p>
                     </div>
                     <div>
-                        <p>{parseMarkdown(poems[index].desc)}</p>
+                        {parseMarkdown(poems[index].desc)}
                     </div>
                 </div>
                 <div
                     onClick={prevSlide}
-                    className={'z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] left-4 text-2xl rounded-full p-2 bg-green-900/40 cursor-pointer'}>
+                    className={'z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] -left-24 text-2xl rounded-full p-2 bg-green-900/40 cursor-pointer'}>
                     <ChevronLeftIcon className={'h-8 w-8 fill-white'}/>
                 </div>
                 <div
                     onClick={nextSlide}
-                    className={'z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] right-4 text-2xl rounded-full p-2 bg-green-900/40 cursor-pointer'}>
+                    className={'z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] -right-24 text-2xl rounded-full p-2 bg-green-900/40 cursor-pointer'}>
                     <ChevronRightIcon className={'h-8 w-8 fill-white'}/>
                 </div>
                 <div className={'flex top-4 justify-center py-4'}>

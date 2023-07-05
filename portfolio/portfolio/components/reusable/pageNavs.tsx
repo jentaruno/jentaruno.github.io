@@ -4,9 +4,9 @@ export default function PageNavs() {
             <ul className="flex">
                 {[
                     ['Home', '/'],
-                    ['Coding', '/coding'],
-                    ['Design', '/design'],
-                    ['Debate', '/debate'],
+                    ['Coding', 'https://github.com/jentaruno'],
+                    ['Design', 'https://www.instagram.com/jentaruno/'],
+                    ['Debate', 'https://disputandum.com/'],
                     ['Contact', '/contact'],
                 ].map(([title, url]) => (
                     <li className={'mr-6'}>
