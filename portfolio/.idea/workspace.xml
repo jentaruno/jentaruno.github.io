@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad07acd4-e9ef-466a-b296-36f4b14c6b41" name="Changes" comment="started The Maverick">
+    <list default="true" id="ad07acd4-e9ef-466a-b296-36f4b14c6b41" name="Changes" comment="Configured gh pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/maverick.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/maverick.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/poemBook.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/poemBook.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/next.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
       <workItem from="1687971669923" duration="11512000" />
       <workItem from="1688060642191" duration="19249000" />
       <workItem from="1688334935840" duration="4713000" />
-      <workItem from="1688600180751" duration="1193000" />
+      <workItem from="1688600180751" duration="2010000" />
     </task>
     <task id="LOCAL-00001" summary="Intro and coding block">
       <created>1687844153044</created>
@@ -138,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688339628345</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[MVP] Spruced up Maverick, added interim links.">
+      <created>1688601543871</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688601543871</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +170,8 @@
     <MESSAGE value="Design block and contact block" />
     <MESSAGE value="Poems page has poem book" />
     <MESSAGE value="started The Maverick" />
-    <option name="LAST_COMMIT_MESSAGE" value="started The Maverick" />
+    <MESSAGE value="[MVP] Spruced up Maverick, added interim links." />
+    <MESSAGE value="Configured gh pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configured gh pages" />
   </component>
 </project>

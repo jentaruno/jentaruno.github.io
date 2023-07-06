@@ -1,5 +1,16 @@
 {
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "scriptname": "next build",
+    "export": "next export",
+    "deploy": "gh-pages -d out -t true",
+    "static": "next build && next export && touch ./out/.nojekyll && echo 'https://jentaruno.github.io' > ./out/CNAME"
+  },
   "dependencies": {
-    "@heroicons/react": "^2.0.18"
+    "@heroicons/react": "^2.0.18",
+    "next": "^13.4.8"
   }
 }
