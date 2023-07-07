@@ -1,5 +1,5 @@
 1:HL["/_next/static/css/27bf84a0c0ec0f32.css",{"as":"style"}]
-0:["wj85aSAHhW_jbSgVN_kc_",[[["",{"children":["poems",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/27bf84a0c0ec0f32.css","precedence":"next"}]],["$L3",null]]]]]
+0:["iVWxPdfTppSKevwzCikp2",[[["",{"children":["poems",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/27bf84a0c0ec0f32.css","precedence":"next"}]],["$L3",null]]]]]
 4:HL["/_next/static/css/3b8ebaed2ee4192a.css",{"as":"style"}]
 5:I{"id":"6021","chunks":["185:static/chunks/app/layout-378a4dbf7c31afa1.js"],"name":"","async":false}
 6:I{"id":"3211","chunks":["272:static/chunks/webpack-f2f1c8c2d62cc4b8.js","253:static/chunks/bce60fc1-ee7ea344e4c1b2a1.js","769:static/chunks/769-d7b7ead661c43af6.js"],"name":"","async":false}
