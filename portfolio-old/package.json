@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "scriptname": "next build",
+    "export": "next export",
+    "deploy": "gh-pages -d out -t true",
+    "static": "next build && next export && touch ./out/.nojekyll && echo 'https://jentaruno.github.io' > ./out/CNAME"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "gh-pages": "^5.0.0",
+    "gray-matter": "^4.0.3",
+    "next": "^13.2.4",
+    "next-images": "^1.8.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.5",
+    "@types/react": "18.0.28",
+    "typescript": "5.0.2"
+  }
+}

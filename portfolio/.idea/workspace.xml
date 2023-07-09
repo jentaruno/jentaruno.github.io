@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ad07acd4-e9ef-466a-b296-36f4b14c6b41" name="Changes" comment="Configured gh pages">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/next.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="2023-updates" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2RiWQGIQBsO7P6QQJsIguEUkZYK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Extracurrs\\Projects\\Personal Website\\jentaruno.github.io\\portfolio\\portfolio\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\app\poems" />
+      <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\reusable" />
+      <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\general" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\reusable\debateHero.tsx" />
+      <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\seeMoreButton.tsx" />
+      <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\codingHero.tsx" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad07acd4-e9ef-466a-b296-36f4b14c6b41" name="Changes" comment="" />
+      <created>1687733367673</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687733367673</updated>
+      <workItem from="1687733370149" duration="12004000" />
+      <workItem from="1687807796210" duration="80000" />
+      <workItem from="1687825437358" duration="283000" />
+      <workItem from="1687825729044" duration="5000" />
+      <workItem from="1687841697750" duration="7989000" />
+      <workItem from="1687897779360" duration="6000" />
+      <workItem from="1687971669923" duration="11512000" />
+      <workItem from="1688060642191" duration="19249000" />
+      <workItem from="1688334935840" duration="4713000" />
+      <workItem from="1688600180751" duration="2010000" />
+    </task>
+    <task id="LOCAL-00001" summary="Intro and coding block">
+      <created>1687844153044</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687844153044</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Intro and coding block">
+      <created>1687844223770</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687844223770</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Debate block">
+      <created>1687977364476</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687977364476</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Design carousel">
+      <created>1688061774109</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688061774109</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Design block and contact block">
+      <created>1688075887945</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688075887945</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Poems page has poem book">
+      <created>1688096082020</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688096082020</updated>
+    </task>
+    <task id="LOCAL-00007" summary="started The Maverick">
+      <created>1688339628345</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688339628345</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[MVP] Spruced up Maverick, added interim links.">
+      <created>1688601543871</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688601543871</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Next files" />
+    <MESSAGE value="Intro and coding block" />
+    <MESSAGE value="Debate block" />
+    <MESSAGE value="Design carousel" />
+    <MESSAGE value="Design block and contact block" />
+    <MESSAGE value="Poems page has poem book" />
+    <MESSAGE value="started The Maverick" />
+    <MESSAGE value="[MVP] Spruced up Maverick, added interim links." />
+    <MESSAGE value="Configured gh pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configured gh pages" />
+  </component>
+</project>

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    @font-face {
+        font-family: 'AppleGaramond';
+        src: url('/public/fonts/AppleGaramond/AppleGaramond-BoldItalic.ttf') format('truetype');
+        font-weight: 600;
+    }
+
+    div {
+        @apply text-lg text-green-900 mt-1;
+    }
+
+    h1 {
+        @apply text-5xl mt-3;
+    }
+
+    h2 {
+        @apply text-4xl mt-2;
+    }
+
+    h3 {
+        @apply text-3xl mt-2;
+    }
+
+    h4 {
+        @apply text-2xl mt-1;
+    }
+
+    h5 {
+        @apply text-xl mt-1;
+    }
+}
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 252, 252, 252;
+    --background-end-rgb: 252, 252, 252;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 252, 252, 252;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+    ) rgb(var(--background-start-rgb));
+}
