@@ -6,7 +6,7 @@ export function SectionHeading(props: { text: string }) {
     const words = props.text.split(" ");
 
     return (
-        <div className={"text-3xl text-green-600 text-center"}>
+        <div className={"flex flex-row flex-wrap text-3xl text-green-600 justify-center"}>
             {words.map((e, i) =>
                 <motion.span
                     className={'mr-2'}

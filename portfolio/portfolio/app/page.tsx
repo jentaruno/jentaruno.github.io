@@ -8,9 +8,9 @@ import {SectionHeading} from "@/components/reusable/sectionHeading";
 export default function Home() {
     return (
         <main className={'flex flex-col bg-white'}>
-            <div className="flex flex-col items-center px-8 lg:px-20 py-4 bg-white">
+            <div className="flex flex-col items-center px-8 lg:px-20 bg-white">
                 <div className={'w-full lg:w-3/4 grid grid-cols-1 divide-y divide-green-200'}>
-                    <div className={'flex flex-col min-h-screen justify-center'}>
+                    <div className={'flex flex-col min-h-[80vh] justify-center'}>
                         <Intro/>
                     </div>
                     <div className={'flex flex-col py-20'}>

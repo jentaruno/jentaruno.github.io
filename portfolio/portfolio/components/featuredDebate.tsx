@@ -20,7 +20,7 @@ export default function FeaturedDebate() {
                 ]}
             />
             <motion.div
-                className={'flex flex-row justify-center grid grid-cols-2 divide-x divide-green-200'}
+                className={'my-8 md:my-0 flex flex-row h-24 justify-center grid grid-cols-2 divide-x divide-green-200'}
                 initial={{height: 0}}
                 whileInView={{height: '6rem'}}
                 transition={{duration: 0.4, delay: 0.3}}
