@@ -18,17 +18,17 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={inter.className}>
-        <div className={"bg-white"}>
+        <header className="sticky top-0 z-50">
             <div className="flex flex-row justify-center bg-white">
                 <PageNavs/>
             </div>
-            <div className={"flex flex-row justify-center"}>
-                {children}
-            </div>
-            <div className={'w-full bg-white px-8 lg:px-20 pt-4 pb-8 drop-shadow-2xl'}>
-                <Contact/>
-            </div>
+        </header>
+        <div className={"flex flex-row justify-center"}>
+            {children}
         </div>
+        <footer id={'contact'} className={'w-full bg-white px-8 lg:px-20 pt-4 pb-8 drop-shadow-2xl'}>
+            <Contact/>
+        </footer>
         </body>
         </html>
     )

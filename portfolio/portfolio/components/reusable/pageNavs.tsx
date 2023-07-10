@@ -11,21 +11,21 @@ const Navbar = () => {
 
     return (
         <div
-            className={`w-full flex flex-row sm:justify-center text-sm font-bold bg-white ${
+            className={`w-full mt-0 flex flex-row sm:justify-center bg-white ${
                 showMenu ? 'drop-shadow-lg' : 'drop-shadow-none'
             }`}>
-            <div className={'hidden sm:block text-orange-700 text-sm font-bold'}>
-                <ul className="flex flex-row flex-wrap justify-center gap-1">
+            <div className={'hidden sm:flex flex-row w-full justify-between text-green-600 mx-8 my-4'}>
+                <a className={'text-xl text-orange-700 font-bold'} href={'/'}>Jen Taruno</a>
+                <ul className="flex flex-row justify-end gap-1">
                     {[
-                        ['Home', '/'],
                         ['Coding', 'https://github.com/jentaruno'],
                         ['Design', 'https://www.instagram.com/jentaruno/'],
                         ['Debate', 'https://disputandum.com/'],
-                        ['Contact', '/contact'],
+                        ['Contact', '/#contact'],
                     ].map(([title, url], i) => (
                         <li key={`nav-${i}`} className={'mr-6'}>
                             <a href={url}
-                               className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">
+                               className="rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
                                 {title}
                             </a>
                         </li>

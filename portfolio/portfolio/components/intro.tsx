@@ -30,9 +30,9 @@ export default function Intro() {
                         whileInView={{opacity: 1, y: 0}}
                         transition={{type: "spring", stiffness: 70}}
                     >
-                        <p className={'text-7xl md:text-8xl font-bold'}>
+                        <h1 className={'text-7xl md:text-8xl font-bold'}>
                             Jen Taruno
-                        </p>
+                        </h1>
                         <h4 className={'mt-3 text-green-600'}>
                             Techie on weekdays, debater on weekends
                         </h4>
