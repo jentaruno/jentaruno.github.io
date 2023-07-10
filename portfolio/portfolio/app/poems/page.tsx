@@ -1,5 +1,6 @@
 import PoemBook from "@/components/poemBook";
 import Maverick from "@/components/maverick";
+import {SectionHeading} from "@/components/reusable/sectionHeading";
 
 export default function Poems() {
 
@@ -16,13 +17,13 @@ export default function Poems() {
                 </div>
                 <div className={'flex flex-col items-center py-20'}>
                     <h3 className={'text-green-600'}>
-                        Flavors from over the years
+                        <SectionHeading text={"Flavors from over the years"}/>
                     </h3>
                     <PoemBook/>
                 </div>
                 <div className={'flex flex-col items-center py-20'}>
                     <h3 className={'text-green-600 mb-4'}>
-                        The Maverick
+                        <SectionHeading text={"The Maverick"}/>
                     </h3>
                     <Maverick/>
                 </div>

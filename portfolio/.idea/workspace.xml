@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Framer motion transitions">
-      <change afterPath="$PROJECT_DIR$/portfolio/.github/workflows/build-and-deploy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package.json" afterDir="false" />
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Config github pages">
+      <change beforePath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +46,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "actions.on.save",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "D:\\Extracurrs\\Projects\\Personal Website\\jentaruno.github.io\\portfolio\\portfolio\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -165,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688958434277</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Config github pages">
+      <created>1688959849513</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688959849513</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +198,7 @@
     <MESSAGE value="Configured gh pages" />
     <MESSAGE value="Add images" />
     <MESSAGE value="Framer motion transitions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framer motion transitions" />
+    <MESSAGE value="Config github pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Config github pages" />
   </component>
 </project>
