@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Add images">
-      <change afterPath="$PROJECT_DIR$/portfolio/components/languages.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/components/reusable/sectionHeading.tsx" afterDir="false" />
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Framer motion transitions">
+      <change afterPath="$PROJECT_DIR$/portfolio/.github/workflows/build-and-deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredCoding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredCoding.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/intro.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package.json" afterDir="false" />
     </list>
@@ -60,7 +50,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "actions.on.save",
-    "ts.external.directory.path": "D:\\Extracurrs\\Projects\\Personal Website\\jentaruno.github.io\\portfolio\\portfolio\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -74,6 +64,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio" />
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\app\poems" />
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\reusable" />
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\general" />
@@ -167,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688947197675</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Framer motion transitions">
+      <created>1688958434277</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688958434277</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +194,7 @@
     <MESSAGE value="[MVP] Spruced up Maverick, added interim links." />
     <MESSAGE value="Configured gh pages" />
     <MESSAGE value="Add images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add images" />
+    <MESSAGE value="Framer motion transitions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framer motion transitions" />
   </component>
 </project>
