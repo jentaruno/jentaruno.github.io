@@ -55,7 +55,7 @@ export function CodingHero(props: {
             <a href={props.link} target={'blank'}>
                 <Image
                     fill={true}
-                    className={"rounded-md drop-shadow-md"}
+                    className={"rounded-xl drop-shadow-md"}
                     src={props.src}
                     alt={props.title}
                     style={{objectFit: "cover"}}

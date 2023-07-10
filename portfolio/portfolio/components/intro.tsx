@@ -45,7 +45,7 @@ export default function Intro() {
                         <p className={'mt-8'}>
                             Passionate about optimising processes, front-end development, and community projects
                         </p>
-                        <div className={'w-full flex flex-wrap justify-between mt-4 mb-16 md:mb-0'}>
+                        <div className={'w-full flex flex-wrap justify-start mt-4 mb-16 md:mb-0'}>
                             <div className={'flex flex-row items-center mr-8'}>
                                 <ComputerDesktopIcon
                                     className={'h-8 w-8 mr-2 fill-orange-700'}/>

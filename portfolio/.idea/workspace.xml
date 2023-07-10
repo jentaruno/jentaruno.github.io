@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="sectionheading on poems">
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Responsive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/components/intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/intro.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/sectionHeading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/sectionHeading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688960072461</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Responsive">
+      <created>1688963174792</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688963174792</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +220,7 @@
     <MESSAGE value="Framer motion transitions" />
     <MESSAGE value="Config github pages" />
     <MESSAGE value="sectionheading on poems" />
-    <option name="LAST_COMMIT_MESSAGE" value="sectionheading on poems" />
+    <MESSAGE value="Responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive" />
   </component>
 </project>
