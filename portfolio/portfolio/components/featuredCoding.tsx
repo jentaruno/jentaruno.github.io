@@ -1,4 +1,5 @@
 import {CodingHero} from "@/components/reusable/codingHero";
+import Languages from "@/components/languages";
 
 export default function FeaturedCoding() {
 
@@ -29,27 +30,7 @@ export default function FeaturedCoding() {
             </div>
 
             <div className={'pt-8'}>
-                <h4 className={'text-green-600'}>I've worked with</h4>
-                <h3 className={'font-bold text-justify leading-normal [word-spacing:1rem]'}>
-                    JavaScript
-                    TypeScript
-                    HTML
-                    CSS
-                    Java
-                    C#
-                    Dart
-                    MySQL
-                    Rust
-                    React.js
-                    Next.js
-                    TailwindCSS
-                    Sass
-                    Flutter
-                    SQLite
-                    JUnit
-                    Unity
-                    WordPress
-                </h3>
+                <Languages/>
             </div>
 
         </div>
