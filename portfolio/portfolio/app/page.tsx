@@ -3,6 +3,7 @@ import FeaturedCoding from "@/components/featuredCoding";
 import FeaturedDebate from "@/components/featuredDebate";
 import {SeeMoreButton} from "@/components/reusable/seeMoreButton";
 import FeaturedDesign from "@/components/featuredDesign";
+import {SectionHeading} from "@/components/reusable/sectionHeading";
 
 export default function Home() {
     return (
@@ -13,9 +14,7 @@ export default function Home() {
                         <Intro/>
                     </div>
                     <div className={'flex flex-col py-20'}>
-                        <h3 className={'text-green-600 text-center'}>
-                            I code with community in mind
-                        </h3>
+                        <SectionHeading text={'I code with community in mind'}/>
                         <div className={'mt-16'}>
                             <FeaturedCoding/>
                             <div className={'mt-12'}>
@@ -24,9 +23,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={'flex flex-col py-20'}>
-                        <h3 className={'text-green-600 text-center'}>
-                            Debate taught me to communicate ideas effectively
-                        </h3>
+                        <SectionHeading text={'Debate taught me to communicate ideas effectively'}/>
                         <div className={'mt-16'}>
                             <FeaturedDebate/>
                             <div className={'mt-12'}>
@@ -36,7 +33,7 @@ export default function Home() {
                     </div>
                     <div className={'flex flex-col py-20'}>
                         <h3 className={'text-green-600 text-center'}>
-                            Let's put an end to bad design
+                            <SectionHeading text={"Let's put an end to bad design"}/>
                         </h3>
                         <div className={'mt-16'}>
                             <FeaturedDesign/>
