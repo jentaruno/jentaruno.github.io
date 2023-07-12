@@ -1,7 +1,6 @@
 'use client'
 
 import bookStyles from '@/components/poems.module.css'
-import utilStyles from "@/components/utils.module.css";
 import {useState} from "react";
 import parseMarkdown from "@/components/fnParseMarkdown";
 
@@ -95,17 +94,16 @@ export default function PoemBook() {
                         <div className={`${bookStyles.page} ${setFlippedState(index)}`} id={index.toString()}
                              onClick={() => handlePageClick(index)}
                              style={setZIndex(index, maxPage)}>
-                            <div className={bookStyles.pageContent}>
-                                <h4 className={'font-serif uppercase'}>
+                            <div className={'my-auto mx-4 sm:mx-12'}>
+                                <p className={'leading-tight text-lg md:text-3xl font-serif uppercase'}>
                                     {title}
-                                </h4>
-                                <small className={utilStyles.itemDate}>
+                                </p>
+                                <p className={'md:my-2 text-[0.4rem] md:text-xs text-green-600'}>
                                     {date}
-                                </small>
-                                <br/>
-                                <small className={utilStyles.itemDesc}>
+                                </p>
+                                <span className={'text-[0.4rem] md:text-xs leading-loose'}>
                                     {parseMarkdown(desc)}
-                                </small>
+                                </span>
                             </div>
                         </div>
                     ))}

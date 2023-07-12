@@ -30,19 +30,19 @@ export default function Intro() {
                         whileInView={{opacity: 1, y: 0}}
                         transition={{type: "spring", stiffness: 70}}
                     >
-                        <h1 className={'text-7xl md:text-8xl font-bold'}>
-                            Jen Taruno
-                        </h1>
-                        <h4 className={'mt-3 text-green-600'}>
+                        <p className={'text-green-600'}>
+                            Hi, I'm Jen
+                        </p>
+                        <h1 className={'text-5xl font-bold'}>
                             Techie on weekdays, debater on weekends
-                        </h4>
+                        </h1>
                     </motion.div>
                     <motion.div
                         initial={{opacity: 0, y: 50}}
                         whileInView={{opacity: 1, y: 0}}
                         transition={{type: "spring", stiffness: 70, delay: 0.2}}
                     >
-                        <p className={'mt-8'}>
+                        <p className={'mt-8 text-green-600'}>
                             Passionate about optimising processes, front-end development, and community projects
                         </p>
                         <div className={'w-full flex flex-wrap justify-start mt-4 mb-16 md:mb-0'}>

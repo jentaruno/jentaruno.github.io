@@ -33,7 +33,7 @@ export default function FeaturedDebate() {
                 title={'World Schools Debate Coach'}
                 desc={'Coached the team to Octofinals. Raised country rank from B to AB.'}
                 src={'/wsdc-coach.jpg'}
-                otherText={'also achieved in 2021'}
+                otherText={'also achieved in 2022'}
                 strings={[
                     'Asian Semifinalist',
                     'Eurasian Quarterfinalist',

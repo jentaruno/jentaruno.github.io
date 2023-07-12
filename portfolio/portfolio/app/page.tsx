@@ -23,7 +23,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={'flex flex-col py-20'}>
-                        <SectionHeading text={'Debate taught me to communicate ideas effectively'}/>
+                        <SectionHeading text={'I communicate ideas effectively'}/>
                         <div className={'mt-16'}>
                             <FeaturedDebate/>
                             <div className={'mt-12'}>

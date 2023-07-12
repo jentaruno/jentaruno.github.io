@@ -21,7 +21,7 @@ module.exports = {
         },
         fontFamily: {
             'sans': ['Inter'],
-            'serif': ['AppleGaramond', 'serif'],
+            'serif': ['Vollkorn'],
         },
         extend: {
             backgroundImage: {
