@@ -15,22 +15,22 @@ export default function Home() {
                     <div className={'flex flex-col min-h-[80vh] justify-center'}>
                         <Intro/>
                     </div>
-                    <div id={'feature-request'} className={'flex flex-col py-20'}>
-                        <SpotlightBlock>
-                            <h1 className={'font-bold mb-8'}>
-                                🙌
-                                <br/>
-                                UBC Course Matcher
-                                <br/>
-                                Feature Request
-                            </h1>
-                            <ContactForm/>
-                        </SpotlightBlock>
-                    </div>
                     <div className={'flex flex-col py-20'}>
                         <SectionHeading text={'I code with community in mind'}/>
                         <div className={'mt-16'}>
                             <FeaturedCoding/>
+                            <div id={'feature-request'} className={'flex flex-col pt-20'}>
+                                <SpotlightBlock>
+                                    <h1 className={'font-bold mb-8'}>
+                                        🙌
+                                        <br/>
+                                        UBC Course Matcher
+                                        <br/>
+                                        Feature Request
+                                    </h1>
+                                    <ContactForm/>
+                                </SpotlightBlock>
+                            </div>
                             <div className={'mt-12'}>
                                 <SeeMoreButton link={'https://github.com/jentaruno'}/>
                             </div>
