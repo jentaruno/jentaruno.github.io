@@ -1,9 +1,9 @@
-1:HL["/_next/static/css/f3640deec09b2e9e.css",{"as":"style"}]
-0:["d0LqBxi9KoKjyBpfHoCYo",[[["",{"children":["poems",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f3640deec09b2e9e.css","precedence":"next"}]],["$L3",null]]]]]
+1:HL["/_next/static/css/24361bfaf1417f88.css",{"as":"style"}]
+0:["HZOWOcSHLI8exFL_izyt5",[[["",{"children":["poems",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/24361bfaf1417f88.css","precedence":"next"}]],["$L3",null]]]]]
 4:HL["/_next/static/css/fda7a07ceb763d8c.css",{"as":"style"}]
-5:I{"id":5287,"chunks":["983:static/chunks/983-3ea4780656ca0168.js","185:static/chunks/app/layout-6dce5a50923b451c.js"],"name":"","async":false}
-6:I{"id":9180,"chunks":["272:static/chunks/webpack-ee996e81596d9685.js","253:static/chunks/bce60fc1-87e17c074df9f3ea.js","698:static/chunks/698-c85c0a61485fef9d.js"],"name":"default","async":false}
-7:I{"id":2306,"chunks":["272:static/chunks/webpack-ee996e81596d9685.js","253:static/chunks/bce60fc1-87e17c074df9f3ea.js","698:static/chunks/698-c85c0a61485fef9d.js"],"name":"default","async":false}
+5:I{"id":5287,"chunks":["983:static/chunks/983-3ea4780656ca0168.js","185:static/chunks/app/layout-97cd2a481e984063.js"],"name":"","async":false}
+6:I{"id":9180,"chunks":["272:static/chunks/webpack-a529f5c48fff6bb8.js","253:static/chunks/bce60fc1-87e17c074df9f3ea.js","698:static/chunks/698-c85c0a61485fef9d.js"],"name":"default","async":false}
+7:I{"id":2306,"chunks":["272:static/chunks/webpack-a529f5c48fff6bb8.js","253:static/chunks/bce60fc1-87e17c074df9f3ea.js","698:static/chunks/698-c85c0a61485fef9d.js"],"name":"default","async":false}
 8:I{"id":5311,"chunks":["983:static/chunks/983-3ea4780656ca0168.js","812:static/chunks/app/poems/page-83ffe1ef28dec2a8.js"],"name":"SectionHeading","async":false}
 9:I{"id":8507,"chunks":["983:static/chunks/983-3ea4780656ca0168.js","812:static/chunks/app/poems/page-83ffe1ef28dec2a8.js"],"name":"","async":false}
 a:I{"id":6011,"chunks":["983:static/chunks/983-3ea4780656ca0168.js","812:static/chunks/app/poems/page-83ffe1ef28dec2a8.js"],"name":"","async":false}
