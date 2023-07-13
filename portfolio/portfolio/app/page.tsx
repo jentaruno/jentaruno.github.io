@@ -4,6 +4,8 @@ import FeaturedDebate from "@/components/featuredDebate";
 import {SeeMoreButton} from "@/components/reusable/seeMoreButton";
 import FeaturedDesign from "@/components/featuredDesign";
 import {SectionHeading} from "@/components/reusable/sectionHeading";
+import ContactForm from "@/components/contactForm";
+import SpotlightBlock from "@/components/reusable/spotlightBlock";
 
 export default function Home() {
     return (
@@ -12,6 +14,18 @@ export default function Home() {
                 <div className={'w-full lg:w-3/4 grid grid-cols-1 divide-y divide-green-200'}>
                     <div className={'flex flex-col min-h-[80vh] justify-center'}>
                         <Intro/>
+                    </div>
+                    <div id={'feature-request'} className={'flex flex-col py-20'}>
+                        <SpotlightBlock>
+                            <h1 className={'font-bold mb-8'}>
+                                🙌
+                                <br/>
+                                UBC Course Matcher
+                                <br/>
+                                Feature Request
+                            </h1>
+                            <ContactForm/>
+                        </SpotlightBlock>
                     </div>
                     <div className={'flex flex-col py-20'}>
                         <SectionHeading text={'I code with community in mind'}/>

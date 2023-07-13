@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={`${vollkorn.className} ${inter.className}`}>
-        <body className={'font-sans'}>
+        <body className={'bg-white font-sans'}>
         <header className="sticky top-0 z-50">
             <div className="flex flex-row justify-center bg-white">
                 <PageNavs/>
