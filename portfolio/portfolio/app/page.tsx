@@ -21,13 +21,13 @@ export default function Home() {
                             <FeaturedCoding/>
                             <div id={'feature-request'} className={'flex flex-col pt-20'}>
                                 <SpotlightBlock>
-                                    <h1 className={'font-bold mb-8'}>
+                                    <h3 className={'md:text-5xl font-bold mb-8'}>
                                         🙌
                                         <br/>
                                         UBC Course Matcher
                                         <br/>
                                         Feature Request
-                                    </h1>
+                                    </h3>
                                     <ContactForm/>
                                 </SpotlightBlock>
                             </div>

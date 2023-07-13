@@ -7,7 +7,7 @@ interface ContainerProps {
 const Container: React.FC<ContainerProps> = ({children}) => {
     return (
         <div
-            className="bg-gradient-to-b from-orange-700 to-orange-700/60 rounded-3xl drop-shadow-lg text-white text-center p-12">
+            className="bg-gradient-to-b from-orange-700 to-orange-700/60 rounded-3xl drop-shadow-lg text-white text-center p-6 md:p-12">
             {children}
         </div>
     );
