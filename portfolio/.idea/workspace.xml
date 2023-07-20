@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Mobile responsive">
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Playing card component">
+      <change afterPath="$PROJECT_DIR$/portfolio/app/card-characters.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/app/coding/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/components/reusable/playingCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/public/card-bg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/maverick.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/maverick.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/AppleGaramond-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/AppleGaramond-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/AppleGaramond.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="2023-updates" />
+        <entry key="$PROJECT_DIR$/.." value="poker" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -96,7 +105,7 @@
       <workItem from="1689127952047" duration="9144000" />
       <workItem from="1689275401247" duration="1000" />
       <workItem from="1689282606906" duration="8202000" />
-      <workItem from="1689883911229" duration="891000" />
+      <workItem from="1689883911229" duration="6936000" />
     </task>
     <task id="LOCAL-00001" summary="Intro and coding block">
       <created>1687844153044</created>
@@ -231,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689290264013</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fix hydration error">
+      <created>1689885009471</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1689885009471</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +285,8 @@
     <MESSAGE value="Tweaks and custom fonts" />
     <MESSAGE value="Contact form" />
     <MESSAGE value="Mobile responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mobile responsive" />
+    <MESSAGE value="Fix hydration error" />
+    <MESSAGE value="Playing card component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Playing card component" />
   </component>
 </project>

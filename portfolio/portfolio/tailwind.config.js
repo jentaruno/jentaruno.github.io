@@ -22,6 +22,7 @@ module.exports = {
         fontFamily: {
             'sans': ['Inter'],
             'serif': ['Vollkorn'],
+            'card': ['var(--font-card)'],
         },
         extend: {
             backgroundImage: {

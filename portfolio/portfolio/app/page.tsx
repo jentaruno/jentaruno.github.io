@@ -6,6 +6,7 @@ import FeaturedDesign from "@/components/featuredDesign";
 import {SectionHeading} from "@/components/reusable/sectionHeading";
 import ContactForm from "@/components/contactForm";
 import SpotlightBlock from "@/components/reusable/spotlightBlock";
+import React from "react";
 
 export default function Home() {
     return (

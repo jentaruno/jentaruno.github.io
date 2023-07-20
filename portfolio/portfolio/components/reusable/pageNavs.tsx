@@ -15,7 +15,9 @@ const Navbar = () => {
                 showMenu ? 'drop-shadow-lg' : 'drop-shadow-none'
             }`}>
             <div className={'hidden sm:flex flex-row w-full justify-between text-green-600 mx-8 my-4'}>
-                <a className={'text-xl text-orange-700 font-bold'} href={'/'}>Jen Taruno</a>
+                <a className={'text-xl text-orange-700 font-bold font-card lowercase [word-spacing:-7px]'} href={'/'}>
+                    Jen Taruno
+                </a>
                 <ul className="flex flex-row justify-end gap-1">
                     {[
                         ['Coding', 'https://github.com/jentaruno'],
