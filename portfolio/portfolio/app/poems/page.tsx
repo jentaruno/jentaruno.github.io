@@ -16,15 +16,11 @@ export default function Poems() {
                     </p>
                 </div>
                 <div className={'flex flex-col items-center py-20'}>
-                    <h3 className={'text-green-600'}>
-                        <SectionHeading text={"Flavors from over the years"}/>
-                    </h3>
+                    <SectionHeading text={"Flavors from over the years"}/>
                     <PoemBook/>
                 </div>
                 <div className={'flex flex-col items-center py-20'}>
-                    <h3 className={'text-green-600 mb-4'}>
-                        <SectionHeading text={"The Maverick"}/>
-                    </h3>
+                    <SectionHeading text={"The Maverick"}/>
                     <Maverick/>
                 </div>
             </div>

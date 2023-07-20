@@ -86,9 +86,9 @@ export default function Maverick() {
                         <p className={'text-green-600'}>{poems[index].date}</p>
                     </div>
                     <div>
-                        <p className={'mt-2 text-sm leading-loose'}>
+                        <span className={'mt-2 text-sm leading-loose'}>
                             {parseMarkdown(poems[index].desc)}
-                        </p>
+                        </span>
                     </div>
                 </div>
                 <div
