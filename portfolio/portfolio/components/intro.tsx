@@ -35,7 +35,7 @@ export default function Intro() {
                         <p className={'text-green-600'}>
                             Hi, I'm Jen
                         </p>
-                        <h1 className={'text-5xl font-bold'}>
+                        <h1 className={'font-bold'}>
                             Techie on weekdays, debater on weekends
                         </h1>
                     </motion.div>

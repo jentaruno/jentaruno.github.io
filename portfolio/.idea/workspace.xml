@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Playing cards can be toggled as tabs">
-      <change afterPath="$PROJECT_DIR$/portfolio/codingData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/components/reusable/scrollToTop.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/public/ar-gamelan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/public/ar-yearbook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/public/debating404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/public/disputandum.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/public/taskwatch.jpg" afterDir="false" />
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Coding page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/app/coding/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/coding/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/codingCards.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/components/intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/intro.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/languages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/languages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/sectionHeading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/sectionHeading.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +99,7 @@
       <workItem from="1689282606906" duration="8202000" />
       <workItem from="1689883911229" duration="11210000" />
       <workItem from="1689915883544" duration="404000" />
-      <workItem from="1689917075359" duration="8770000" />
+      <workItem from="1689917075359" duration="9662000" />
     </task>
     <task id="LOCAL-00001" summary="Intro and coding block">
       <created>1687844153044</created>
@@ -272,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689903010519</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Coding page">
+      <created>1689966214455</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689966214455</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +303,7 @@
     <MESSAGE value="Fix hydration error" />
     <MESSAGE value="Playing card component" />
     <MESSAGE value="Playing cards can be toggled as tabs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Playing cards can be toggled as tabs" />
+    <MESSAGE value="Coding page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coding page" />
   </component>
 </project>

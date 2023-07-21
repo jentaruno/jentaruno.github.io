@@ -6,10 +6,10 @@ export function SectionHeading(props: { text: string }) {
     const words = props.text.split(" ");
 
     return (
-        <div className={"flex flex-row flex-wrap font-light text-3xl text-green-600 justify-center"}>
+        <div className={"flex flex-row flex-wrap font-card tracking-tight text-3xl text-green-600 justify-center"}>
             {words.map((e, i) =>
                 <motion.span
-                    className={'mr-2'}
+                    className={'mr-4'}
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
                     viewport={{once: true}}
