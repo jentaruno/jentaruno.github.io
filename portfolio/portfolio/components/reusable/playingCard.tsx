@@ -18,7 +18,7 @@ export const PlayingCard =
                  onClick={props.handleClick}
             >
                 <div
-                    className={`relative h-full w-full rounded-xl shadow-lg transition-all duration-500 [transform-style:preserve-3d] ${props.flipped ? '[transform:rotateY(180deg)]' : '[transform:rotateY(0deg)]'}`}>
+                    className={`relative h-full w-full rounded-xl shadow-lg transition-all duration-500 [transform-style:preserve-3d] ${props.flipped ? '[transform:rotateY(180deg)]' : '[transform:rotateY(0deg)]'} hover:[transform:rotateY(180deg)]`}>
                     <div className="absolute inset-0">
                         <Image
                             width={300}

@@ -16,7 +16,7 @@ export default function Coding() {
         setCurrentCard(i);
         setTimeout(() =>
                 content.current?.scrollIntoView({behavior: 'smooth', block: 'start'}),
-            500);
+            1000);
     }
 
     return (
