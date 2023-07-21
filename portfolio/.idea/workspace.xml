@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Heading font">
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Card animation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/app/coding/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/coding/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/playingCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/playingCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689966214455</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Card animation">
+      <created>1689968559847</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1689968559847</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +310,7 @@
     <MESSAGE value="Playing card component" />
     <MESSAGE value="Playing cards can be toggled as tabs" />
     <MESSAGE value="Coding page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Coding page" />
+    <MESSAGE value="Card animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Card animation" />
   </component>
 </project>
