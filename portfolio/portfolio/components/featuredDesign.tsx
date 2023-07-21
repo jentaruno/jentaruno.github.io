@@ -29,6 +29,7 @@ export default function FeaturedDesign() {
             <motion.div
                 initial={{opacity: 0, y: 50}}
                 whileInView={{opacity: 1, y: 0}}
+                viewport={{once: true}}
                 transition={{type: "spring", stiffness: 70, delay: 0.2}}
             >
                 <div className={'w-full m-auto px-4 relative group'}>

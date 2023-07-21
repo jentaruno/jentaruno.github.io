@@ -23,6 +23,7 @@ export default function FeaturedDebate() {
                 className={'my-8 md:my-0 flex flex-row h-24 justify-center grid grid-cols-2 divide-x divide-green-200'}
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
+                viewport={{once: true}}
                 transition={{duration: 0.4}}
             >
                 <p></p>

@@ -33,7 +33,7 @@ export default function Home() {
                                 </SpotlightBlock>
                             </div>
                             <div className={'mt-12'}>
-                                <SeeMoreButton link={'https://github.com/jentaruno'}/>
+                                <SeeMoreButton link={'/coding'}/>
                             </div>
                         </div>
                     </div>

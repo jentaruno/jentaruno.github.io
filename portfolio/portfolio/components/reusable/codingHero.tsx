@@ -4,13 +4,13 @@ import Image from "next/image";
 import {motion} from "framer-motion";
 
 export function CodingHero(props: {
-    link: string,
+    link?: string,
     src: string,
     title: string,
     desc: string,
     languages: string[],
-    statNumber: string,
-    statDesc: string
+    statNumber?: string,
+    statDesc?: string
 }) {
 
     const elems = [
@@ -45,12 +45,15 @@ export function CodingHero(props: {
             className={"relative h-64 lg:w-1/2 flex flex-col justify-center lg:mr-8"}
             initial={{opacity: 0, y: -50}}
             whileInView={{opacity: 1, y: 0}}
+            viewport={{once: true}}
             transition={{type: "spring", stiffness: 70, delay: 0.2}}
-            whileHover={{
-                scale: 1.03,
-                y: -5,
-                transition: {duration: 0.2},
-            }}
+            whileHover={props.link
+                ? {
+                    scale: 1.03,
+                    y: -5,
+                    transition: {duration: 0.2},
+                }
+                : {}}
         >
             <a href={props.link} target={'blank'}>
                 <Image
@@ -68,6 +71,7 @@ export function CodingHero(props: {
                     key={`codingElem-${i}`}
                     initial={{opacity: 0, scale: 0.95}}
                     whileInView={{opacity: 1, scale: 1}}
+                    viewport={{once: true}}
                     transition={{type: "spring", stiffness: 200, delay: 0.1 * i}}
                 >
                     {e}

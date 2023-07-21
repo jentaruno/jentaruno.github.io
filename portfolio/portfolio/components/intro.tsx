@@ -13,6 +13,7 @@ export default function Intro() {
                     <motion.div
                         initial={{opacity: 0, scale: 0.8}}
                         whileInView={{opacity: 1, scale: 1}}
+                        viewport={{once: true}}
                         transition={{type: "spring", stiffness: 100, delay: 0.1}}
                     >
                         <Image
@@ -28,6 +29,7 @@ export default function Intro() {
                     <motion.div
                         initial={{opacity: 0, y: 50}}
                         whileInView={{opacity: 1, y: 0}}
+                        viewport={{once: true}}
                         transition={{type: "spring", stiffness: 70}}
                     >
                         <p className={'text-green-600'}>
@@ -40,6 +42,7 @@ export default function Intro() {
                     <motion.div
                         initial={{opacity: 0, y: 50}}
                         whileInView={{opacity: 1, y: 0}}
+                        viewport={{once: true}}
                         transition={{type: "spring", stiffness: 70, delay: 0.2}}
                     >
                         <p className={'mt-8 text-green-600'}>

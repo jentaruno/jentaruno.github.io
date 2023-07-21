@@ -10,6 +10,7 @@ export function DebateHero(props: { year: number, title: string, desc: string, s
                 className={"flex flex-col md:w-1/3 md:mr-4 justify-center"}
                 initial={{opacity: 0, x: 50}}
                 whileInView={{opacity: 1, x: 0}}
+                viewport={{once: true}}
                 transition={{type: "spring", stiffness: 100, delay: 0.2}}
             >
                 <h1 className={"font-bold mb-4"}>{props.title}</h1>
@@ -20,6 +21,7 @@ export function DebateHero(props: { year: number, title: string, desc: string, s
                     className={'w-2/3 md:w-full bg-white justify-center rounded-md drop-shadow-md'}
                     initial={{opacity: 0, y: -50}}
                     whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: true}}
                     transition={{type: "spring", stiffness: 100, delay: 0.1}}
                 >
                     <div className={"text-center text-green-600 font-bold tracking-wider"}>
@@ -39,6 +41,7 @@ export function DebateHero(props: { year: number, title: string, desc: string, s
                 className={"flex flex-col md:w-1/3 md:ml-4 justify-center"}
                 initial={{opacity: 0, x: -50}}
                 whileInView={{opacity: 1, x: 0}}
+                viewport={{once: true}}
                 transition={{type: "spring", stiffness: 100, delay: 0.2}}
             >
                 <span className={"uppercase text-sm text-orange-700 font-bold tracking-widest mb-2"}>

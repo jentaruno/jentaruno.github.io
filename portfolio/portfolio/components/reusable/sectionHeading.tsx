@@ -12,6 +12,7 @@ export function SectionHeading(props: { text: string }) {
                     className={'mr-2'}
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
+                    viewport={{once: true}}
                     transition={{type: "spring", stiffness: 70, delay: 0.1 * i}}
                 >
                     {e}

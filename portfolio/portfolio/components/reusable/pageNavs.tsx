@@ -20,7 +20,7 @@ const Navbar = () => {
                 </a>
                 <ul className="flex flex-row justify-end gap-1">
                     {[
-                        ['Coding', 'https://github.com/jentaruno'],
+                        ['Coding', '/coding'],
                         ['Design', 'https://www.instagram.com/jentaruno/'],
                         ['Debate', 'https://disputandum.com/'],
                         ['Contact', '/#contact'],

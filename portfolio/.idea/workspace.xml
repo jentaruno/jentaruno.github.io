@@ -5,10 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Playing cards can be toggled as tabs">
-      <change afterPath="$PROJECT_DIR$/portfolio/components/codingCards.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/codingData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/components/reusable/scrollToTop.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/public/ar-gamelan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/public/ar-yearbook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/public/debating404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/public/disputandum.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/public/taskwatch.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/app/coding/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/coding/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/playingCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/playingCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/poems/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/codingCards.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDebate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/intro.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/languages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/languages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/sectionHeading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/sectionHeading.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +79,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\app\coding" />
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\app" />
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio" />
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\app\poems" />
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\reusable" />
-      <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\general" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components\codingCards.tsx" />
@@ -98,7 +114,9 @@
       <workItem from="1689127952047" duration="9144000" />
       <workItem from="1689275401247" duration="1000" />
       <workItem from="1689282606906" duration="8202000" />
-      <workItem from="1689883911229" duration="9981000" />
+      <workItem from="1689883911229" duration="11210000" />
+      <workItem from="1689915883544" duration="404000" />
+      <workItem from="1689917075359" duration="8770000" />
     </task>
     <task id="LOCAL-00001" summary="Intro and coding block">
       <created>1687844153044</created>
@@ -247,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689892970444</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Playing cards can be toggled as tabs">
+      <created>1689903010519</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1689903010519</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
