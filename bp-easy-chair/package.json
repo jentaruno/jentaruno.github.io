@@ -1,0 +1,11 @@
+{
+  "name": "easychair",
+  "version": "1.0.0",
+  "description": "BP chairing made easy",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Jen",
+  "license": "ISC"
+}
