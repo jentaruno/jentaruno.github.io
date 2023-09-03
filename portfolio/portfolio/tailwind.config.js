@@ -17,6 +17,10 @@ module.exports = {
                 700: '#ff8c00',
                 800: '#c76e00',
             },
+            'purple': {
+                700: '#663da0',
+                800: '#4e2f7b',
+            },
             'white': '#fcfcfc',
         },
         fontFamily: {

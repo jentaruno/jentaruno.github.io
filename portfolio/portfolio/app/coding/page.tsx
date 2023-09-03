@@ -8,7 +8,7 @@ import ScrollToTopButton from "@/components/reusable/scrollToTop";
 
 export default function Coding() {
     // TODO: carousel on mobile
-    // TODO: scroll to section
+    // TODO: responsive
     const [currentCard, setCurrentCard] = useState(0);
     const content = useRef<HTMLDivElement | null>(null);
 

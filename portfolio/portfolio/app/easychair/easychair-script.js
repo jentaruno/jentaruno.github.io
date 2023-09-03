@@ -8,7 +8,9 @@ var finalCObeatCG;
 
 const benches = ["OG", "OO", "CG", "CO"];
 
-function $(x) { return document.getElementById(x); }
+function $(x) {
+    return document.getElementById(x);
+}
 
 function interchangeSymbol() {
     return `<svg style="display:inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -27,8 +29,7 @@ function onManualType(e) {
         $("inputDecisionManual").style.display = "block";
         $("inputDecision").reset();
         $("inputDecisionManual").reset();
-    }
-    else {
+    } else {
         $("inputDecision").style.display = "block";
         $("inputDecisionManual").style.display = "none";
         $("inputDecision").reset();
@@ -43,7 +44,9 @@ function onTopTwo(e) {
 
     if (e.target.checked == true) {
         const elements = document.querySelectorAll(".third-fourth, .third-fourth-table");
-        elements.forEach(e => { e.style.display = "none"; });
+        elements.forEach(e => {
+            e.style.display = "none";
+        });
         $("decision3").required = false;
         $("decision4").required = false;
         $("finalThirdFourth").style.display = "none";
@@ -53,9 +56,13 @@ function onTopTwo(e) {
         $("inputDecisionManual").reset();
     } else {
         const elements = document.querySelectorAll(".third-fourth");
-        elements.forEach(e => { e.style.display = "flex"; });
+        elements.forEach(e => {
+            e.style.display = "flex";
+        });
         const tableElements = document.querySelectorAll(".third-fourth-table");
-        tableElements.forEach(e => { e.style.display = "table-cell"; });
+        tableElements.forEach(e => {
+            e.style.display = "table-cell";
+        });
         $("decision3").required = true;
         $("decision4").required = true;
         $("finalThirdFourth").style.display = "inline-flex";
@@ -88,10 +95,10 @@ function onInputDecision(e) {
         if ($("manualTypeBtn").checked == true) {
             //Locate benches and ranks
             const decisionManual = $("decisionManual").value.toUpperCase();
-            var decision = [{ key: "OG", value: 0, interchange: "" },
-            { key: "OO", value: 0, interchange: "" },
-            { key: "CG", value: 0, interchange: "" },
-            { key: "CO", value: 0, interchange: "" }]
+            var decision = [{key: "OG", value: 0, interchange: ""},
+                {key: "OO", value: 0, interchange: ""},
+                {key: "CG", value: 0, interchange: ""},
+                {key: "CO", value: 0, interchange: ""}]
             for (let i = 0; i < decision.length; i++) {
                 if (decisionManual.indexOf(decision[i].key) == -1) {
                     decision.splice(i, 1);
@@ -172,8 +179,8 @@ function onHoverRow(e) {
     for (i = 0; i < $("callTbody").rows.length; i++) {
         for (j = 0; j < $("callTbody").rows[i].cells.length; j++)
             $("callTbody").rows[i].cells[j].style.fontWeight = "normal";
-        var team = [{ key: exchange.substring(0, 2), rank: 0 },
-        { key: exchange.substring(3, 5), rank: 0 }]
+        var team = [{key: exchange.substring(0, 2), rank: 0},
+            {key: exchange.substring(3, 5), rank: 0}]
         //Locate teams positions
         for (var j = 1; j <= teamsLength; j++) {
             if ($("callTbody").rows[i].cells[j].innerHTML.indexOf(team[0].key) != -1)
@@ -225,10 +232,10 @@ function onClearRadio(e) {
 }
 
 function onFinalise() {
-    var finalRank = [{ key: "OG", value: 1 },
-    { key: "OO", value: 1 },
-    { key: "CG", value: 1 },
-    { key: "CO", value: 1 }]
+    var finalRank = [{key: "OG", value: 1},
+        {key: "OO", value: 1},
+        {key: "CG", value: 1},
+        {key: "CO", value: 1}]
     $("dissentRadioStatus").innerHTML = "";
     for (i = 1; i <= 4; i++)
         $("rank" + i).innerHTML = "--";
@@ -396,23 +403,25 @@ function checkInterchange(num) {
             if ($("interchange3-4").checked)
                 return interchangeSymbol();
             else return "";
-        default: return "";;
+        default:
+            return "";
+            ;
     }
 }
 
 function calculateDissent() {
     //0 = OG-OO, 1 = OG-CG, 2 = OO-CG, 3 = OG-CO, 4 = OO-CO, 5 = CG-CO
-    var dissent = [{ key: "OG-OO", order: 0, interchange: 0, givingRight: 0, distance: 0, color: "black" },
-    { key: "OG-CG", order: 1, interchange: 0, givingRight: 0, distance: 0, color: "black" },
-    { key: "OO-CG", order: 2, interchange: 0, givingRight: 0, distance: 0, color: "black" },
-    { key: "OG-CO", order: 3, interchange: 0, givingRight: 0, distance: 0, color: "black" },
-    { key: "OO-CO", order: 4, interchange: 0, givingRight: 0, distance: 0, color: "black" },
-    { key: "CG-CO", order: 5, interchange: 0, givingRight: 0, distance: 0, color: "black" }];
+    var dissent = [{key: "OG-OO", order: 0, interchange: 0, givingRight: 0, distance: 0, color: "black"},
+        {key: "OG-CG", order: 1, interchange: 0, givingRight: 0, distance: 0, color: "black"},
+        {key: "OO-CG", order: 2, interchange: 0, givingRight: 0, distance: 0, color: "black"},
+        {key: "OG-CO", order: 3, interchange: 0, givingRight: 0, distance: 0, color: "black"},
+        {key: "OO-CO", order: 4, interchange: 0, givingRight: 0, distance: 0, color: "black"},
+        {key: "CG-CO", order: 5, interchange: 0, givingRight: 0, distance: 0, color: "black"}];
     //0 = OG, 1 = OO, 2 = CG, 4 = OO
-    var team = [{ key: "OG", rank: 0, topTwo: 0 },
-    { key: "OO", rank: 0, topTwo: 0 },
-    { key: "CG", rank: 0, topTwo: 0 },
-    { key: "CO", rank: 0, topTwo: 0 }]
+    var team = [{key: "OG", rank: 0, topTwo: 0},
+        {key: "OO", rank: 0, topTwo: 0},
+        {key: "CG", rank: 0, topTwo: 0},
+        {key: "CO", rank: 0, topTwo: 0}]
     $("callTableStatus").style.display = "table-cell";
     $("dissentTableStatus").style.display = "table-cell";
     $("dissentTable").innerHTML = "";
@@ -473,7 +482,7 @@ function calculateDissent() {
                                 rightCell = l;
                         }
                         if (($("callTbody").rows[i].cells[leftCell].innerHTML.toLowerCase().indexOf("<svg") >= 0 &&
-                            team[k].rank < team[j].rank) ||
+                                team[k].rank < team[j].rank) ||
                             ($("callTbody").rows[i].cells[rightCell].innerHTML.toLowerCase().indexOf("<svg") >= 0 &&
                                 team[j].rank < team[k].rank))
                             dissent[disInd].interchange += 1;
@@ -483,7 +492,9 @@ function calculateDissent() {
             }
         }
         //Arrange table rows
-        dissent.sort(function (a, b) { a.order - b.order; });
+        dissent.sort(function (a, b) {
+            a.order - b.order;
+        });
         //Show team comparisons in the debate
         //Also add options to resolve those exchanges
         if ($("callTbody").rows.length > 1) {
@@ -500,6 +511,7 @@ function calculateDissent() {
                         else return "";
                     }
                 }
+
                 $("dissentTableStatus").style.display = "none";
                 //Add team comparisons to table
                 $("dissentTable").innerHTML += `
@@ -599,6 +611,7 @@ function displayDissents(dissent) {
             return "";
         }
     }
+
     // Repeat for all team comparisons
     for (let i = 0; i < dissent.length; i++) {
         $("dissentTable").innerHTML +=
@@ -616,7 +629,7 @@ function displayDissents(dissent) {
 
 async function readDraw(link) {
     try {
-        const response = await fetch('https://manchesteriv2022.calicotab.com/api/v1/tournaments');
+        const response = await fetch('https://cors.io/?http://ubcfallhst2022.calicotab.com/api/v1/tournaments/ubcfall2022sr/adjudicators');
         const data = await response.json();
         // Handle the received data on the client-side
         console.log(data);
@@ -660,7 +673,9 @@ sorttable = {
             // manually override the type with a sorttable_type attribute
             if (!headrow[i].className.match(/\bsorttable_nosort\b/)) { // skip this col
                 mtch = headrow[i].className.match(/\bsorttable_([a-z0-9]+)\b/);
-                if (mtch) { override = mtch[1]; }
+                if (mtch) {
+                    override = mtch[1];
+                }
                 if (mtch && typeof sorttable["sort_" + override] == 'function') {
                     headrow[i].sorttable_sortfunction = sorttable["sort_" + override];
                 } else {
@@ -722,9 +737,13 @@ sorttable = {
                         }
                     });
                     sortfwdind = document.getElementById('sorttable_sortfwdind');
-                    if (sortfwdind) { sortfwdind.parentNode.removeChild(sortfwdind); }
+                    if (sortfwdind) {
+                        sortfwdind.parentNode.removeChild(sortfwdind);
+                    }
                     sortrevind = document.getElementById('sorttable_sortrevind');
-                    if (sortrevind) { sortrevind.parentNode.removeChild(sortrevind); }
+                    if (sortrevind) {
+                        sortrevind.parentNode.removeChild(sortrevind);
+                    }
 
                     this.className += ' sorttable_sorted';
                     sortfwdind = document.createElement('span');
@@ -752,13 +771,26 @@ sorttable = {
                         if (col == 0) {
                             let orderTeam = 0;
                             switch ($("dissentTable").rows[j].cells[col].children[1].innerHTML) {
-                                case "OG-OO": orderTeam = 0; break;
-                                case "OG-CG": orderTeam = 1; break;
-                                case "OO-CG": orderTeam = 2; break;
-                                case "OG-CO": orderTeam = 3; break;
-                                case "OO-CO": orderTeam = 4; break;
-                                case "CG-CO": orderTeam = 5; break;
-                                default: orderTeam = 0;
+                                case "OG-OO":
+                                    orderTeam = 0;
+                                    break;
+                                case "OG-CG":
+                                    orderTeam = 1;
+                                    break;
+                                case "OO-CG":
+                                    orderTeam = 2;
+                                    break;
+                                case "OG-CO":
+                                    orderTeam = 3;
+                                    break;
+                                case "OO-CO":
+                                    orderTeam = 4;
+                                    break;
+                                case "CG-CO":
+                                    orderTeam = 5;
+                                    break;
+                                default:
+                                    orderTeam = 0;
                             }
                             row_array[row_array.length] = [orderTeam, rows[j]];
                         }
@@ -951,9 +983,15 @@ var forEach = function (object, block, context) {
 };
 
 // Add event listeners
-window.addEventListener("click", function (event) { if (event.target == $("helpModal")) $("helpModal").style.display = "none"; });
-$("helpBtn").addEventListener("click", function () { $("helpModal").style.display = "block"; });
-$("closeHelpBtn").addEventListener("click", function () { $("helpModal").style.display = "none"; });
+window.addEventListener("click", function (event) {
+    if (event.target == $("helpModal")) $("helpModal").style.display = "none";
+});
+$("helpBtn").addEventListener("click", function () {
+    $("helpModal").style.display = "block";
+});
+$("closeHelpBtn").addEventListener("click", function () {
+    $("helpModal").style.display = "none";
+});
 $("decisionManual").addEventListener("keyup", restrictLetters);
 $("manualTypeBtn").addEventListener("click", onManualType);
 $("topTwoBtn").addEventListener("click", onTopTwo);

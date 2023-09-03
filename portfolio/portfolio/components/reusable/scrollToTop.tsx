@@ -34,7 +34,7 @@ const ScrollToTopButton = () => {
         <button
             className={`${
                 isVisible ? 'block' : 'hidden'
-            } z-50 fixed bottom-4 right-4 p-2 rounded-full bg-white shadow-lg`}
+            } z-50 fixed bottom-4 right-4 p-2 rounded-full bg-green-200 shadow-lg`}
             onClick={scrollToTop}
         >
             <ChevronDoubleUpIcon className={"fill-green-600 w-6 h-6"}/>
