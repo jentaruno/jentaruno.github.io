@@ -4,8 +4,6 @@ import FeaturedDebate from "@/components/featuredDebate";
 import {SeeMoreButton} from "@/components/reusable/seeMoreButton";
 import FeaturedDesign from "@/components/featuredDesign";
 import {SectionHeading} from "@/components/reusable/sectionHeading";
-import ContactForm from "@/components/contactForm";
-import SpotlightBlock from "@/components/reusable/spotlightBlock";
 import React from "react";
 
 export default function Home() {
@@ -20,18 +18,6 @@ export default function Home() {
                         <SectionHeading text={'I code with community in mind'}/>
                         <div className={'mt-16'}>
                             <FeaturedCoding/>
-                            <div id={'feature-request'} className={'flex flex-col pt-20'}>
-                                <SpotlightBlock>
-                                    <h3 className={'md:text-5xl font-bold mb-8'}>
-                                        🙌
-                                        <br/>
-                                        UBC Course Matcher
-                                        <br/>
-                                        Feature Request
-                                    </h3>
-                                    <ContactForm/>
-                                </SpotlightBlock>
-                            </div>
                             <div className={'mt-12'}>
                                 <SeeMoreButton link={'/coding'}/>
                             </div>
