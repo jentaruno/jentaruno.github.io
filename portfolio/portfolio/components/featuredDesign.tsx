@@ -56,12 +56,12 @@ export default function FeaturedDesign() {
                     </div>
                     <div
                         onClick={prevSlide}
-                        className={'z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] left-8 sm:left-20 text-2xl rounded-full p-2 bg-white cursor-pointer'}>
+                        className={'z-20 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] left-8 sm:left-20 text-2xl rounded-full p-2 bg-white cursor-pointer'}>
                         <ChevronLeftIcon className={'h-8 w-8 fill-green-900'}/>
                     </div>
                     <div
                         onClick={nextSlide}
-                        className={'z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] right-8 sm:right-20 text-2xl rounded-full p-2 bg-white cursor-pointer'}>
+                        className={'z-20 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] right-8 sm:right-20 text-2xl rounded-full p-2 bg-white cursor-pointer'}>
                         <ChevronRightIcon className={'h-8 w-8 fill-green-900'}/>
                     </div>
                     <div className={'flex top-4 justify-center py-4'}>
