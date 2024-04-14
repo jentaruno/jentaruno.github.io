@@ -29,7 +29,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en" className={`${cardCharacters.variable} ${vollkorn.variable} ${inter.variable}`}>
+        <html lang="en" className={`${cardCharacters.variable} ${vollkorn.variable} ${inter.variable} m-0 p-0`}>
         <body className={'bg-green-100 font-sans'}>
         <header className="sticky top-0 z-50">
             <div className="flex flex-row justify-center bg-green-100">

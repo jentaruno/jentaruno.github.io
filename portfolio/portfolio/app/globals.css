@@ -6,7 +6,7 @@
 @layer base {
 
     div {
-        @apply text-green-900 mt-1;
+        @apply text-green-900;
     }
 
     h1 {

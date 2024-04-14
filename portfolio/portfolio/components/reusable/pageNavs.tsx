@@ -1,5 +1,5 @@
 'use client'
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {motion} from "framer-motion";
 
 const Navbar = () => {
@@ -10,6 +10,15 @@ const Navbar = () => {
         ['Debate', 'https://disputandum.com/'],
         ['Contact', '/#contact'],
     ];
+    const [top, setTop] = useState(true);
+
+    useEffect(() => {
+        const scrollHandler = () => {
+            window.scrollY > 10 ? setTop(false) : setTop(true)
+        };
+        window.addEventListener('scroll', scrollHandler);
+        return () => window.removeEventListener('scroll', scrollHandler);
+    }, [top]);
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
@@ -17,14 +26,15 @@ const Navbar = () => {
 
     return (
         <div
-            className={`w-full mt-0 flex flex-row sm:justify-center bg-green-100 ${
-                showMenu ? 'drop-shadow-lg' : 'drop-shadow-none'
+            className={`w-full mt-0 flex flex-row sm:justify-center bg-green-100
+                ${showMenu ? 'drop-shadow-lg' : 'drop-shadow-none'}
+                ${!top && `border-b-[0.5px] border-green-200`
             }`}>
-            <div className={'hidden sm:flex flex-row w-full justify-between text-green-600 mx-8 my-4'}>
+            <div className={`hidden sm:flex flex-row w-full justify-between text-green-600 mx-8 my-3`}>
                 <a className={'text-xl text-orange-700 font-bold font-card lowercase [word-spacing:-7px]'} href={'/'}>
                     Jen Taruno
                 </a>
-                <ul className="flex flex-row justify-end gap-1">
+                <ul className="flex flex-row justify-end gap-1 items-center">
                     {routes.map(([title, url], i) => (
                         <li key={`nav-${i}`} className={'mr-6'}>
                             <a href={url}
