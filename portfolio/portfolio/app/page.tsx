@@ -33,9 +33,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={'flex flex-col py-20'}>
-                        <h3 className={'text-green-600 text-center'}>
-                            <SectionHeading text={"Let's put an end to bad design"}/>
-                        </h3>
+                        <SectionHeading text={"Let's put an end to bad design"}/>
                         <div className={'mt-16'}>
                             <FeaturedDesign/>
                             <div className={'mt-12'}>

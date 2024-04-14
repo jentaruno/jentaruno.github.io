@@ -27,7 +27,7 @@ export function CodingHero(props: {
         </p>,
         <ul className="flex flex-row flex-wrap text-green-600">
             {props.languages.map(e =>
-                <li className={'text-sm bg-green-200 py-1 px-3 rounded-full mt-2 mr-2 uppercase'}>
+                <li key={`lang-${e}`} className={'text-sm bg-green-200 py-1 px-3 rounded-full mt-2 mr-2 uppercase'}>
                     {e}
                 </li>)}
         </ul>,

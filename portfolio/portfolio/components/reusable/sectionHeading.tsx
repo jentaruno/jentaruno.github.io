@@ -9,6 +9,7 @@ export function SectionHeading(props: { text: string }) {
         <div className={"flex flex-row flex-wrap font-card tracking-tight text-3xl text-green-600 justify-center"}>
             {words.map((e, i) =>
                 <motion.span
+                    key={e + i}
                     className={'mr-4'}
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}

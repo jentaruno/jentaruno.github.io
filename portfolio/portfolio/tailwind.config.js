@@ -9,7 +9,7 @@ module.exports = {
         colors: {
             'green': {
                 200: '#dbebce',
-                600: '#748c5e',
+                600: '#5f754a',
                 800: '#28502e',
                 900: '#1c3b21'
             },
@@ -24,8 +24,8 @@ module.exports = {
             'white': '#fcfcfc',
         },
         fontFamily: {
-            'sans': ['Inter'],
-            'serif': ['Vollkorn'],
+            'sans': ['var(--font-sans)'],
+            'serif': ['var(--font-serif)'],
             'card': ['var(--font-card)'],
         },
         extend: {

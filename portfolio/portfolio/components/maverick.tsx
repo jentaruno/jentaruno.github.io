@@ -74,31 +74,31 @@ export default function Maverick() {
     }
 
     return (
-        <div className={'pb-12'}>
+        <div className={'mt-4 pb-12'}>
             <div className={'w-full m-auto px-4 relative group'}>
                 <div className={'flex flex-col w-[70vw] md:w-[50vw] lg:w-[40vw] h-min justify-center'}>
-                    <div className={'flex flex-row justify-between mb-2'}>
+                    <div className={'flex flex-col md:flex-row justify-between mb-2'}>
                         <h1 className={'font-serif uppercase'}>
                             The<br/>
                             Maverick,<br/>
                             {poems[index].title}
                         </h1>
-                        <p className={'text-green-600'}>{poems[index].date}</p>
+                        <p className={'font-serif text-green-600'}>{poems[index].date}</p>
                     </div>
                     <div>
-                        <span className={'mt-2 text-sm leading-loose'}>
+                        <span className={'font-serif mt-2 text-xs md:text-md leading-loose'}>
                             {parseMarkdown(poems[index].desc)}
                         </span>
                     </div>
                 </div>
                 <div
                     onClick={prevSlide}
-                    className={'z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] -left-12 md:-left-16 text-2xl rounded-full p-2 bg-green-900/40 cursor-pointer'}>
+                    className={'z-20 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] -left-12 md:-left-16 text-2xl rounded-full p-2 bg-green-900/40 cursor-pointer'}>
                     <ChevronLeftIcon className={'h-8 w-8 fill-white'}/>
                 </div>
                 <div
                     onClick={nextSlide}
-                    className={'z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] -right-12 md:-right-16 text-2xl rounded-full p-2 bg-green-900/40 cursor-pointer'}>
+                    className={'z-20 group-hover:opacity-100 transition-opacity duration-200 absolute top-[50%] -translate-x-0 translate-y-[-50%] -right-12 md:-right-16 text-2xl rounded-full p-2 bg-green-900/40 cursor-pointer'}>
                     <ChevronRightIcon className={'h-8 w-8 fill-white'}/>
                 </div>
                 <div className={'flex top-4 justify-center py-4'}>

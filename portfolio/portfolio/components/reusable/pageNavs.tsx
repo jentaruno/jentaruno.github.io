@@ -4,6 +4,12 @@ import {motion} from "framer-motion";
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const routes = [
+        ['Coding', '/coding'],
+        ['Design', 'https://www.instagram.com/jentaruno/'],
+        ['Debate', 'https://disputandum.com/'],
+        ['Contact', '/#contact'],
+    ];
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
@@ -19,12 +25,7 @@ const Navbar = () => {
                     Jen Taruno
                 </a>
                 <ul className="flex flex-row justify-end gap-1">
-                    {[
-                        ['Coding', '/coding'],
-                        ['Design', 'https://www.instagram.com/jentaruno/'],
-                        ['Debate', 'https://disputandum.com/'],
-                        ['Contact', '/#contact'],
-                    ].map(([title, url], i) => (
+                    {routes.map(([title, url], i) => (
                         <li key={`nav-${i}`} className={'mr-6'}>
                             <a href={url}
                                className="rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
@@ -50,14 +51,9 @@ const Navbar = () => {
                         exit={{height: 0}}
                         className={`mb-2 flex-col sm:mb-0 sm:gap-1`}
                     >
-                        {[
-                            ['Home', '/'],
-                            ['Coding', 'https://github.com/jentaruno'],
-                            ['Design', 'https://www.instagram.com/jentaruno/'],
-                            ['Debate', 'https://disputandum.com/'],
-                            ['Contact', '/contact'],
-                        ].map(([title, url], i) => (
+                        {routes.map(([title, url], i) => (
                             <motion.div
+                                key={`nav-${i}`}
                                 initial={{opacity: 0}}
                                 whileInView={{opacity: 1}}
                                 exit={{opacity: 0}}

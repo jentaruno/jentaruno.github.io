@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="dyne png">
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Fix fonts">
+      <change afterPath="$PROJECT_DIR$/portfolio/app/inter.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/app/vollkorn.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/public/obraden.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/public/ourboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/public/sherlockify.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/codingData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/codingData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/featuredDesign.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/maverick.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/maverick.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/poemBook.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/poemBook.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/codingHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/sectionHeading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/sectionHeading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +33,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2f3oqItupxcwRenYOornhQKt1q6" />
   <component name="ProjectLevelVcsManager">
@@ -62,110 +77,16 @@
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="DjangoTestsConfigurationType">
-      <module name="portfolio" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="portfolio" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="portfolio" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <module name="portfolio" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="portfolio" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Python.FlaskServer">
-      <module name="portfolio" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="portfolio" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7d550ff7-9cad-4cb9-9b76-295006ea19bc" name="Changes" comment="Easychair" />
+      <changelist id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Update Coding resume, make chevrons always visible in design" />
       <created>1713039311495</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713039311495</updated>
       <workItem from="1713039313380" duration="941000" />
+      <workItem from="1713061962106" duration="2325000" />
     </task>
     <task id="LOCAL-00001" summary="dyne png">
       <created>1713040519928</created>
@@ -174,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713040519928</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update Coding resume, make chevrons always visible in design">
+      <created>1713043128784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713043128784</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +110,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dyne png" />
-    <option name="LAST_COMMIT_MESSAGE" value="dyne png" />
+    <MESSAGE value="Update Coding resume, make chevrons always visible in design" />
+    <MESSAGE value="Fix fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix fonts" />
   </component>
 </project>

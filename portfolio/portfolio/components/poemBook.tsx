@@ -98,10 +98,10 @@ export default function PoemBook() {
                                 <p className={'leading-tight text-lg md:text-3xl font-serif uppercase'}>
                                     {title}
                                 </p>
-                                <p className={'md:my-2 text-[0.4rem] md:text-xs text-green-600'}>
+                                <p className={'font-serif md:my-2 text-[0.4rem] md:text-sm text-green-600'}>
                                     {date}
                                 </p>
-                                <span className={'text-[0.4rem] md:text-xs leading-loose'}>
+                                <span className={'font-serif text-[0.4rem] md:text-sm leading-loose'}>
                                     {parseMarkdown(desc)}
                                 </span>
                             </div>
