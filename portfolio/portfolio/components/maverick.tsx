@@ -86,7 +86,7 @@ export default function Maverick() {
                         <p className={'font-serif text-green-600'}>{poems[index].date}</p>
                     </div>
                     <div>
-                        <span className={'font-serif mt-2 text-xs md:text-md leading-loose'}>
+                        <span className={'font-serif mt-2 text-xs md:text-sm leading-loose md:leading-loose'}>
                             {parseMarkdown(poems[index].desc)}
                         </span>
                     </div>

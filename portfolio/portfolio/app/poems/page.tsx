@@ -12,9 +12,9 @@ export default function Poems() {
                         <p className={'text-8xl font-bold mb-4'}>
                             Poems
                         </p>
-                        <p className={'text-green-600'}>
-                            Emotions I put down into words when I feel them strongly
-                        </p>
+                        {/*<p className={'text-green-600'}>*/}
+                        {/*    Emotions I put down into words when I feel them strongly*/}
+                        {/*</p>*/}
                     </div>
                     <div className={'flex flex-col items-center'}>
                         <SectionHeading text={"Flavors from over the years"}/>

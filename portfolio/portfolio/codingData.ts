@@ -21,15 +21,6 @@ export const CodingData: CodingDataItem[] =
             name: "Web Development",
             blocks: [
                 {
-                    link: 'https://devpost.com/software/ourboard',
-                    src: 'ourboard.png',
-                    title: 'OurBoard',
-                    desc: 'AR bulletin board web app that allows users to post photos and text (Best Beginner Hack & Honorable Mention at NWHacks)',
-                    languages: ['MongoDB', 'Flask', 'Three.js', 'AR.js'],
-                    statNumber: '600+',
-                    statDesc: 'hackathon participants',
-                },
-                {
                     link: 'https://devpost.com/software/sherlockify',
                     src: 'sherlockify.png',
                     title: 'Sherlockify',
@@ -73,15 +64,6 @@ export const CodingData: CodingDataItem[] =
             name: "Mobile App Development",
             blocks: [
                 {
-                    link: 'https://github.com/jentaruno/Obra-Den',
-                    src: 'obraden.png',
-                    title: 'Obra Den',
-                    desc: 'Obra Dinn themed AR escape room',
-                    languages: ['C#', 'Unity', 'ARCore'],
-                    statNumber: '1',
-                    statDesc: 'person made happy on his birthday',
-                },
-                {
                     link: 'https://github.com/jentaruno/taskwatch',
                     src: '/taskwatch.jpg',
                     title: 'TaskWatch',
@@ -120,6 +102,24 @@ export const CodingData: CodingDataItem[] =
             face: "}",
             name: "Augmented Reality",
             blocks: [
+                {
+                    link: 'https://devpost.com/software/ourboard',
+                    src: 'ourboard.png',
+                    title: 'OurBoard',
+                    desc: 'AR bulletin board web app that allows users to post photos and text (Best Beginner Hack & Honorable Mention at NWHacks 2024)',
+                    languages: ['MongoDB', 'Flask', 'Three.js', 'AR.js'],
+                    statNumber: '600+',
+                    statDesc: 'hackathon participants',
+                },
+                {
+                    link: 'https://github.com/jentaruno/Obra-Den',
+                    src: 'obraden.png',
+                    title: 'Obra Den',
+                    desc: 'Obra Dinn themed AR escape room',
+                    languages: ['C#', 'Unity', 'ARCore'],
+                    statNumber: '1',
+                    statDesc: 'person made happy on his birthday',
+                },
                 {
                     src: '/ar-yearbook.png',
                     title: 'AR Yearbook',

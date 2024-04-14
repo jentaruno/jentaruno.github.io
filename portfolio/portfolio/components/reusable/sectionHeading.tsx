@@ -10,7 +10,7 @@ export function SectionHeading(props: { text: string }) {
             {words.map((e, i) =>
                 <motion.span
                     key={e + i}
-                    className={'mr-4'}
+                    className={'mr-3'}
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
                     viewport={{once: true}}
