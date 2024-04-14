@@ -48,7 +48,7 @@ export default function ContactForm() {
                         required
                         type="text"
                         name="user_name"
-                        className={"shadow text-green-900 bg-white appearance-none border-2 border-green-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-600"}
+                        className={"shadow text-green-900 bg-green-100 appearance-none border-2 border-green-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-green-100 focus:border-green-600"}
                     />
                 </div>
             </div>
@@ -60,7 +60,7 @@ export default function ContactForm() {
                     <input
                         type="email"
                         name="user_email"
-                        className={"mb-2 shadow text-green-900 bg-white appearance-none border-2 border-green-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:border-green-600"}
+                        className={"mb-2 shadow text-green-900 bg-green-100 appearance-none border-2 border-green-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:border-green-600"}
                     />
                 </div>
             </div>
@@ -72,7 +72,7 @@ export default function ContactForm() {
                 <textarea
                     required
                     name="message"
-                    className={"mb-2 shadow text-green-900 bg-white appearance-none border-2 border-green-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:border-green-600"}
+                    className={"mb-2 shadow text-green-900 bg-green-100 appearance-none border-2 border-green-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:border-green-600"}
                 />
                 </div>
             </div>

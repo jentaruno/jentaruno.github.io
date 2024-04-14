@@ -32,7 +32,7 @@ export default function Intro() {
                         viewport={{once: true}}
                         transition={{type: "spring", stiffness: 70}}
                     >
-                        <p className={'text-green-600'}>
+                        <p className={'text-green-900'}>
                             Hi, I'm Jen
                         </p>
                         <h1 className={'font-bold'}>
@@ -45,7 +45,7 @@ export default function Intro() {
                         viewport={{once: true}}
                         transition={{type: "spring", stiffness: 70, delay: 0.2}}
                     >
-                        <p className={'mt-8 text-green-600'}>
+                        <p className={'mt-8 text-green-900'}>
                             Passionate about optimising processes, front-end development, and community projects
                         </p>
                         <div className={'w-full flex flex-wrap justify-start mt-4 mb-16 md:mb-0'}>

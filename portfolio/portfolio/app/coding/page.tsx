@@ -20,14 +20,14 @@ export default function Coding() {
     }
 
     return (
-        <div className={"flex flex-col items-center px-8 lg:px-20 py-4 bg-white"}>
+        <div className={"flex flex-col items-center px-8 lg:px-20 py-4 bg-green-100"}>
             <div className={'w-full grid grid-cols-1 divide-y divide-green-200'}>
                 <div className={'flex flex-col items-center py-16'}>
                     <div className={'flex flex-col justify-center'}>
                         <h1 className={'text-center text-8xl font-bold'}>
                             Coding
                         </h1>
-                        <div className={"flex flex-row flex-wrap items-center justify-center space-x-8 space-y-8"}>
+                        <div className={"flex flex-row flex-wrap items-center justify-center space-x-2 md:space-x-8 space-y-2 md:space-y-8"}>
                             <span/>
                             {CodingData.map((e: { name: string, face: string, value: string }, i: number) =>
                                 <motion.span
@@ -47,7 +47,7 @@ export default function Coding() {
                                         cardValue={e.value}
                                         cardFace={e.face}
                                     >
-                                        <h4 className={'font-bold'}>{e.name}</h4>
+                                        <h4 className={'text-lg md:text-2xl font-bold'}>{e.name}</h4>
                                     </PlayingCard>
                                 </motion.span>
                             )}

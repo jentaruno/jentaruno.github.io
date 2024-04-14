@@ -8,8 +8,8 @@ import React from "react";
 
 export default function Home() {
     return (
-        <main className={'flex flex-col bg-white max-w-screen-2xl'}>
-            <div className="flex flex-col items-center px-8 lg:px-20 bg-white">
+        <main className={'flex flex-col bg-green-100 max-w-screen-2xl'}>
+            <div className="flex flex-col items-center px-8 lg:px-20 bg-green-100">
                 <div className={'w-full lg:w-3/4 grid grid-cols-1 divide-y divide-green-200'}>
                     <div className={'flex flex-col min-h-[80vh] justify-center'}>
                         <Intro/>

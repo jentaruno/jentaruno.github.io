@@ -17,7 +17,7 @@ const Navbar = () => {
 
     return (
         <div
-            className={`w-full mt-0 flex flex-row sm:justify-center bg-white ${
+            className={`w-full mt-0 flex flex-row sm:justify-center bg-green-100 ${
                 showMenu ? 'drop-shadow-lg' : 'drop-shadow-none'
             }`}>
             <div className={'hidden sm:flex flex-row w-full justify-between text-green-600 mx-8 my-4'}>
@@ -51,7 +51,7 @@ const Navbar = () => {
                         exit={{height: 0}}
                         className={`mb-2 flex-col sm:mb-0 sm:gap-1`}
                     >
-                        {routes.map(([title, url], i) => (
+                        {[['Home', '/'], ...routes].map(([title, url], i) => (
                             <motion.div
                                 key={`nav-${i}`}
                                 initial={{opacity: 0}}

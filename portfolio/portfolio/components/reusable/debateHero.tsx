@@ -44,7 +44,7 @@ export function DebateHero(props: { year: number, title: string, desc: string, s
                 viewport={{once: true}}
                 transition={{type: "spring", stiffness: 100, delay: 0.2}}
             >
-                <span className={"uppercase text-sm text-orange-700 font-bold tracking-widest mb-2"}>
+                <span className={"uppercase text-sm text-green-600 font-bold tracking-widest mb-2"}>
                     {props.otherText}
                 </span>
                 <ul className={"list-disc list-outside ml-4"}>

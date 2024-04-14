@@ -30,16 +30,16 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={`${cardCharacters.variable} ${vollkorn.variable} ${inter.variable}`}>
-        <body className={'bg-white font-sans'}>
+        <body className={'bg-green-100 font-sans'}>
         <header className="sticky top-0 z-50">
-            <div className="flex flex-row justify-center bg-white">
+            <div className="flex flex-row justify-center bg-green-100">
                 <PageNavs/>
             </div>
         </header>
-        <div className={"flex flex-row justify-center font-sans"}>
+        <div className={"flex flex-row justify-center font-sans bg-green-100"}>
             {children}
         </div>
-        <footer id={'contact'} className={'w-full bg-white px-8 lg:px-20 pt-4 pb-8 drop-shadow-2xl'}>
+        <footer id={'contact'} className={'w-full bg-green-100 px-8 lg:px-20 pt-4 pb-8 drop-shadow-2xl'}>
             <Contact/>
         </footer>
         </body>

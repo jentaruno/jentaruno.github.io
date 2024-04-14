@@ -5,7 +5,7 @@ import {SectionHeading} from "@/components/reusable/sectionHeading";
 export default function Poems() {
 
     return (
-        <div className={"flex flex-col items-center px-8 lg:px-20 py-4 bg-white"}>
+        <div className={"flex flex-col items-center px-8 lg:px-20 py-4 bg-green-100"}>
             <div className={'w-full lg:w-3/4 grid grid-cols-1 divide-y divide-green-200'}>
                 <div className={'flex flex-col py-20 space-y-16'}>
                     <div className={'flex flex-col items-center'}>

@@ -8,6 +8,7 @@ module.exports = {
     theme: {
         colors: {
             'green': {
+                100: '#f4f0ee',
                 200: '#dbebce',
                 600: '#5f754a',
                 800: '#28502e',

@@ -12,13 +12,13 @@ export const PlayingCard =
     }) => {
         // TODO: framer transition flip after slide in
         return (
-            <div className={`group ${props.size == 'sm' ? 'w-48' : 'w-72'}
-            ${props.size == 'sm' ? 'h-64' : 'h-96'} [perspective:1000px]
+            <div className={`group ${props.size == 'sm' ? 'w-36 md:w-48' : 'w-72'}
+            ${props.size == 'sm' ? 'h-48 md:h-64' : 'h-96'} [perspective:1000px]
             ${props.handleClick ? 'hover:cursor-pointer' : ''}`}
                  onClick={props.handleClick}
             >
                 <div
-                    className={`relative h-full w-full rounded-xl shadow-lg transition-all duration-500 [transform-style:preserve-3d] ${props.flipped ? '[transform:rotateY(180deg)]' : '[transform:rotateY(0deg)]'} hover:[transform:rotateY(180deg)]`}>
+                    className={`bg-white relative h-full w-full rounded-xl shadow-lg transition-all duration-500 [transform-style:preserve-3d] ${props.flipped ? '[transform:rotateY(180deg)]' : '[transform:rotateY(0deg)]'} hover:[transform:rotateY(180deg)]`}>
                     <div className="absolute inset-0">
                         <Image
                             width={300}
@@ -33,13 +33,13 @@ export const PlayingCard =
                         <div className={`flex min-h-full flex-col items-center justify-center`}>
                             <div className="flex items-center justify-between">
                                 <div
-                                    className={`${props.size == 'sm' ? 'text-2xl' : 'text-4xl'} ${props.cardFace == '[' || props.cardFace == '{' ? 'text-orange-700' : 'text-green-900'} font-card transform absolute top-1 left-1`}>
+                                    className={`${props.size == 'sm' ? 'text-sm md:text-2xl' : 'text-4xl'} ${props.cardFace == '[' || props.cardFace == '{' ? 'text-orange-700' : 'text-green-900'} font-card transform absolute top-1 left-1`}>
                                     <p>{props.cardValue}</p>
                                     <p>{props.cardFace}</p>
                                 </div>
                             </div>
                             <div
-                                className={`${props.size == 'sm' ? 'text-2xl' : 'text-4xl'} ${props.cardFace == '[' || props.cardFace == '{' ? 'text-orange-700' : 'text-green-900'} font-card transform rotate-180 absolute bottom-1 right-1`}>
+                                className={`${props.size == 'sm' ? 'text-sm md:text-2xl' : 'text-4xl'} ${props.cardFace == '[' || props.cardFace == '{' ? 'text-orange-700' : 'text-green-900'} font-card transform rotate-180 absolute bottom-1 right-1`}>
                                 <p>{props.cardValue}</p>
                                 <p>{props.cardFace}</p>
                             </div>
