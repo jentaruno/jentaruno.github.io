@@ -1,6 +1,7 @@
 import {SectionHeading} from "@/components/reusable/sectionHeading";
 import FeaturedDebate from "@/components/featuredDebate";
 import DebateAchievements from "@/components/DebateAchievements";
+import DebateWorkshops from "@/components/DebateWorkshops";
 
 export default function Debate() {
 
@@ -20,6 +21,10 @@ export default function Debate() {
                     <div className={'flex flex-col py-8 items-center space-y-8'}>
                         <SectionHeading text={"Debate & Judging Awards"}/>
                         <DebateAchievements/>
+                    </div>
+                    <div className={'flex flex-col py-8 items-center space-y-8'}>
+                        <SectionHeading text={"Workshops"}/>
+                        <DebateWorkshops/>
                     </div>
                 </div>
             </div>

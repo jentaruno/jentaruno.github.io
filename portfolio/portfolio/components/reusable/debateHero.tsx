@@ -24,7 +24,7 @@ export function DebateHero(props: { year: number, title: string, desc: string, s
                     viewport={{once: true}}
                     transition={{type: "spring", stiffness: 100, delay: 0.1}}
                 >
-                    <div className={"text-center text-green-600 font-bold tracking-wider"}>
+                    <div className={"mt-1 text-center text-green-600 font-bold tracking-wider"}>
                         {props.year}
                     </div>
                     <div className={"relative mx-2 mb-4 h-64"}>
