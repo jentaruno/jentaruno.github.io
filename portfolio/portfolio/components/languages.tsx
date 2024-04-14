@@ -16,18 +16,17 @@ export default function Languages() {
                 TypeScript
                 HTML
                 CSS
-                Java
+                Python
                 C#
-                Dart
-                MySQL
-                Rust
+                C++
+                Java
                 React.js
                 Next.js
                 TailwindCSS
                 Sass
                 Flutter
+                MongoDB
                 SQLite
-                JUnit
                 Unity
                 WordPress
             </h3>

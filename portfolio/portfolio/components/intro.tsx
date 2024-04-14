@@ -36,7 +36,8 @@ export default function Intro() {
                             Hi, I'm Jen
                         </p>
                         <h1 className={'font-bold'}>
-                            Techie on weekdays, debater on weekends
+                            Techie on weekdays, <br/>
+                            debater on weekends
                         </h1>
                     </motion.div>
                     <motion.div

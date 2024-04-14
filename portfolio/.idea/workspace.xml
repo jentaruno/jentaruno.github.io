@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Change BG color">
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Fix margins and border for heading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/intro.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/languages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/languages.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713039311495</updated>
       <workItem from="1713039313380" duration="941000" />
-      <workItem from="1713061962106" duration="8283000" />
+      <workItem from="1713061962106" duration="8718000" />
     </task>
     <task id="LOCAL-00001" summary="dyne png">
       <created>1713040519928</created>
@@ -113,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713069298012</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix margins and border for heading">
+      <created>1713070551961</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713070551961</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +141,7 @@
     <MESSAGE value="Update Coding resume, make chevrons always visible in design" />
     <MESSAGE value="Fix fonts" />
     <MESSAGE value="Change BG color" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change BG color" />
+    <MESSAGE value="Fix margins and border for heading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix margins and border for heading" />
   </component>
 </project>

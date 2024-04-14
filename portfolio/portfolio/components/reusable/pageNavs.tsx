@@ -26,7 +26,7 @@ const Navbar = () => {
 
     return (
         <div
-            className={`w-full mt-0 flex flex-row sm:justify-center bg-green-100
+            className={`w-full mt-2 md:mt-0 flex flex-row sm:justify-center bg-green-100
                 ${showMenu ? 'drop-shadow-lg' : 'drop-shadow-none'}
                 ${!top && `border-b-[0.5px] border-green-200`
             }`}>
