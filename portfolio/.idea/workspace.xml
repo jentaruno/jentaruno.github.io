@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Debate achievements">
-      <change afterPath="$PROJECT_DIR$/portfolio/components/DebateWorkshops.tsx" afterDir="false" />
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Debate workshops">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/app/debate/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/debate/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/debateHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/DebateAchievements.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/DebateAchievements.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/components/DebateWorkshops.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/DebateWorkshops.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,22 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Extracurrs/Projects/Personal Website/jentaruno.github.io/portfolio/portfolio/app/debate",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\Extracurrs\\Projects\\Personal Website\\jentaruno.github.io\\portfolio\\portfolio\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Extracurrs/Projects/Personal Website/jentaruno.github.io/portfolio/portfolio/app/debate&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Extracurrs\\Projects\\Personal Website\\jentaruno.github.io\\portfolio\\portfolio\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -79,7 +79,11 @@
       <option name="presentableId" value="Default" />
       <updated>1713039311495</updated>
       <workItem from="1713039313380" duration="941000" />
-      <workItem from="1713061962106" duration="14919000" />
+      <workItem from="1713061962106" duration="15592000" />
+      <workItem from="1713123473851" duration="1328000" />
+      <workItem from="1713206361364" duration="3000" />
+      <workItem from="1713206378823" duration="3000" />
+      <workItem from="1713304291953" duration="4911000" />
     </task>
     <task id="LOCAL-00001" summary="dyne png">
       <created>1713040519928</created>
@@ -137,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713073839362</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Debate workshops">
+      <created>1713077119233</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713077119233</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +173,7 @@
     <MESSAGE value="Fix margins and border for heading" />
     <MESSAGE value="Update langs" />
     <MESSAGE value="Debate achievements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debate achievements" />
+    <MESSAGE value="Debate workshops" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debate workshops" />
   </component>
 </project>

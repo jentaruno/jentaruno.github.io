@@ -16,7 +16,7 @@ function WorkshopCard(props: { src: string, title: string, date: string, link: s
                 />
             </div>
             <h4 className={"mt-2 font-bold"}>{props.title}</h4>
-            <p className={'mt-1'}>{props.date}</p>
+            <p className={'mt-1 text-sm text-green-600'}>{props.date}</p>
     </Link>
 }
 
