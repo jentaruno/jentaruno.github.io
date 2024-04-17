@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Fix image appearances">
-      <change afterPath="$PROJECT_DIR$/portfolio/public/jen-no-bg.png" afterDir="false" />
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Main pfp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/components/intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/intro.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +83,7 @@
       <workItem from="1713206361364" duration="3000" />
       <workItem from="1713206378823" duration="3000" />
       <workItem from="1713304291953" duration="5087000" />
-      <workItem from="1713390403306" duration="5784000" />
+      <workItem from="1713390403306" duration="6206000" />
     </task>
     <task id="LOCAL-00001" summary="dyne png">
       <created>1713040519928</created>
@@ -169,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713394336306</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Main pfp">
+      <created>1713396764854</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713396764854</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +205,7 @@
     <MESSAGE value="Debate intro &amp; achievements credits roll" />
     <MESSAGE value="Debate page" />
     <MESSAGE value="Fix image appearances" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix image appearances" />
+    <MESSAGE value="Main pfp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main pfp" />
   </component>
 </project>
