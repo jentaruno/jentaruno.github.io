@@ -4,19 +4,22 @@ import Image from "next/image";
 function WorkshopCard(props: { src: string, title: string, date: string, link: string }) {
     return <Link
                 href={props.link}
-                className={"md:w-1/3 h-72 px-4 py-4 hover:bg-green-200 transition-all duration-200 hover:rounded-2xl hover:drop-shadow-md"}
+                className={"px-4 py-4 hover:bg-green-200 transition-all duration-200 hover:rounded-2xl hover:drop-shadow-md"}
             >
-            <div className={'relative h-1/2'}>
+            <div className={'flex flex-col md:flex-row space-x-4 items-center'}>
                 <Image
                     className={'rounded-lg'}
                     alt={"workshop-" + props.title}
-                    fill={true}
+                    height={150}
+                    width={200}
                     src={props.src}
                     style={{objectFit: "cover"}}
                 />
+                <div>
+                    <h4 className={"mt-2 font-bold"}>{props.title}</h4>
+                    <p className={'mt-1 text-sm text-green-600'}>{props.date}</p>
+                </div>
             </div>
-            <h4 className={"mt-2 font-bold"}>{props.title}</h4>
-            <p className={'mt-1 text-sm text-green-600'}>{props.date}</p>
     </Link>
 }
 
@@ -29,13 +32,13 @@ export default function DebateWorkshops() {
             link: 'https://www.youtube.com/watch?v=hlKi1UbJX0g'
         },
         {
-            img: 'https://i.ytimg.com/vi/DSwfOqK9R_8/maxresdefault.jpg',
+            img: 'workshop2.png',
             title: 'How To Make A Solid Setup',
             date: 'Jan 2022',
             link: 'https://www.youtube.com/watch?v=DSwfOqK9R_8'
         },
         {
-            img: 'https://i.ytimg.com/vi/8dwA_dvjR4g/hqdefault.jpg',
+            img: 'workshop3.png',
             title: 'Debating for Newbies (Varsity)',
             date: 'Jan 2022',
             link: 'https://youtu.be/8dwA_dvjR4g?si=T9pMb4n3whydq2V_&t=616'
@@ -43,7 +46,7 @@ export default function DebateWorkshops() {
     ]
 
     return (
-        <div className={'flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2'}>
+        <div className={'flex flex-col'}>
             {workshops.map((e,i) =>
                 <WorkshopCard
                     key={`card-${i}`}

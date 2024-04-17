@@ -14,11 +14,11 @@ export default function Debate() {
                         <h1 className={'text-8xl font-bold mb-4'}>
                             Debate
                         </h1>
-                        <p>I spent over 10,000 hours yapping and still think it's great.</p>
+                        <p>There's nothing quite like 10,000 hours of yapping.</p>
                     </div>
                     <div className={'flex flex-col py-8 items-center space-y-8'}>
                         <SectionHeading text={"Current Work"}/>
-                        <div className={'flex flex-col md:flex-row md:space-x-8'}>
+                        <div className={'flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center'}>
                             <Image src={'disputandum-logo.png'} alt={'Disputandum Logo'}
                             width={100} height={100}/>
                             <p>My competitive debating journey concluded in 2022.

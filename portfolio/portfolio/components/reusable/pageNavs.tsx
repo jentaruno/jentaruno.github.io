@@ -7,7 +7,7 @@ const Navbar = () => {
     const routes = [
         ['Coding', '/coding'],
         ['Design', 'https://www.instagram.com/jentaruno/'],
-        ['Debate', 'https://disputandum.com/'],
+        ['Debate', '/debate'],
         ['Contact', '/#contact'],
     ];
     const [top, setTop] = useState(true);
