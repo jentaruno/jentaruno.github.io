@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Debate intro &amp; achievements credits roll">
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Debate page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/app/debate/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/debate/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/DebateAchievements.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/DebateAchievements.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/DebateWorkshops.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/DebateWorkshops.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/components/reusable/pageNavs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/codingData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/codingData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/public/ourboard.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/public/ourboard.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
       <workItem from="1713206361364" duration="3000" />
       <workItem from="1713206378823" duration="3000" />
       <workItem from="1713304291953" duration="5087000" />
-      <workItem from="1713390403306" duration="2864000" />
+      <workItem from="1713390403306" duration="3744000" />
     </task>
     <task id="LOCAL-00001" summary="dyne png">
       <created>1713040519928</created>
@@ -157,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713309383352</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Debate page">
+      <created>1713393362772</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713393362772</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +189,7 @@
     <MESSAGE value="Debate achievements" />
     <MESSAGE value="Debate workshops" />
     <MESSAGE value="Debate intro &amp; achievements credits roll" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debate intro &amp; achievements credits roll" />
+    <MESSAGE value="Debate page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debate page" />
   </component>
 </project>

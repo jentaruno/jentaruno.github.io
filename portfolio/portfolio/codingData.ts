@@ -106,7 +106,7 @@ export const CodingData: CodingDataItem[] =
                     link: 'https://devpost.com/software/ourboard',
                     src: 'ourboard.png',
                     title: 'OurBoard',
-                    desc: 'AR bulletin board web app that allows users to post photos and text (Best Beginner Hack & Honorable Mention at NWHacks 2024)',
+                    desc: 'Collaborative AR bulletin board (Best Beginner Hack & Honorable Mention at NWHacks 2024)',
                     languages: ['MongoDB', 'Flask', 'Three.js', 'AR.js'],
                     statNumber: '600+',
                     statDesc: 'hackathon participants',
