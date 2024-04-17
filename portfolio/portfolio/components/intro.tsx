@@ -9,7 +9,7 @@ export default function Intro() {
     return (
         <div className={'text-left'}>
             <div className={'flex flex-col md:flex-row justify-between items-center'}>
-                <div className={'w-full md:w-1/3 flex justify-center items-start md:items-center mb-4'}>
+                <div className={'w-full flex justify-center items-start md:items-center mb-4'}>
                     <motion.div
                         initial={{opacity: 0, scale: 0.8}}
                         whileInView={{opacity: 1, scale: 1}}
@@ -17,15 +17,14 @@ export default function Intro() {
                         transition={{type: "spring", stiffness: 100, delay: 0.1}}
                     >
                         <Image
-                            width={200}
-                            height={200}
-                            className={'rounded-full'}
-                            src={'/profile.jpeg'}
+                            width={800}
+                            height={800}
+                            src={'/jen-no-bg.png'}
                             alt={'profile'}
                         />
                     </motion.div>
                 </div>
-                <div className={'w-full md:w-2/3'}>
+                <div className={'w-full'}>
                     <motion.div
                         initial={{opacity: 0, y: 50}}
                         whileInView={{opacity: 1, y: 0}}
@@ -52,12 +51,12 @@ export default function Intro() {
                         <div className={'w-full flex flex-wrap justify-start mt-4 mb-16 md:mb-0'}>
                             <div className={'flex flex-row items-center mr-8'}>
                                 <ComputerDesktopIcon
-                                    className={'h-8 w-8 mr-2 fill-orange-700'}/>
+                                    className={'h-7 w-7 mr-2 fill-orange-700'}/>
                                 <h5>Full Ride UBC CS</h5>
                             </div>
                             <div className={'flex flex-row items-center'}>
                                 <TrophyIcon
-                                    className={'h-8 w-8 mr-2 fill-orange-700'}/>
+                                    className={'h-7 w-7 mr-2 fill-orange-700'}/>
                                 <h5>Worlds Debate Coach</h5>
                             </div>
                         </div>
