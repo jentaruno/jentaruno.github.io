@@ -616,7 +616,7 @@ function displayDissents(dissent) {
 
 async function readDraw(link) {
     try {
-        const response = await fetch('https://cors.io/?http://ubcfallhst2022.calicotab.com/api/v1/tournaments/ubcfall2022sr/adjudicators');
+        const response = await fetch('https://manchesteriv2022.calicotab.com/api/v1/tournaments');
         const data = await response.json();
         // Handle the received data on the client-side
         console.log(data);
