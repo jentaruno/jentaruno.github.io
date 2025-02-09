@@ -24,7 +24,7 @@ export const CodingData: CodingDataItem[] =
                     link: 'https://devpost.com/software/baboon',
                     src: 'baboon.png',
                     title: 'Baboon',
-                    desc: 'The world\'s first programming language',
+                    desc: 'The world\'s first motion-based programming language',
                     languages: ['Svelte', 'Python', 'OpenCV']
                 },
                 {

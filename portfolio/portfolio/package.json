@@ -7,7 +7,7 @@
     "scriptname": "next build",
     "export": "next export",
     "deploy": "gh-pages -d out -t true",
-    "static": "next build && next export && touch ./out/.nojekyll && echo 'https://jentaruno.github.io' > ./out/CNAME"
+    "static": "static.bat"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
