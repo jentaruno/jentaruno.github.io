@@ -21,6 +21,13 @@ export const CodingData: CodingDataItem[] =
             name: "Web Development",
             blocks: [
                 {
+                    link: 'https://devpost.com/software/baboon',
+                    src: 'baboon.png',
+                    title: 'Baboon',
+                    desc: 'The world\'s first programming language',
+                    languages: ['Svelte', 'Python', 'OpenCV']
+                },
+                {
                     link: 'https://devpost.com/software/sherlockify',
                     src: 'sherlockify.png',
                     title: 'Sherlockify',
@@ -61,14 +68,22 @@ export const CodingData: CodingDataItem[] =
         {
             value: "K",
             face: "]",
-            name: "Mobile App Development",
+            name: "Game Development",
             blocks: [
                 {
-                    link: 'https://github.com/jentaruno/taskwatch',
-                    src: '/taskwatch.jpg',
-                    title: 'TaskWatch',
-                    desc: 'Cross platform productivity app to record and optimise time for completing tasks',
-                    languages: ['Flutter', 'Dart', 'SQLite'],
+                    link: 'https://permafrosted.itch.io/mt-stringmore',
+                    src: 'mtstringmore.png',
+                    title: 'Mt. Stringmore',
+                    desc: 'A marshmallow head who can\'t stop running climbs a mountain. A ball of yarn keeps them from going off the rails. ',
+                    languages: ['Unity', 'C#', 'Krita'],
+                    statNumber: '30+',
+                    statDesc: 'playtests run',
+                },
+                {
+                    src: 'instagram-guess-who.png',
+                    title: 'Instagram Guess Who',
+                    desc: 'Guess who, but it\'s your mutual followers on the board',
+                    languages: ['React', 'Vite', 'TailwindCSS']
                 },
             ]
         },
