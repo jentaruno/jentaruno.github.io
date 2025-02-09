@@ -1,0 +1,214 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: .25rem
+}
+
+.card > hr {
+    margin-right: 0;
+    margin-left: 0
+}
+
+.card > .list-group {
+    border-top: inherit;
+    border-bottom: inherit
+}
+
+.card > .list-group:first-child {
+    border-top-width: 0;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px)
+}
+
+.card > .list-group:last-child {
+    border-bottom-width: 0;
+    border-bottom-right-radius: calc(.25rem - 1px);
+    border-bottom-left-radius: calc(.25rem - 1px)
+}
+
+.cardDeck .card {
+    margin-bottom: 15px
+}
+
+@media (min-width: 576px) {
+    .cardDeck {
+        display: flex;
+        flex-flow: row wrap;
+        margin-right: 15px;
+        margin-left: 15px
+    }
+
+    .cardDeck .card {
+        flex: 1 0 0%;
+        margin-right: 15px;
+        margin-bottom: 0;
+        margin-left: 15px
+    }
+}
+
+.formControl {
+    display: block;
+    width: 100%;
+    height: calc(1.375em + 1.25rem + 2px);
+    padding: .625rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.375;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+}
+
+.formControl::-ms-expand {
+    background-color: transparent;
+    border: 0
+}
+
+.formControl:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #495057
+}
+
+.formControl:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #a88ad2;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(102, 61, 160, 0.25)
+}
+
+.formControl::placeholder {
+    color: #868e96;
+    opacity: 1
+}
+
+.formControl:disabled, .formControl[readonly] {
+    background-color: #e9ecef;
+    opacity: 1
+}
+
+.customSelect {
+    display: inline-block;
+    width: 100%;
+    height: calc(1.375em + 1.25rem + 2px);
+    padding: .625rem 1.75rem .625rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.375;
+    color: #495057;
+    vertical-align: middle;
+    background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    appearance: none
+}
+
+.customSelect:focus {
+    border-color: #a88ad2;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(102, 61, 160, 0.25)
+}
+
+.customSelect:focus::-ms-value {
+    color: #495057;
+    background-color: #fff
+}
+
+.customSelect[multiple], .customSelect[size]:not([size="1"]) {
+    height: auto;
+    padding-right: .75rem;
+    background-image: none
+}
+
+.customSelect:disabled {
+    color: #868e96;
+    background-color: #e9ecef
+}
+
+.customSelect::-ms-expand {
+    display: none
+}
+
+.customSelect:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #495057
+}
+
+.interchangeCheckbox {
+    display: none;
+}
+
+.interchangeCheckbox:checked + .interchangeLabel {
+    font-weight: bold;
+    color: #fd681d;
+    stroke: #fd681d;
+    stroke-width: 1;
+}
+
+.interchangeLabel:focus,
+.interchangeLabel:hover {
+    color: #cc4502 !important;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 1.7rem;
+    height: 1rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 0.67rem;
+    width: 0.67rem;
+    left: 2.67px;
+    bottom: 2.67px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #663da0;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #663da0;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(0.67rem);
+    -ms-transform: translateX(0.67rem);
+    transform: translateX(0.67rem);
+}
