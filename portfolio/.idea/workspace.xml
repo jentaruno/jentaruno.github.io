@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="Main pfp">
+    <list default="true" id="631095f0-df29-472d-aff3-fb7630be1551" name="Changes" comment="baboon mtstringmore ig guess who">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/codingData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/codingData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/app/coding/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/app/coding/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713396764854</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="baboon mtstringmore ig guess who">
+      <created>1739071209066</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739071209066</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +212,7 @@
     <MESSAGE value="Debate page" />
     <MESSAGE value="Fix image appearances" />
     <MESSAGE value="Main pfp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main pfp" />
+    <MESSAGE value="baboon mtstringmore ig guess who" />
+    <option name="LAST_COMMIT_MESSAGE" value="baboon mtstringmore ig guess who" />
   </component>
 </project>

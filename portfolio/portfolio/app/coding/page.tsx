@@ -31,6 +31,7 @@ export default function Coding() {
                             <span/>
                             {CodingData.map((e: { name: string, face: string, value: string }, i: number) =>
                                 <motion.span
+                                    key={`coding-spring-${i}`}
                                     className={""}
                                     transition={{type: "spring", stiffness: 70}}
                                     whileHover={{
