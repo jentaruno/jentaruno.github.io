@@ -14,8 +14,8 @@
     "@heroicons/react": "^2.0.18",
     "@next/font": "^13.4.9",
     "framer-motion": "^10.12.18",
-    "gh-pages": "^3.0.0",
-    "next": "^13.4.8",
+    "gh-pages": "^6.3.0",
+    "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
