@@ -9,9 +9,9 @@ export default function Poems() {
             <div className={'w-full lg:w-3/4 grid grid-cols-1 divide-y divide-green-200'}>
                 <div className={'flex flex-col py-20 space-y-16'}>
                     <div className={'flex flex-col items-center'}>
-                        <p className={'text-8xl font-bold mb-4'}>
+                        <h1 className={'text-8xl font-bold mb-4'}>
                             Poems
-                        </p>
+                        </h1>
                         {/*<p className={'text-green-600'}>*/}
                         {/*    Emotions I put down into words when I feel them strongly*/}
                         {/*</p>*/}

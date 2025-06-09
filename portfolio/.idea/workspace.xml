@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db2d6684-6914-42e6-85ae-9924e97d3645" name="Changes" comment="REFACTOR">
+    <list default="true" id="db2d6684-6914-42e6-85ae-9924e97d3645" name="Changes" comment="pkgjson">
+      <change afterPath="$PROJECT_DIR$/app/crosswords/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static.bat" beforeDir="false" afterPath="$PROJECT_DIR$/static.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/poems/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/poems/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,22 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Extracurrs/Projects/Personal Website/jentaruno.github.io/portfolio/portfolio/app/debate",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\Extracurrs\\Projects\\Personal Website\\jentaruno.github.io\\portfolio\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Extracurrs/Coding/Web Dev/Personal Website/jentaruno.github.io/portfolio&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Extracurrs\\Coding\\Web Dev\\Personal Website\\jentaruno.github.io\\portfolio\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -85,7 +85,11 @@
       <workItem from="1713206378823" duration="3000" />
       <workItem from="1713304291953" duration="5087000" />
       <workItem from="1713390403306" duration="6206000" />
-      <workItem from="1739075044647" duration="790000" />
+      <workItem from="1739075044647" duration="1522000" />
+      <workItem from="1739740834138" duration="10000" />
+      <workItem from="1740948065196" duration="132000" />
+      <workItem from="1747016444245" duration="933000" />
+      <workItem from="1749431433162" duration="1289000" />
     </task>
     <task id="LOCAL-00001" summary="dyne png">
       <created>1713040519928</created>
@@ -199,7 +203,21 @@
       <option name="project" value="LOCAL" />
       <updated>1739075370641</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="stronk commands">
+      <created>1739076025968</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1739076025968</updated>
+    </task>
+    <task id="LOCAL-00018" summary="pkgjson">
+      <created>1739076352267</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1739076352269</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +249,8 @@
     <MESSAGE value="Main pfp" />
     <MESSAGE value="baboon mtstringmore ig guess who" />
     <MESSAGE value="REFACTOR" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR" />
+    <MESSAGE value="stronk commands" />
+    <MESSAGE value="pkgjson" />
+    <option name="LAST_COMMIT_MESSAGE" value="pkgjson" />
   </component>
 </project>
