@@ -7,7 +7,7 @@ export default function Contact() {
                 <h4 className={'font-bold mb-2'}>
                     Contact
                 </h4>
-                <div className={'flex flex-row flex-wrap'}>
+                <div className={'flex flex-row flex-wrap gap-2'}>
                     <div className={'flex flex-row items-center mr-8 mb-1'}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                              className="mr-2 fill-orange-700 bi bi-facebook" viewBox="0 0 16 16">
