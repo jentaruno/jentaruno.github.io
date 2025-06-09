@@ -37,15 +37,6 @@ export const CodingData: CodingDataItem[] =
                     statDesc: 'social media sites',
                 },
                 {
-                    link: 'https://www.dyneapp.ca/',
-                    src: 'dyne.png',
-                    title: 'Dyne',
-                    desc: 'Created customizable drag and drop dashboard using React hooks',
-                    languages: ['Next.js', 'React.js', 'Chakra UI'],
-                    statNumber: '20+',
-                    statDesc: 'reusable components',
-                },
-                {
                     link: 'https://ubc-course-matcher.netlify.app/',
                     src: '/course-matcher.png',
                     title: 'UBC Course Matcher',
