@@ -37,7 +37,10 @@ export default function Home() {
                         <div className={'mt-16'}>
                             <FeaturedDesign/>
                             <div className={'mt-12'}>
-                                <SeeMoreButton link={'https://www.instagram.com/jentaruno/'}/>
+                                <SeeMoreButton
+                                    link={'https://www.instagram.com/jentaruno/'}
+                                    newTab={true}
+                                />
                             </div>
                         </div>
                     </div>
