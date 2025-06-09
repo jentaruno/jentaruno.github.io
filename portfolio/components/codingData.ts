@@ -93,7 +93,7 @@ export const CodingData: CodingDataItem[] =
             name: "WordPress",
             blocks: [
                 {
-                    link: 'https://disputandum.com',
+                    link: 'https://disputandum.wordpress.com',
                     src: '/disputandum.png',
                     title: 'Disputandum',
                     desc: 'Created website for blog teaching debating techniques and social issues',

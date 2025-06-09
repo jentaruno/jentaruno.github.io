@@ -28,7 +28,7 @@ export default function Home() {
                         <div className={'mt-16'}>
                             <FeaturedDebate/>
                             <div className={'mt-12'}>
-                                <SeeMoreButton link={'https://disputandum.com/'}/>
+                                <SeeMoreButton link={'https://disputandum.wordpress.com/'}/>
                             </div>
                         </div>
                     </div>

@@ -24,7 +24,7 @@ export default function Debate() {
                             <p>My competitive debating journey concluded in 2022.
                                 I'm passing the torch by teaching in a debate academy and creating
                                 content for {" "}
-                                <a href={'https://disputandum.com'}
+                                <a href={'https://disputandum.wordpress.com'}
                                 className={"text-green-600 transition-colors underline underline-offset-4 hover:decoration-orange-700"}>
                                     Disputandum
                                 </a>,

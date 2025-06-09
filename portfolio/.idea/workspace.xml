@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db2d6684-6914-42e6-85ae-9924e97d3645" name="Changes" comment="standardise page-title">
-      <change beforePath="$PROJECT_DIR$/app/coding/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/coding/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codingData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/codingData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
+    <list default="true" id="db2d6684-6914-42e6-85ae-9924e97d3645" name="Changes" comment="move things around + add favicon">
+      <change beforePath="$PROJECT_DIR$/app/debate/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/debate/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +63,8 @@
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\app\UBCCMFeatRequest.tsx" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Extracurrs\Coding\Web Dev\Personal Website\jentaruno.github.io\portfolio\components" />
+      <recent name="D:\Extracurrs\Coding\Web Dev\Personal Website\jentaruno.github.io\portfolio" />
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\public" />
       <recent name="D:\Extracurrs\Projects\Personal Website\jentaruno.github.io\portfolio\portfolio\components" />
     </key>
@@ -88,7 +88,7 @@
       <workItem from="1739740834138" duration="10000" />
       <workItem from="1740948065196" duration="132000" />
       <workItem from="1747016444245" duration="933000" />
-      <workItem from="1749431433162" duration="1951000" />
+      <workItem from="1749431433162" duration="2019000" />
     </task>
     <task id="LOCAL-00001" summary="dyne png">
       <created>1713040519928</created>
@@ -230,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1749433148156</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="move things around + add favicon">
+      <created>1749433488365</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1749433488365</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +273,7 @@
     <MESSAGE value="pkgjson" />
     <MESSAGE value="add crosswords page" />
     <MESSAGE value="standardise page-title" />
-    <option name="LAST_COMMIT_MESSAGE" value="standardise page-title" />
+    <MESSAGE value="move things around + add favicon" />
+    <option name="LAST_COMMIT_MESSAGE" value="move things around + add favicon" />
   </component>
 </project>
