@@ -2,7 +2,7 @@
 import {PlayingCard} from "@/components/reusable/playingCard";
 import React, {useRef, useState} from "react";
 import {CodingHero} from "@/components/reusable/codingHero";
-import {CodingData} from "@/codingData"
+import {CodingData} from "@/components/codingData"
 import {motion} from "framer-motion";
 import ScrollToTopButton from "@/components/reusable/scrollToTop";
 

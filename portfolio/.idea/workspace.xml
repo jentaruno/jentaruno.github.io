@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db2d6684-6914-42e6-85ae-9924e97d3645" name="Changes" comment="add crosswords page">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="db2d6684-6914-42e6-85ae-9924e97d3645" name="Changes" comment="standardise page-title">
       <change beforePath="$PROJECT_DIR$/app/coding/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/coding/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/debate/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/debate/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/poems/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/poems/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codingData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/codingData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +88,7 @@
       <workItem from="1739740834138" duration="10000" />
       <workItem from="1740948065196" duration="132000" />
       <workItem from="1747016444245" duration="933000" />
-      <workItem from="1749431433162" duration="1621000" />
+      <workItem from="1749431433162" duration="1951000" />
     </task>
     <task id="LOCAL-00001" summary="dyne png">
       <created>1713040519928</created>
@@ -226,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1749432797074</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="standardise page-title">
+      <created>1749433148156</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1749433148156</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +265,7 @@
     <MESSAGE value="stronk commands" />
     <MESSAGE value="pkgjson" />
     <MESSAGE value="add crosswords page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add crosswords page" />
+    <MESSAGE value="standardise page-title" />
+    <option name="LAST_COMMIT_MESSAGE" value="standardise page-title" />
   </component>
 </project>
