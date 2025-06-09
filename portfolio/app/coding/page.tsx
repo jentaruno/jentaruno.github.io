@@ -24,7 +24,7 @@ export default function Coding() {
             <div className={'w-full grid grid-cols-1 divide-y divide-green-200'}>
                 <div className={'flex flex-col items-center py-16'}>
                     <div className={'flex flex-col justify-center'}>
-                        <h1 className={'text-center text-8xl font-bold'}>
+                        <h1 className={'page-title mb-4'}>
                             Coding
                         </h1>
                         <div className={"flex flex-row flex-wrap items-center justify-center space-x-2 md:space-x-8 space-y-2 md:space-y-8"}>

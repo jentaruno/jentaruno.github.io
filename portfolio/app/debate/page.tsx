@@ -11,7 +11,7 @@ export default function Debate() {
             <div className={'w-full lg:w-3/4 grid grid-cols-1 divide-y divide-green-200'}>
                 <div className={'flex flex-col py-20 space-y-16'}>
                     <div className={'flex flex-col items-center'}>
-                        <h1 className={'text-8xl font-bold mb-4'}>
+                        <h1 className={'page-title mb-4'}>
                             Debate
                         </h1>
                         <p>There's nothing quite like 10,000 hours of yapping.</p>

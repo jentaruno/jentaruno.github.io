@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db2d6684-6914-42e6-85ae-9924e97d3645" name="Changes" comment="pkgjson">
-      <change afterPath="$PROJECT_DIR$/app/crosswords/page.tsx" afterDir="false" />
+    <list default="true" id="db2d6684-6914-42e6-85ae-9924e97d3645" name="Changes" comment="add crosswords page">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/coding/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/coding/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/debate/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/debate/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/poems/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/poems/page.tsx" afterDir="false" />
     </list>
@@ -89,7 +91,7 @@
       <workItem from="1739740834138" duration="10000" />
       <workItem from="1740948065196" duration="132000" />
       <workItem from="1747016444245" duration="933000" />
-      <workItem from="1749431433162" duration="1289000" />
+      <workItem from="1749431433162" duration="1621000" />
     </task>
     <task id="LOCAL-00001" summary="dyne png">
       <created>1713040519928</created>
@@ -217,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739076352269</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add crosswords page">
+      <created>1749432797074</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1749432797074</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +260,7 @@
     <MESSAGE value="REFACTOR" />
     <MESSAGE value="stronk commands" />
     <MESSAGE value="pkgjson" />
-    <option name="LAST_COMMIT_MESSAGE" value="pkgjson" />
+    <MESSAGE value="add crosswords page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add crosswords page" />
   </component>
 </project>

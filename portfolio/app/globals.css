@@ -60,5 +60,5 @@ body {
 }
 
 .page-title {
-    @apply font-bold text-5xl md:text-8xl;
+    @apply text-center font-bold text-5xl md:text-8xl;
 }
