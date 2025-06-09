@@ -67,11 +67,16 @@ export default function Contact() {
                 <h4 className={'font-bold mb-2'}>
                     More
                 </h4>
-                <div className={'flex flex-row flex-wrap'}>
+                <div className={'flex flex-row flex-wrap gap-2'}>
                     <a
                         className={"flex-1 text-green-900 transition-colors underline underline-offset-4 hover:decoration-orange-700"}
                         href={'/poems'}>
                         Poems
+                    </a>
+                    <a
+                        className={"flex-1 text-green-900 transition-colors underline underline-offset-4 hover:decoration-orange-700"}
+                        href={'/crosswords'}>
+                        Crosswords
                     </a>
                 </div>
             </div>
