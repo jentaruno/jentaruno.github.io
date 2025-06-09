@@ -6,7 +6,7 @@
     "start": "next start",
     "scriptname": "next build",
     "export": "next export",
-    "deploy": "gh-pages -d out -t true",
+    "deploy": "gh-pages -d out -t",
     "static": "static.bat"
   },
   "dependencies": {
