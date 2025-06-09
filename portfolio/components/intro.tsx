@@ -8,7 +8,7 @@ import {motion} from "framer-motion";
 export default function Intro() {
     return (
         <div className={'text-left'}>
-            <div className={'flex flex-col md:flex-row justify-between items-center'}>
+            <div className={'flex flex-col md:flex-row justify-between items-center gap-6'}>
                 <div className={'w-full flex justify-center items-start md:items-center my-4'}>
                     <motion.div
                         initial={{opacity: 0, scale: 0.8}}
