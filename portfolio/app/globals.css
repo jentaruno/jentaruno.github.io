@@ -7,18 +7,23 @@
 
     div {
         @apply text-green-900;
+        font-weight: 300;
+        letter-spacing: 0.02rem;
     }
 
     h1 {
         @apply text-4xl mt-3;
+        letter-spacing: -0.05rem;
     }
 
     h2 {
         @apply text-3xl mt-2;
+        letter-spacing: -0.05rem;
     }
 
     h3 {
         @apply text-2xl mt-2;
+        letter-spacing: -0.05rem;
     }
 
     h4 {
