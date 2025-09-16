@@ -4,7 +4,7 @@ import Contact from "@/components/reusable/contact";
 import localFont from 'next/font/local'
 
 const inter = localFont({
-    src: './inter.ttf',
+    src: './merriweather.ttf',
     display: 'swap',
     variable: '--font-sans'
 })

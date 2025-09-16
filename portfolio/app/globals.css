@@ -7,6 +7,8 @@
 
     div {
         @apply text-green-900;
+        font-weight: 300;
+        letter-spacing: 0.02rem;
     }
 
     h1 {
@@ -26,7 +28,6 @@
 
     h4 {
         @apply text-xl mt-1;
-        letter-spacing: -0.05rem;
     }
 
     h5 {
