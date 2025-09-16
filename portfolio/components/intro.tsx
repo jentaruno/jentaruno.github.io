@@ -17,8 +17,8 @@ export default function Intro() {
                         transition={{type: "spring", stiffness: 100, delay: 0.1}}
                     >
                         <Image
-                            width={800}
-                            height={800}
+                            width={440}
+                            height={480}
                             src={'/jen-no-bg.png'}
                             alt={'profile'}
                         />
