@@ -11,18 +11,22 @@
 
     h1 {
         @apply text-4xl mt-3;
+        letter-spacing: -0.05rem;
     }
 
     h2 {
         @apply text-3xl mt-2;
+        letter-spacing: -0.05rem;
     }
 
     h3 {
         @apply text-2xl mt-2;
+        letter-spacing: -0.05rem;
     }
 
     h4 {
         @apply text-xl mt-1;
+        letter-spacing: -0.05rem;
     }
 
     h5 {
