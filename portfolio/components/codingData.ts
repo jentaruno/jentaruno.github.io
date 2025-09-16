@@ -1,19 +1,42 @@
 type CodingDataItem = {
+    link?: string;
+    src: string;
+    title: string;
+    desc: string;
+    languages: string[];
+    statNumber?: string;
+    statDesc?: string;
+};
+
+type CodingDataSection = {
     value: string;
     face: string;
     name: string;
-    blocks: {
-        link?: string;
-        src: string;
-        title: string;
-        desc: string;
-        languages: string[];
-        statNumber?: string;
-        statDesc?: string;
-    }[];
-}
+    blocks: CodingDataItem[];
+};
 
-export const CodingData: CodingDataItem[] =
+export const FeaturedCodingData: CodingDataItem[] = [
+    {
+        link: 'https://permafrosted.itch.io/mt-stringmore',
+        src: 'mtstringmore.png',
+        title: 'Mt. Stringmore',
+        desc: 'A marshmallow head who can\'t stop running climbs a mountain. A ball of yarn keeps them from going off the rails. ',
+        languages: ['Unity', 'C#', 'Krita'],
+        statNumber: '99+',
+        statDesc: 'playtests run',
+    },
+    {
+        link: 'https://ubc-course-matcher.netlify.app/',
+        src: '/course-matcher.png',
+        title: 'UBC Course Matcher',
+        desc: 'Social networking app for UBC students',
+        languages: ['React.js', 'Sass', 'Bootstrap'],
+        statNumber: '5,000+',
+        statDesc: 'views in 2 weeks',
+    },
+];
+
+export const CodingData: CodingDataSection[] =
     [
         {
             value: "A",
