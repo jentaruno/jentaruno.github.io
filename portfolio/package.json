@@ -7,7 +7,8 @@
     "scriptname": "next build",
     "export": "next export",
     "deploy": "gh-pages -d out -t",
-    "static": "static.bat"
+    "static": "static.bat",
+    "cloudflare": "next build && cp -a ../bp-easy-chair ./out/"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
