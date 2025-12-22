@@ -15,7 +15,7 @@ export default function Home() {
                 </div>
                 <div className={'w-full lg:w-3/4 grid grid-cols-1 divide-y divide-green-200'}>
                     <div className={'flex flex-col py-20'}>
-                        <SectionHeading text={'I code with community in mind'}/>
+                        <SectionHeading text={'Coding projects'}/>
                         <div className={'mt-16'}>
                             <FeaturedCoding/>
                             <div className={'mt-12'}>
@@ -24,7 +24,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={'flex flex-col py-20'}>
-                        <SectionHeading text={'I communicate ideas effectively'}/>
+                        <SectionHeading text={'Debate journey'}/>
                         <div className={'mt-16'}>
                             <FeaturedDebate/>
                             <div className={'mt-12'}>
@@ -33,7 +33,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={'flex flex-col py-20'}>
-                        <SectionHeading text={"Let's put an end to bad design"}/>
+                        <SectionHeading text={"Graphic design work"}/>
                         <div className={'mt-16'}>
                             <FeaturedDesign/>
                             <div className={'mt-12'}>

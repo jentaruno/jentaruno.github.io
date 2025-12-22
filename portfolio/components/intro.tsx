@@ -45,20 +45,20 @@ export default function Intro() {
                         viewport={{once: true}}
                         transition={{type: "spring", stiffness: 70, delay: 0.2}}
                     >
-                        <p className={'mt-8 text-green-900'}>
-                            Passionate about optimising processes, front-end development, and community projects
-                        </p>
-                        <div className={'w-full flex flex-wrap justify-start mt-4 mb-16 md:mb-0'}>
+                        <div className={"mt-4 "}>
                             <div className={'flex flex-row items-center mr-8'}>
                                 <ComputerDesktopIcon
                                     className={'h-7 w-7 mr-2 fill-orange-700'}/>
-                                <h5>Full Ride UBC CS</h5>
+                                <h5>Prev. SWE Intern @ Asana & EA</h5>
                             </div>
                             <div className={'flex flex-row items-center'}>
                                 <TrophyIcon
                                     className={'h-7 w-7 mr-2 fill-orange-700'}/>
-                                <h5>Worlds Debate Coach</h5>
+                                <h5>World Schools Debate Coach</h5>
                             </div>
+                            <p className={'mt-4 text-green-900'}>
+                                I also make video games and crosswords :)
+                            </p>
                         </div>
                     </motion.div>
                 </div>
