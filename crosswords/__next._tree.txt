@@ -1,5 +1,5 @@
-:HL["/_next/static/chunks/567d1fa095871884.css","style"]
+:HL["/_next/static/chunks/c7c2dcd009859d6c.css","style"]
 :HL["/_next/static/media/card_characters-s.p.844ab0cc.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
 :HL["/_next/static/media/merriweather-s.p.abc5d529.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
 :HL["/_next/static/media/vollkorn-s.p.6a135141.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
-0:{"buildId":"shkBJtHVexV5AbacJlStb","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"crosswords","paramType":null,"paramKey":"crosswords","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"jqCIR-GvOLyRvLKwzEQ4Y","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"crosswords","paramType":null,"paramKey":"crosswords","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
