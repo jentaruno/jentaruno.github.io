@@ -84,6 +84,15 @@ export const CodingData: CodingDataSection[] = [
     name: "Game Development",
     blocks: [
       {
+        link: "https://kaisoapbox.itch.io/polar-cafe",
+        src: "  polar-cafe.png",
+        title: "Polar Cafe",
+        desc: "Serve drinks, shoot hockey pucks, collect fish, and survive another day at the Polar Cafe.",
+        languages: ["Godot", "Krita"],
+        statNumber: "#5",
+        statDesc: "out of 68 in Winter Game Jam 2025",
+      },
+      {
         link: "https://permafrosted.itch.io/mt-stringmore",
         src: "mtstringmore.png",
         title: "Mt. Stringmore",
@@ -95,7 +104,7 @@ export const CodingData: CodingDataSection[] = [
       {
         src: "instagram-guess-who.png",
         title: "Instagram Guess Who",
-        desc: "Guess who, but it's your mutual followers on the board",
+        desc: "Guess Who, but it's your mutual followers on the board",
         languages: ["React", "Vite", "TailwindCSS"],
       },
     ],
