@@ -102,6 +102,7 @@ export const CodingData: CodingDataSection[] = [
         statDesc: "playtests run",
       },
       {
+        link: "https://chromewebstore.google.com/detail/instagram-guess-who/pkccogfkfmjognalafbeonakgmhefnmc",
         src: "instagram-guess-who.png",
         title: "Instagram Guess Who",
         desc: "Guess Who, but it's your mutual followers on the board",
