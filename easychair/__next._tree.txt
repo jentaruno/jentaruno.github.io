@@ -5,4 +5,4 @@
 :HL["/_next/static/chunks/e1e97ddc7c2d1a95.css","style"]
 :HL["/howtouse-1.jpg","image"]
 :HL["/howtouse-2.jpg","image"]
-0:{"buildId":"jqCIR-GvOLyRvLKwzEQ4Y","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"easychair","paramType":null,"paramKey":"easychair","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"s0Ss8kR441sZj2BfhxJut","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"easychair","paramType":null,"paramKey":"easychair","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
